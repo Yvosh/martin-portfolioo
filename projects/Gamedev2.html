@@ -10,7 +10,18 @@
 </head>
 
 <body class="font-sans">
-    <?php include '../components/header_project.php'; ?>
+      <!-- HEADER -->
+  <header class="sticky-header p-4 flex justify-between items-center opacity-90">
+    <!-- Left: Home/Arrow Icon -->
+    <a href="../index.html" class="text-white text-2xl hover:text-gray-300">
+      &#8592; <!-- Left arrow symbol -->
+    </a>
+
+    <!-- Right: Name -->
+    <span class="text-white text-2xl">
+      Yvosh <span class="text-[#4fc3f7]">Caila</span> Martin
+    </span>
+  </header>
 
     <!-- MAIN CONTENT -->
     <section class="px-[5%] p-6 bg-gray-900 rounded-xl shadow-lg mt-8 ml-10 mr-10">
@@ -265,7 +276,19 @@
         </div>
     </div>
 
-<?php include '../components/footer.php'; ?>
+<footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #000; color: white; flex-wrap: wrap;">
+  <p style="margin: 0; flex: 1; text-align: left;">
+    Yvosh Martin
+  </p>
+  
+  <p style="margin: 0; flex: 1; text-align: center;">
+    &copy; 2025 Yvosh Martin. All rights reserved.
+  </p>
+  
+  <span class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" style="cursor: pointer; text-decoration: underline; flex: 1; text-align: right;">
+    Back to Top
+  </span>
+</footer>
 
     <!-- BACK TO TOP SCRIPT -->
     <script>
