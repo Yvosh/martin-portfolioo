@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Work Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body class="font-sans">
+    <?php include '../components/header_project.php'; ?>
+
+    <!-- MAIN CONTENT -->
+    <section class="px-[5%] p-6 bg-gray-900 rounded-xl shadow-lg mt-8 ml-10 mr-10">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+            <!-- Left: Main Image -->
+            <div class="flex-shrink-0 w-full md:w-2/4">
+                <div class="flex space-x-2">
+                    <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Board.png" alt="Main Project" class="rounded-lg w-2/2 shadow-md" />
+                </div>
+            </div>
+
+            <!-- Right: Description + Button -->
+            <div class="w-full md:w-1/2 text-left">
+                <h1 class="text-3xl font-bold mb-14">Guardian of the Museum</h1>
+                <p class="text-gray-740 mb-5"><strong>Role: UI/UX and Graphic Designer</strong><br /></p>
+                <p class="text-gray-300 mb-14">
+                    Category: Mobile Application<br />
+                    Status: Completed<br />
+                    Client: N/A<br />
+                    Platform: Canva and Other AI generator<br> <br>
+                    Contribution: Fully designed and developed the board game "Guardian of the Museums" — including the game concept, rules, flow, and all visual assets such as the board, weapon cards, character cards, place cards, point system, and other cards. <br> <br>
+                    Game Flow: Players roll the dice to determine who goes first (highest roll). Each player receives 4 cards: 1 role (Visitor or Accomplice) and 3 game elements (Suspect, Weapon, Room — SWR). These elements are crossed off in their notes to eliminate known items.
+
+                    On their turn, players roll the dice and try to enter a room to make a guess about the SWR. If successful, they propose a combination (SWR), and other players must secretly reveal one matching card if they have any. Players can then select others for an “investigation phase,” where roles (Visitor/Accomplice) are revealed to the host. Visitors must tell the truth; the Accomplice may bluff.
+
+                    If the Accomplice wins 3 investigation rounds, they and the killer win. If the Visitors win 3 rounds or correctly identify the Accomplice by round 4 or 5, the Accomplice loses. The game continues until a player correctly identifies the full SWR combination. <br><br>
+
+                    Companion App: When a player lands on a tile with a "?" symbol, they can choose whether or not to use the companion app for additional gameplay options or assistance. <br> <br>
+                    Inspired by the mechanics of Avalon and Cluedo
+                </p>
+                <p class="text-gray-740 mb-5"><strong>For more pictures and a video demo of the game, click the button below:</strong><br /></p>    
+                <a href="https://drive.google.com/drive/folders/1k-tpp3CC3I1ATja28TTFAu3BoTf4IfME" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-full transition">
+                    Click here
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Game UI/UX (Companion App)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(0)">
+            <img src="../images/Gamedev1/1. Start.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Start</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(1)">
+            <img src="../images/Gamedev1/2. About Us.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">About Us</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(2)">
+            <img src="../images/Gamedev1/3. Rules.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Rules</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(3)">
+            <img src="../images/Gamedev1/3.1 Rule.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Choosing a File</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(4)">
+            <img src="../images/Gamedev1/3.2 Rule.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Rules</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(5)">
+            <img src="../images/Gamedev1/3.3 Rule.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Rules</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(6)">
+            <img src="../images/Gamedev1/3.4 Rule.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Rules </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(7)">
+            <img src="../images/Gamedev1/4. Deck_of_Cards.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(8)">
+            <img src="../images/Gamedev1/4.1 Artifact.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Artifact </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(9)">
+            <img src="../images/Gamedev1/4.2 Sample_Cards.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Sample Cards </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(10)">
+            <img src="../images/Gamedev1/4.3 Garbage.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Garbage Card </h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Boards and Other Cards)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(11)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Board.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Board</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(12)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C1. Back Page.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Back of Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(13)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C1. Accomplice.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Accomplice Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(14)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C1.1 Visitor.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Visitor Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(15)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C2. Accomplice (Vote).png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Voting Cards of Accomplice</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(16)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C2.Visitor (Vote).png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Voting Cards of Visitor</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(17)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 1.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(18)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 2.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(19)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 3.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(20)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 4.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(21)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 5.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(22)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 6.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(23)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 7.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(24)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 8.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(25)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 9.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(26)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 10.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Chance Cards</h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Characters)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(27)">
+            <img src="../images/Gamedev1/Assets (Cards)/Characters/Curator.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Curator</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(28)">
+            <img src="../images/Gamedev1/Assets (Cards)/Characters/Helen.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Helen</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(29)">
+            <img src="../images/Gamedev1/Assets (Cards)/Characters/John.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">John</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(30)">
+            <img src="../images/Gamedev1/Assets (Cards)/Characters/Marga.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Marga</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(31)">
+            <img src="../images/Gamedev1/Assets (Cards)/Characters/Mary.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Mary</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(32)">
+            <img src="../images/Gamedev1/Assets (Cards)/Characters/William.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">William</h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Place)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(33)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Exhibition Hall.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Exhibition Hall</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(34)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Art Studio.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Art Studio</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(35)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Auditorium.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Auditorium</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(36)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Coffee Shop.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Coffee Shop</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(37)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Galleries.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Galleries</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(38)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Lecture Hall.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Lecture Hall</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(39)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Lobby.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Lobby</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(40)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Storage Room.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Storage Room</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(41)">
+            <img src="../images/Gamedev1/Assets (Cards)/Place/Store.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Store</h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Weapons)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(42)">
+            <img src="../images/Gamedev1/Assets (Cards)/Weapons/Knife.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Knife</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(43)">
+            <img src="../images/Gamedev1/Assets (Cards)/Weapons/Lead Pipe.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Lead Pipe</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(44)">
+            <img src="../images/Gamedev1/Assets (Cards)/Weapons/Pistol.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Pistol</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(45)">
+            <img src="../images/Gamedev1/Assets (Cards)/Weapons/Rope.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Rope</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(46)">
+            <img src="../images/Gamedev1/Assets (Cards)/Weapons/Sculpture.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Sculpture</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(47)">
+            <img src="../images/Gamedev1/Assets (Cards)/Weapons/Wrench.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Wrench</h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Other Assets
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(48)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Note Sheet.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Note Sheet</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer inline-block" onclick="openModal(49)">
+            <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Privilege Card.png" class="rounded-md mb-0 w-full" />
+            <h2 class="text-base font-semibold text-center mt-1">Privilege Card</h2>
+        </div>
+        <div class="flex flex-col space-y-4"> <!-- Parent container for vertical stacking -->
+            <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(50)">
+                <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Investigation Board.png" class="rounded-md mb-3 w-full" />
+                <h2 class="text-lg font-semibold text-center">Investigation Board</h2>
+            </div>
+            <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(51)">
+                <img src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Points.png" class="rounded-md mb-3 w-full" />
+                <h2 class="text-lg font-semibold text-center">Success/Failure Token</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50 px-[17%]">
+        <!-- Container -->
+        <div class="w-full bg-gray-800 rounded-lg shadow-xl">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+                <h2 id="modal-title" class="text-2xl font-semibold text-white">Project Title</h2>
+                <button onclick="closeModal()" class="text-white text-3xl hover:text-red-400">&times;</button>
+            </div>
+
+            <!-- Modal Image Area -->
+            <div class="relative bg-gray-900 p-6 flex items-center justify-center rounded-b-lg" style="min-height: 80vh;">
+                <!-- Left Arrow -->
+                <button onclick="prevImage()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-10">
+                    &larr;
+                </button>
+
+                <!-- Image -->
+                <img id="lightbox-img" src="" alt="Zoomed Image" class="w-full h-[75vh] object-contain rounded-md shadow-md transition duration-300" />
+
+                <!-- Right Arrow -->
+                <button onclick="nextImage()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-10">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+    </div>
+
+<?php include '../components/footer.php'; ?>
+
+
+    <!-- BACK TO TOP SCRIPT -->
+    <script>
+        // Show/Hide Back to Top Button
+        window.onscroll = function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- Modal Script -->
+    <script>
+        const images = [{
+                src: "../images/Gamedev1/1. Start.png",
+                title: "Start"
+            },
+            {
+                src: "../images/Gamedev1/2. About Us.png",
+                title: "About Us"
+            },
+            {
+                src: "../images/Gamedev1/3. Rules.png",
+                title: "Rules"
+            },
+            {
+                src: "../images/Gamedev1/3.1 Rule.png",
+                title: "Choosing a File"
+            },
+            {
+                src: "../images/Gamedev1/3.2 Rule.png",
+                title: "Rules"
+            },
+            {
+                src: "../images/Gamedev1/3.3 Rule.png",
+                title: "Rules"
+            },
+            {
+                src: "../images/Gamedev1/3.4 Rule.png",
+                title: "Rules"
+            },
+            {
+                src: "../images/Gamedev1/4. Deck_of_Cards.png",
+                title: "Cards"
+            },
+            {
+                src: "../images/Gamedev1/4.1 Artifact.png",
+                title: "Artifact"
+            },
+            {
+                src: "../images/Gamedev1/4.2 Sample_Cards.png",
+                title: "Sample Cards"
+            },
+            {
+                src: "../images/Gamedev1/4.3 Garbage.png",
+                title: "Garbage Card"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Board.png",
+                title: "Board"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C1. Back Page.png",
+                title: "Back of Card"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C1. Accomplice.png",
+                title: "Accomplice Card"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C1.1 Visitor.png",
+                title: "Visitor Card"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C2. Accomplice (Vote).png",
+                title: "Voting Cards of Accomplice"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/C2.Visitor (Vote).png",
+                title: "Voting Cards of Visitor"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 1.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 2.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 3.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 4.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 5.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 6.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 7.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 8.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 9.png",
+                title: "Chance Cards"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Chance Card 10.png",
+                title: "Chance Cards"
+            },
+
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Characters/Curator.png",
+                title: "Character: Curator"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Characters/Helen.png",
+                title: "Character: Helen"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Characters/John.png",
+                title: "Character: John"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Characters/Marga.png",
+                title: "Character: Marga"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Characters/Mary.png",
+                title: "Character: Mary"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Characters/William.png",
+                title: "Character: William"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Exhibition Hall.png",
+                title: "Place: Exhibition Hall"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Art Studio.png",
+                title: "Place: Art Studio"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Auditorium.png",
+                title: "Place: Auditorium"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Coffee Shop.png",
+                title: "Place: Coffee Shop"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Galleries.png",
+                title: "Place: Galleries"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Lecture Hall.png",
+                title: "Place: Lecture Hall"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Lobby.png",
+                title: "Place: Lobby"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Storage Room.png",
+                title: "Place: Storage Room"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Place/Store.png",
+                title: "Place: Store"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Weapons/Knife.png",
+                title: "Weapon: Knife"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Weapons/Lead Pipe.png",
+                title: "Weapon: Lead Pipe"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Weapons/Pistol.png",
+                title: "Weapon: Pistol"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Weapons/Rope.png",
+                title: "Weapon: Rope"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Weapons/Sculpture.png",
+                title: "Weapon: Sculpture"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Weapons/Wrench.png",
+                title: "Weapon: Wrench"
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Note Sheet.png",
+                title: "Note Sheet",
+                modalId: 48
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Privilege Card.png",
+                title: "Privilege Card",
+                modalId: 49
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Investigation Board.png",
+                title: "Investigation Board",
+                modalId: 50
+            },
+            {
+                src: "../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Points.png",
+                title: "Success/Failure Token",
+                modalId: 51
+            }
+        ];
+
+
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('lightbox');
+            if (!modal.classList.contains('hidden')) {
+                if (event.key === 'ArrowRight') {
+                    nextImage();
+                } else if (event.key === 'ArrowLeft') {
+                    prevImage();
+                } else if (event.key === 'Escape') {
+                    closeModal();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

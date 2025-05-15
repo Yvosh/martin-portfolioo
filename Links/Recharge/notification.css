@@ -1,0 +1,106 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #e8f5e9;
+  padding: 15px 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b5f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 20px;
+  font-size: 22px;
+  color: #3b5f1f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #A5D681;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.notification-item {
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-text {
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #000;
+}
+
+.notification-time {
+  color: #39611b;
+  font-size: 12px;
+}
+
+.unread .notification-text {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .notification-text {
+    font-size: 14px;
+  }
+
+  .notification-time {
+    font-size: 11px;
+  }
+
+  header {
+    font-size: 18px;
+    padding: 12px 10px;
+  }
+
+  .back-arrow {
+    font-size: 20px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .notification-item {
+    padding: 12px 5px;
+  }
+
+  .notification-text {
+    font-size: 13px;
+  }
+
+  .notification-time {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Contributor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="leadboard.css" />
+</head>
+<body>
+  <div class="header">
+    <a href="Dashboard.html">
+    <i class="fas fa-chevron-left icon" style="color: #2e7d32;"></i>
+</a>
+
+    <div class="header-title">Top Contributor</div>
+    <div>
+        <i class="fas fa-bell icon" style="color: #2e7d32;" onclick="toggleDropdown()"></i>
+        <div class="dropdown" id="notificationDropdown">
+            <div class="dropdown-header">
+              <a href="notification.html" class="see-all-link">See All Notifications...</a>
+            </div>
+            <div class="notification-entry">
+                <span class="notification-item">John Doe liked your post</span>
+                <span class="notification-days">2 minutes ago</span>
+              </div>              
+          </div>
+    </div>
+  </div>
+  <div class="top-box">
+    <div class="contributor-wrapper">
+      <div class="contributor-box contributor-left">
+        <div class="star">    </div>
+        <div class="badge">2</div>
+        <div class="contributor-content">John Doe 2<br></div>
+        <span class="contributor-ranks">600</span>
+      </div>
+      <div class="contributor-box contributor-center">
+        <div class="star">    </div>
+            <div class="badge">1</div>
+            <div class="contributor-content">John Doe 1<br></div>
+            <span class="contributor-ranks">1000 pts</span>
+        </div>
+      <div class="contributor-box contributor-right">
+        <div class="star">    </div>
+            <div class="badge">3</div>
+        <div class="contributor-content">John Doe 3<br></div>
+        <span class="contributor-ranks">400 pts</span>
+      </div>
+    </div>
+  </div>
+  <div class="other-box">
+    <h3>Other Contributors</h3>
+    <div class="other-contributor">
+      <span class="contributor-rank">4</span>
+      <span class="contributor-name">Name 1</span>
+      <span class="contributor-points">120 pts</span>
+    </div>
+    <div class="other-contributor">
+      <span class="contributor-rank">5</span>
+      <span class="contributor-name">Name 2</span>
+      <span class="contributor-points">100 pts</span>
+    </div>
+    <div class="other-contributor">
+      <span class="contributor-rank">6</span>
+      <span class="contributor-name">Name 3</span>
+      <span class="contributor-points">90 pts</span>
+    </div>
+  </div>
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('notificationDropdown');
+      dropdown.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

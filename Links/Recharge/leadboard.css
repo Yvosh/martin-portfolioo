@@ -1,0 +1,400 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #e8f5e9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b5f1f;
+}
+
+.icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 60%;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.dropdown-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 10px;
+  }
+  
+  .notification-entry {
+    display: flex;
+    flex-direction: column;  /* Stack the items vertically */
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif;
+  }
+  
+  .notification-item {
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .notification-days {
+    font-size: 12px;
+    color: gray;
+    margin-top: 3px; 
+  }
+  
+  
+  .see-all-link {
+    font-size: 13px;
+    color: #6FB03C;
+    text-decoration: none;
+  }
+  
+  .see-all-link:hover {
+    text-decoration: underline;
+  }
+/* Top contributor section */
+.top-box {
+    background-color: #6FB03C;
+    padding: 40px 20px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contributor-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.contributor-box {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 110px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+}
+
+.contributor-center {
+    width: 140px;
+    height: 200px;
+    z-index: 1;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Badge styling */
+.contributor-left,
+.contributor-center,
+.contributor-right {
+    position: relative;
+}
+
+/* Shared styling for the star */
+.star {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 50px;
+    width: 50px;
+    background: #FFD700;
+    text-align: left;
+    transform: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.star:before,
+.star:after {
+    content: "";
+    position: absolute;
+    background: #FFD700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.star:before {
+    height: 50px;
+    width: 50px;
+    transform: rotate(-30deg);
+}
+
+.star:after {
+    height: 50px;
+    width: 50px;
+    transform: rotate(30deg);
+}
+
+/* Smaller stars for left and right contributors */
+.contributor-left .star {
+    height: 30px;
+    width: 30px;
+    top: -10px;
+    right: -10px;
+    background: #C0C0C0;
+}
+
+.contributor-right .star {
+    height: 30px;
+    width: 30px;
+    top: -10px;
+    right: -10px;
+    background: #CD7F32;
+    /* Bronze */
+}
+
+.contributor-left .star:before {
+    height: 30px;
+    width: 30px;
+    background-color: #C0C0C0;
+    /* Silver for left, override bronze below */
+}
+
+.contributor-right .star:before {
+    height: 30px;
+    width: 30px;
+    background-color: #CD7F32;
+    /* Silver for left, override bronze below */
+}
+
+.contributor-left .star:after {
+    height: 30px;
+    width: 30px;
+
+    background: #C0C0C0;
+}
+
+.contributor-right .star:after {
+    height: 30px;
+    width: 30px;
+    background: #CD7F32;
+}
+
+/* Badge positioning */
+.badge {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px white;
+    z-index: 2;
+}
+
+.contributor-center .badge {
+    background-color: #FFD700;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.contributor-left .badge,
+.contributor-right .badge {
+    background-color: #C0C0C0;
+    /* Silver for left, override bronze below */
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.contributor-right .badge {
+    background-color: #CD7F32;
+    /* Bronze */
+}
+
+
+.contributor-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #6FB03C;
+}
+
+.contributor-content span {
+    font-weight: normal;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.contributor-ranks {
+    font-weight: normal;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #6FB03C;
+}
+
+.contributor-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Other contributors */
+.other-box {
+    background-color: #A5D681;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.other-contributor {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contributor-rank {
+    font-weight: bold;
+    width: 20px;
+    color: #6FB03C;
+}
+
+.contributor-name {
+    flex: 1;
+}
+
+.contributor-points {
+    font-weight: normal;
+    color: #6FB03C;
+}
+
+/* Ensure the contributor wrapper always stays in a row layout */
+.contributor-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-wrap: nowrap;
+    /* Prevent wrapping of boxes */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Phones and smaller screens */
+@media (max-width: 600px) {
+    .contributor-wrapper {
+        flex-direction: row;
+        /* Ensure horizontal layout on small screens */
+        justify-content: space-between;
+        /* Space out the boxes */
+    }
+
+    .contributor-box {
+        width: 80%;
+        /* Increase width on smaller screens */
+        height: 100px;
+        /* Adjust height */
+        margin-bottom: 15px;
+        /* Add space between boxes */
+    }
+
+    .contributor-center {
+        width: 90%;
+        /* Make the center box responsive */
+        height: 150px;
+    }
+
+    .badge {
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        top: -6px;
+        right: -6px;
+    }
+}
+
+/* Tablets and up */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contributor-box {
+        width: 120px;
+        /* Set a medium size for tablets */
+        height: 140px;
+    }
+
+    .contributor-center {
+        width: 160px;
+        /* Make the center box larger */
+        height: 180px;
+    }
+}
+
+/* Laptops and large screens */
+@media (min-width: 1025px) {
+    .contributor-wrapper {
+        flex-direction: row;
+        /* Horizontal layout for larger screens */
+    }
+
+    .contributor-box {
+        width: 110px;
+        /* Default width */
+        height: 120px;
+    }
+
+    .contributor-center {
+        width: 140px;
+        /* Center box stays bigger */
+        height: 200px;
+    }
+}

@@ -1,0 +1,394 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Ungu Studio Blue 3D Centered</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: black;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem 4rem;
+      color: white;
+      user-select: none;
+    }
+    /* Grid background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(rgba(23, 139, 171, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 139, 171, 0.15) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+      pointer-events: none;
+    }
+    /* Brush purple top-left */
+    .brush-purple {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at top left, #7f3fbf88, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      mix-blend-mode: screen;
+    }
+    /* Brush blue bottom-right */
+    .brush-blue {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at bottom right, #3b82f688, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      mix-blend-mode: screen;
+    }
+    /* Coding logos background */
+    .logos-background {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 120vw;
+      height: 120vh;
+      transform: translate(-50%, -50%);
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: 120px;
+      gap: 40px;
+      opacity: 0.07;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+    .logos-background img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 1px rgba(23, 139, 171, 0.5));
+      mix-blend-mode: screen;
+      justify-self: center;
+      align-self: center;
+    }
+    /* 3D blue-purple gradient icon container */
+    .icon-3d {
+      width: 180px;
+      height: 180px;
+      border-radius: 1rem;
+      background: linear-gradient(145deg, #178bab, #6a3ea1);
+      box-shadow: 8px 8px 15px #0f4f66, -8px -8px 15px #3a7ea1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 5px 5px rgba(23, 139, 171, 0.4));
+      margin-bottom: 1.5rem;
+      z-index: 10;
+    }
+    /* Inner white code brackets 3D */
+    .icon-3d svg {
+      width: 90px;
+      height: 90px;
+      filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+    }
+    /* Text container */
+    .content-wrapper {
+      position: relative;
+      z-index: 10;
+      max-width: 320px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .title {
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      font-size: 1.125rem;
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+    }
+    .role {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #a0d8f7;
+      margin-top: 0.5rem;
+      font-style: bolder;
+      white-space: nowrap;
+    }
+    /* Logos below content - styled as subtle background design */
+    .logos-below {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: 120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      opacity: 0.12;
+      filter: grayscale(60%) brightness(1.2);
+      pointer-events: none;
+      user-select: none;
+      z-index: 5;
+    }
+    .logos-below img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      mix-blend-mode: screen;
+      transition: none;
+      filter: drop-shadow(0 0 2px rgba(23, 139, 171, 0.3));
+      cursor: default;
+    }
+    @media (max-width: 480px) {
+      .icon-3d {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 1rem;
+      }
+      .icon-3d svg {
+        width: 70px;
+        height: 70px;
+      }
+      .title {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .content-wrapper {
+        max-width: 90vw;
+      }
+      .logos-below {
+        gap: 2rem;
+        height: 90px;
+      }
+      .logos-below img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.title {
+  font-size: 2.5rem; /* adjust size as needed */
+  font-weight: normal; /* Anton is already bold */
+  white-space: nowrap; /* keep on one line */
+}
+
+.front-end {
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+
+.developer {
+  font-family: 'Anton', sans-serif;
+  background: linear-gradient(90deg, #007CF0, #00DFD8); /* blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.icon-image {
+  width: 304px;
+  height: 304px;
+  object-fit: contain; /* or 'cover' depending on your design */
+  z-index:1;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="brush-purple"></div>
+  <div class="brush-blue"></div> <br><br>
+  <!-- <div aria-label="3D blue and purple rounded square with white code brackets icon" class="icon-3d"> -->
+<img src="../images/logos.png" alt="Logo" class="icon-image" />
+
+  <!-- </div> -->
+  <main class="content-wrapper">
+<h1 class="title">
+  <span class="front-end">Front-End</span> <span class="developer">Developer</span>
+</h1>
+    <p class="subtitle">Web Design and Graphic Designer</p>
+    <p class="role">Front-End - Yvosh</p>
+  </main>
+  <section class="logos-below" aria-label="Subtle coding logos background design below content">
+    <img
+      alt="JavaScript logo stylized text JS in blue background"
+      src="https://storage.googleapis.com/a1aa/image/c1acd34f-bb65-4828-f9f0-f145f12f4ed2.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="HTML5 logo stylized text HTML5 in purple background"
+      src="https://storage.googleapis.com/a1aa/image/8269c8a0-4063-4aed-57f8-511295191217.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="CSS3 logo stylized text CSS3 in blue background"
+      src="https://storage.googleapis.com/a1aa/image/d46397b1-2f3e-44a0-a641-f91fffdf164a.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="React logo stylized text React in purple background"
+      src="https://storage.googleapis.com/a1aa/image/184128c9-9b6d-40a9-f216-4c1b2fedbdb5.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="Node.js logo stylized text Node in blue background"
+      src="https://storage.googleapis.com/a1aa/image/2baf6e54-2940-443d-3228-2bc487cae7ce.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="Vue.js logo stylized text Vue in purple background"
+      src="https://storage.googleapis.com/a1aa/image/c907aabf-9089-4c19-b520-da978e4b49c0.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="Git logo stylized text Git in blue background"
+      src="https://storage.googleapis.com/a1aa/image/4a9f03ac-f296-4bee-0c0e-60d989d827db.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+    <img
+      alt="TypeScript logo stylized text TS in purple background"
+      src="https://storage.googleapis.com/a1aa/image/4195ad17-c070-492a-1bd4-a2800c849b30.jpg"
+      width="60"
+      height="60"
+      loading="lazy"
+    />
+  </section>
+  <div aria-hidden="true" class="logos-background">
+    <img
+      alt="JavaScript logo stylized text JS in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/c1acd34f-bb65-4828-f9f0-f145f12f4ed2.jpg"
+      width="80"
+    />
+    <img
+      alt="HTML5 logo stylized text HTML5 in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/8269c8a0-4063-4aed-57f8-511295191217.jpg"
+      width="80"
+    />
+    <img
+      alt="CSS3 logo stylized text CSS3 in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/d46397b1-2f3e-44a0-a641-f91fffdf164a.jpg"
+      width="80"
+    />
+    <img
+      alt="React logo stylized text React in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/184128c9-9b6d-40a9-f216-4c1b2fedbdb5.jpg"
+      width="80"
+    />
+    <img
+      alt="Node.js logo stylized text Node in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/2baf6e54-2940-443d-3228-2bc487cae7ce.jpg"
+      width="80"
+    />
+    <img
+      alt="Vue.js logo stylized text Vue in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/c907aabf-9089-4c19-b520-da978e4b49c0.jpg"
+      width="80"
+    />
+    <img
+      alt="Git logo stylized text Git in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/4a9f03ac-f296-4bee-0c0e-60d989d827db.jpg"
+      width="80"
+    />
+    <img
+      alt="TypeScript logo stylized text TS in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/4195ad17-c070-492a-1bd4-a2800c849b30.jpg"
+      width="80"
+    />
+    <img
+      alt="JavaScript logo stylized text JS in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/c1acd34f-bb65-4828-f9f0-f145f12f4ed2.jpg"
+      width="80"
+    />
+    <img
+      alt="HTML5 logo stylized text HTML5 in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/8269c8a0-4063-4aed-57f8-511295191217.jpg"
+      width="80"
+    />
+    <img
+      alt="CSS3 logo stylized text CSS3 in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/d46397b1-2f3e-44a0-a641-f91fffdf164a.jpg"
+      width="80"
+    />
+    <img
+      alt="React logo stylized text React in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/184128c9-9b6d-40a9-f216-4c1b2fedbdb5.jpg"
+      width="80"
+    />
+    <img
+      alt="Node.js logo stylized text Node in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/2baf6e54-2940-443d-3228-2bc487cae7ce.jpg"
+      width="80"
+    />
+    <img
+      alt="Vue.js logo stylized text Vue in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/c907aabf-9089-4c19-b520-da978e4b49c0.jpg"
+      width="80"
+    />
+    <img
+      alt="Git logo stylized text Git in blue background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/4a9f03ac-f296-4bee-0c0e-60d989d827db.jpg"
+      width="80"
+    />
+    <img
+      alt="TypeScript logo stylized text TS in purple background"
+      height="80"
+      src="https://storage.googleapis.com/a1aa/image/4195ad17-c070-492a-1bd4-a2800c849b30.jpg"
+      width="80"
+    />
+  </div>
+</body>
+</html>

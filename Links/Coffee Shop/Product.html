@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+  <style>
+    .edit-buttons {
+        background-color: #733E30; /* Button background color */
+        border: none; /* Remove border */
+        padding: 5px 10px; /* Add some padding for better button size */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    .edit-buttons i {
+        color: white; /* Icon color */
+    }
+
+    .edit-buttons:hover {
+        opacity: 0.8; /* Slight opacity change on hover */
+    }
+</style>
+  <div class="sidebar">
+    <img src = "logo.png" class = "logo">
+    <ul>
+        <li><a href="#home"><i class="fa fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#home"><i class="fa fa-warehouse"></i> Inventory</a></li>
+        <li><a href="#home"><i class="fa fa-utensils"></i> Menu</a></li>
+        <li><a href="#home"><i class="fa fa-receipt"></i> Orders</a></li>
+        <li><a href="#home"><i class="fa fa-users"></i> Customers</a></li>
+        <li><a href="#home"><i class="fa fa-chart-line"></i> Analytics and Reports</a></li>
+        <li><a class="active" href="#home"><i class="fa fa-box-open"></i> Product Management</a></li>
+        <li><a href="#home"><i class="fa fa-truck"></i> Supply Management</a></li>
+      </ul>
+      
+      <ul class="setting">
+        <hr>
+        <li><a href="#home"><i class="fa fa-cog"></i> Settings</a></li>
+        <li><a href="#home"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+      </ul>      
+  </div>
+
+  <div class="main">
+    <div class="topbar">Product Management</div>
+
+    <div class="white-box">
+      <div class="tabss">
+        <div class="tabs-left">
+          <a class="active" href="Product.html">Product</a>
+          <a href="Categories.html">Categories</a>
+        </div>
+        <div class="tabs-right">
+          <button class="add-product-btn"><i class="fas fa-plus"></i> Add Product </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-filter">
+        <p class="search-label">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="      Search products...">
+        </p>
+          
+      <button><i class="fas fa-filter"></i> Filter</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Id</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Status</th>
+          <th>Category</th>
+          <th style="width: 300px;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sample Product</td>
+          <td>#001</td>
+          <td>₱10.00</td>
+          <td>100</td>
+          <td>Available</td>
+          <td>Snacks</td>
+          <td class="action-buttons">
+            <button class="edit-button"><i class="fas fa-edit"></i></button>
+            <button class="view-variants-button"><i class="fas fa-eye"></i> View Variants</button>
+          </td>
+        </tr>
+        <tr>
+            <td>Sample Product</td>
+            <td>#002</td>
+            <td>₱10.00</td>
+            <td>100</td>
+            <td>Available</td>
+            <td>Snacks</td>
+            <td class="action-buttons">
+              <button class="edit-button"><i class="fas fa-edit"></i></button>
+              <button class="view-variants-button"><i class="fas fa-eye"></i> View Variants</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Sample Product</td>
+            <td>#003</td>
+            <td>₱10.00</td>
+            <td>100</td>
+            <td>Available</td>
+            <td>Snacks</td>
+            <td class="action-buttons">
+              <button class="edit-button"><i class="fas fa-edit"></i></button>
+              <button class="view-variants-button"><i class="fas fa-eye"></i> View Variants</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Sample Product</td>
+            <td>#004</td>
+            <td>₱10.00</td>
+            <td>100</td>
+            <td>Available</td>
+            <td>Snacks</td>
+            <td class="action-buttons">
+              <button class="edit-button"><i class="fas fa-edit"></i></button>
+              <button class="view-variants-button"><i class="fas fa-eye"></i> View Variants</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Sample Product</td>
+            <td>#005</td>
+            <td>₱10.00</td>
+            <td>100</td>
+            <td>Available</td>
+            <td>Snacks</td>
+            <td class="action-buttons">
+              <button class="edit-button"><i class="fas fa-edit"></i></button>
+              <button class="view-variants-button"><i class="fas fa-eye"></i> View Variants</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button>&lt;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>&gt;</button>
+    </div>
+  </div>
+
+  <!-- EDIT VARIANT MODAL -->
+  <div id="editModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 1200px; padding: 20px; color: #733E30;">
+  
+      <!-- Top Header with Back Button -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+        <button  class="close"style="background-color: #733E30; border-radius: 5px; color: white; border: none; padding: 8px 16px; cursor: pointer;">&lt; Back</button>
+      </div>
+  
+      <!-- Breadcrumb -->
+      <div style="margin-bottom: 10px; font-size: 14px; color: gray;">
+        Products &gt; Add New Products &gt; <span style="font-weight: bold; color: #733E30;">Basic Information</span>
+      </div>
+  
+      <!-- Page Title -->
+      <h2 style="margin-bottom: 20px;">Edit Product</h2>
+  
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active">Basic Information</button>
+        <button class="tab">Variant Information</button>
+        <button class="tab" style="margin-left: auto; background: red; color: white; border-radius: 4px; padding: 8px 16px; margin-bottom: 5px;">Delete Variant</button>
+      </div>
+      <div id="basicInfoContent">
+      <!-- Form Group with Left & Right Columns -->
+      <div class="form-group">
+        
+        <!-- Left Column -->
+        <div class="left-column">
+          <!-- Row 1 -->
+          <div class="form-row">
+            <div class="form-field">
+              <label>Product Name</label>
+              <input type="text" />
+            </div>
+            <div class="form-field">
+              <label>Status</label>
+              <input type="text" />
+            </div>
+          </div>
+  
+          <!-- Row 2 -->
+          <div class="form-row">
+            <div class="form-field">
+              <label>Price</label>
+              <input type="text" />
+            </div>
+            <div class="form-field">
+              <label>Stock</label>
+              <input type="text" />
+            </div>
+            <div class="form-field">
+              <label>Product ID</label>
+              <input type="text" />
+            </div>
+            <div class="form-field">
+              <label>Category</label>
+              <input type="text" />
+            </div>
+          </div>
+  
+          <!-- Description Row -->
+          <div class="form-row">
+            <div class="form-field full-width">
+              <label>Description</label>
+              <textarea></textarea>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right Column (Image Upload) -->
+        <div class="right-column">
+          <label>Product Image</label>
+          <div class="upload-box">
+            <i class="fas fa-upload"></i>
+            <p>Drag image here</p>
+            <input type="file" />
+          </div>
+          <div class="image-thumbnails">
+            <div class="upload-box thumbnail">
+              <i class="fas fa-image"></i>
+              <p style="font-size: 12px; color: #999;">Drag Image</p>
+              <input type="file" />
+            </div>
+            <div class="upload-box thumbnail">
+              <i class="fas fa-image"></i>
+              <p style="font-size: 12px; color: #999;">Drag Image</p>
+              <input type="file" />
+            </div>
+            <div class="upload-box thumbnail">
+              <i class="fas fa-image"></i>
+              <p style="font-size: 12px; color: #999;">Drag Image</p>
+              <input type="file" />
+            </div>
+
+      <!-- Action Buttons -->
+      <div class="form-buttons" style="display: flex; gap: 10px; justify-content: flex-start; margin-top: 100px;">
+        <button class="add-button" style="background: #4CAF50; color: white; padding: 12px 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-left: 50px;">
+          Add New Product
+        </button>
+        <button class="discard-button" style="background: #888; color: white; padding: 12px 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">
+          Discard Changes
+        </button>
+      </div>
+         
+    </div>
+  </div>
+  </div>
+  </div>
+<!-- Variant Info Content (Initially Hidden) -->
+<div id="variantInfoContent" style="display: none; width: 100%;">
+
+  <!-- Variant Box Container -->
+  <div id="variantContainer" style="margin-top: 20px;">
+
+    <!-- Variant Box Template -->
+    <div class="variant-box" style="border-radius: 10px; padding: 20px; position: relative; width: 100%; box-sizing: border-box;">
+
+      <!-- Row for Titles -->
+      <div style="display: flex; justify-content: space-between; margin-bottom: 10px; gap: 10px;">
+        <div style="flex: 1;"><label>Variant Name</label></div>
+        <div style="flex: 1;"><label>Variant ID</label></div>
+        <div style="flex: 1;"><label>Price</label></div>
+        <div style="flex: 1;"><label>Stock</label></div>
+        <div style="flex: 1;"><label>Status</label></div>
+      </div>
+
+      <!-- Row for Inputs -->
+      <div style="display: flex; justify-content: space-between; gap: 10px;">
+        <div style="flex: 1;">
+          <input type="text" placeholder="Enter Variant Name" style="width: 100%; padding: 8px; background-color:#F0F0F0; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        <div style="flex: 1;">
+          <input type="text" placeholder="Enter Variant ID" style="width: 100%; padding: 8px; background-color:#F0F0F0; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        <div style="flex: 1;">
+          <input type="text" placeholder="Enter Price" style="width: 100%; padding: 8px; background-color:#F0F0F0; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        <div style="flex: 1;">
+          <input type="text" placeholder="Enter Stock" style="width: 100%; padding: 8px; background-color:#F0F0F0; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        <div style="flex: 1;">
+          <input type="text" placeholder="Enter Status" style="width: 100%; padding: 8px; background-color:#F0F0F0; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+      </div> <!-- Close Input Row -->
+
+    </div> <!-- Close .variant-box -->
+
+  </div> <!-- Close #variantContainer -->
+
+  <!-- Add Variant Button -->
+  <button style="margin-top: 20px; background: #ccc; color: #333; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer;">
+    <i class="fas fa-plus"></i> Add Variant
+  </button>
+
+  <!-- Action Buttons -->
+  <div class="form-buttons" style="display: flex; gap: 10px; justify-content: flex-start;">
+    <button class="add-button" style="background: #4CAF50; color: white; padding: 12px 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-left: 50px;">
+      Add New Product
+    </button>
+    <button class="discard-button" style="background: #888; color: white; padding: 12px 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">
+      Discard Changes
+    </button>
+  </div>
+
+</div> <!-- Close #variantInfoContent -->
+
+  
+  
+        <!-- Modal Overlay for View Variants -->
+<div id="viewVariantsModal" class="modal-overlay">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <button class="back-button" onclick="closeViewVariantsModal()">← Back</button>
+      <div class="breadcrumb">
+        Products &gt; Classic Brews &gt; <span class="current">Variants</span>
+      </div>
+    </div>
+
+    <h2 class="modal-title">Classic Brew</h2>
+
+    <!-- Search Bar -->
+    <div class="search-filter">
+      <p class="search-label">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="      Search products...">
+      </p>
+        
+    <button><i class="fas fa-filter"></i> Filter</button>
+  </div>
+
+    <!-- Table -->
+    <table class="variants-table">
+      <thead>
+        <tr>
+          <th>Variant</th>
+          <th>Variant ID</th>
+          <th>Product ID</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Espresso</td>
+          <td>V001</td>
+          <td>P001</td>
+          <td>₱5.00</td>
+          <td>120</td>
+          <td><i class="fas fa-check-circle" style="color: green;"></i> <span style="color: inherit;">Active</span></td>
+          <td style="width: 100px;"><button class="edit-buttons"><i class="fas fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>Espresso</td>
+          <td>V001</td>
+          <td>P001</td>
+          <td>₱5.00</td>
+          <td>120</td>
+          <td><i class="fas fa-check-circle" style="color: green;"></i> <span style="color: inherit;">Active</span></td>
+          <td style="width: 100px;"><button class="edit-buttons"><i class="fas fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>Espresso</td>
+          <td>V001</td>
+          <td>P001</td>
+          <td>₱5.00</td>
+          <td>120</td>
+          <td><i class="fas fa-check-circle" style="color: green;"></i> <span style="color: inherit;">Active</span></td>
+          <td style="width: 100px;"><button class="edit-buttons"><i class="fas fa-edit"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Footer -->
+    <div class="modal-footer">
+      <div class="results">
+        Results per page:
+        <select>
+          <option>3</option>
+          <option>5</option>
+          <option>10</option>
+        </select>
+      </div>
+      <div class="pagination">
+        <button>&lt;</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>&gt;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- ADD PRODUCT -->
+<div id="addProductModal" class="modal-overlay">
+  <div class="modal-content">
+    
+    <button class="back-buttons"><i class="fas fa-chevron-left"></i> Back</button>
+
+    <div class="breadcrumb">
+      Products &gt; Add New Product &gt; <span class="current">Basic Information</span>
+    </div>
+
+    <h2 class="modal-title">Add New Product</h2>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('basic')">
+        <i class="fas fa-info-circle"></i> Basic Information
+      </button>
+      <button class="tab" onclick="switchTab('variant')">
+        <i class="fas fa-boxes"></i> Variant Information
+      </button>
+    </div>
+
+    <div class="tab-content" id="tab-basic">
+      <div class="form-group">
+        <!-- Left Form Section -->
+        <div class="left-column">
+          
+          <!-- Row 1: Product Name + Status -->
+          <div class="form-row">
+            <div class="form-field">
+              <label>Product Name</label>
+              <input type="text" placeholder="Enter product name">
+            </div>
+            <div class="form-field">
+              <label>Status</label>
+              <select>
+                <option selected>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+          </div>
+      
+          <!-- Row 2: Price, Stock, Product ID, Category -->
+          <div class="form-row">
+            <div class="form-field">
+              <label>Price</label>
+              <input type="text" placeholder="PHP">
+            </div>
+            <div class="form-field">
+              <label>Stock</label>
+              <input type="number" placeholder="0">
+            </div>
+            <div class="form-field">
+              <label>Product ID</label>
+              <input type="text" placeholder="#000">
+            </div>
+            <div class="form-field">
+              <label>Category</label>
+              <select>
+                <option>Coffee</option>
+                <option>Tea</option>
+                <option>Snacks</option>
+              </select>
+            </div>
+          </div>
+      
+          <!-- Row 3: Description -->
+          <div class="form-row">
+            <div class="form-field full-width">
+              <label>Description</label>
+              <textarea placeholder="Write a brief description..."></textarea>
+            </div>
+          </div>
+          
+        </div>
+      
+        <!-- Right Image Upload Section -->
+        <div class="right-column">
+          <label>Product Image</label>
+          <div class="image-upload">
+            <div class="upload-box">
+              <i class="fas fa-image"></i>
+              <p>Upload or Drop Image Here</p>
+              <input type="file" onchange="previewImage(event)">
+            </div>
+        
+            <!-- Preview Thumbnails -->
+            <div class="image-thumbnails" id="imagePreviews">
+              <img src="img1.jpg" alt="Preview 1" class="thumbnail">
+              <img src="img2.jpg" alt="Preview 2" class="thumbnail">
+              <img src="img2.jpg" alt="Preview 2" class="thumbnail"> 
+            </div>
+          </div>
+        
+          
+      <div class="form-buttons">
+        <button id="addProductButton" class="add-button">Add New Product</button>
+        <button class="discard-button" onclick="closeModal()">Discard Changes</button>
+      </div>
+    </div>
+
+    <!-- Placeholder for variant tab -->
+    <div class="tab-content" id="tab-variant" style="display: none;">
+      <p>Variant Info content goes here...</p>
+    </div>
+        </div>
+      </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("addProductModal");
+  const addProductBtn = document.querySelector(".add-product-btn"); // use a unique class
+  const backBtn = document.querySelector(".back-buttons");
+
+  if (addProductBtn && modal && backBtn) {
+    addProductBtn.addEventListener("click", () => {
+      console.log("Add Product button clicked");
+      modal.style.display = "flex";
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    backBtn.addEventListener("click", closeModal);
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  } else {
+    console.error("Missing Add Product elements");
+  }
+});
+
+
+  const viewVariantsBtns = document.querySelectorAll(".view-variants-button");
+const variantsModal = document.getElementById("viewVariantsModal");
+const backBtnVariants = document.querySelector(".back-button");
+
+
+
+viewVariantsBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    variantsModal.style.display = "flex";
+  });
+});
+
+function closeVariantsModal() {
+  variantsModal.style.display = "none";
+}
+
+backBtnVariants.addEventListener("click", closeVariantsModal);
+
+// Optional: Close modal when clicking outside
+window.addEventListener("click", (e) => {
+  if (e.target === variantsModal) {
+    closeVariantsModal();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the modal element
+  const editModal = document.getElementById("editModal");
+
+  // Get the edit button that opens the modal
+  const editButton = document.querySelector(".edit-button");
+
+  // Get the close button inside the modal
+  const closeBtn = editModal.querySelector(".close");
+
+  // Open the modal when the edit button is clicked
+  if (editButton && editModal && closeBtn) {
+    editButton.addEventListener("click", () => {
+      console.log("Edit button clicked");
+      editModal.style.display = "flex"; // Show the modal
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener("click", () => {
+      editModal.style.display = "none"; // Hide the modal
+    });
+
+    // Close the modal when clicking outside of it
+    window.addEventListener("click", (e) => {
+      if (e.target === editModal) {
+        editModal.style.display = "none"; // Hide the modal
+      }
+    });
+  } else {
+    console.error("Missing elements for Edit Modal");
+  }
+});
+
+
+    const tabs = document.querySelectorAll('.tab');
+    const basicInfoContent = document.getElementById('basicInfoContent');
+    const variantInfoContent = document.getElementById('variantInfoContent');
+  
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+  
+        if (tab.textContent.trim() === 'Basic Information') {
+          basicInfoContent.style.display = 'block';
+          variantInfoContent.style.display = 'none';
+        } else if (tab.textContent.trim() === 'Variant Information') {
+          basicInfoContent.style.display = 'none';
+          variantInfoContent.style.display = 'block';
+        }
+      });
+    });
+
+</script>
+
+</body>
+</html>

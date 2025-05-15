@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Work Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body class="font-sans">
+    <?php include '../components/header_project.php'; ?>
+
+    <!-- MAIN CONTENT -->
+    <section class="px-[5%] p-6 bg-gray-900 rounded-xl shadow-lg mt-8 ml-10 mr-10">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+            <!-- Left: Main Image -->
+            <div class="flex-shrink-0 w-full md:w-1/2">
+                <img src="../images/Gamedev2/1. Start.png" alt="Main Project" class="rounded-lg w-full shadow-md" />
+            </div>
+            <!-- Right: Description + Button -->
+            <div class="w-full md:w-1/2 text-left">
+                <h1 class="text-3xl font-bold mb-4">Arboresque: Vengeance Quest</h1>
+                <p class="text-gray-740 mb-5"><strong>Role: UI/UX and Graphic Designer</strong><br /></p>
+                <p class="text-gray-300 mb-4">
+                    Category: Cross-platform game available on both mobile and PC<br />
+                    Status: Completed<br />
+                    Client: N/A<br />
+                    Platform: Canva and Other AI Generator<br> <br>
+                    Contribution: Designed our TTRPG game, including all assets such as the layout, main menu, pause screen, character cards, monster cards, weapon cards, and other cards, while ensuring the overall design was aesthetically pleasing and user-friendly. <br> <br>
+                    Game Flow: Choose your path, manage your move points wisely, battle monsters, and progress through the story to reach the end!
+                </p>      
+                <p class="text-gray-740 mb-5"><strong>For more pictures and a video demo of the game, click the button below:</strong><br /></p>          
+                <a href="https://drive.google.com/drive/folders/1-JA5UjrflKJfWOLpooPCIZ2NNYe_9P2a" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-full transition">
+                    Click here
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Game UI/UX (Companion App)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(0)">
+            <img src="../images/Gamedev2/1. Menu.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Menu</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(1)">
+            <img src="../images/Gamedev2/1. Start.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Start</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(2)">
+            <img src="../images/Gamedev2/2. Lore.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Lore</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(3)">
+            <img src="../images/Gamedev2/3. Choose_a_Character.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Choose a Character </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(4)">
+            <img src="../images/Gamedev2/4. Character1.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Character</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(5)">
+            <img src="../images/Gamedev2/4.1 Character_Stats.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Character Status</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(6)">
+            <img src="../images/Gamedev2/4.2 Choose_a_Story (Levels).png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Choose a Story </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(7)">
+            <img src="../images/Gamedev2/5. Sample_Picking Cards.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Sample Picking Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(8)">
+            <img src="../images/Gamedev2/5.1 Choosing a Weapon.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Choosing a Weapon </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(9)">
+            <img src="../images/Gamedev2/5.2 Attacking.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Attacking</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(10)">
+            <img src="../images/Gamedev2/6. Character_Talking.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Character Talking</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(11)">
+            <img src="../images/Gamedev2/6.1 Sample_Choices.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Choices (Sample)</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(12)">
+            <img src="../images/Gamedev2/6.2 Sample_Choices2.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center"> Choices (Sample) </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(13)">
+            <img src="../images/Gamedev2/6.3 Sample_Choices3_Touch_it.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center"> Choices (Sample) </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(14)">
+            <img src="../images/Gamedev2/6.4 Sample_Choices3.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center"> Choices (Sample) </h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(15)">
+            <img src="../images/Gamedev2/6.5 Sample_Choices4.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center"> Choices (Sample) </h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Advantage and Disadvantage Cards)
+    </p>
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- GALLERY SECTION -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(16)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/1 Back Page.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Back of the Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(17)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/2.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Advantage Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(18)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/3.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Advantage Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(19)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/4.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Advantage Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(20)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/5.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Advantage Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(21)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/6.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Advantage Card</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(22)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/7.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Disadvantage Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(23)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/8.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Disadvantage Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(24)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/9.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Disadvantage Cards</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(25)">
+            <img src="../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/10.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Disadvantage Cards</h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Attacks)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(26)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/ARKHOSIANS - SORCERER.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Sample Back Cover (Arkhosians-Sorcerer)</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(27)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/MIRAGE - SHADOWS.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Sample Back Cover (Mirage-Shadows)</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(28)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/ABLAZE.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Ablaze</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(29)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/AMETHYST WAND.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Amethyst Wand</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(30)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/BLINDING WINGS ARMOR.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Blinding Wings Armor</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(31)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/BOW.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">BOW</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(32)">
+            <img src="../images/Gamedev2/Assets (Cards)/Attacks/CLEANSE.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Cleanse</h2>
+        </div>
+    </section>
+
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Assets (Monsters)
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(33)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/1.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Earth Back Cover</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(34)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/2.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Guardian Back Cover</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(35)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/5.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Ice Back Cover</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(36)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/9.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Easy</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(37)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/11.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Easy</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(38)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/10.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Medium</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(39)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/17.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Medium</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(40)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/15.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Hard</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(41)">
+            <img src="../images/Gamedev2/Assets (Cards)/Monsters/30.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Hard</h2>
+        </div>
+    </section>
+    <!-- MODAL -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50 px-[17%]">
+        <!-- Container -->
+        <div class="w-full bg-gray-800 rounded-lg shadow-xl">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+                <h2 id="modal-title" class="text-2xl font-semibold text-white">Project Title</h2>
+                <button onclick="closeModal()" class="text-white text-3xl hover:text-red-400">&times;</button>
+            </div>
+
+            <!-- Modal Image Area -->
+            <div class="relative bg-gray-900 p-6 flex items-center justify-center rounded-b-lg" style="min-height: 80vh;">
+                <!-- Left Arrow -->
+                <button onclick="prevImage()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-10">
+                    &larr;
+                </button>
+
+                <!-- Image -->
+                <img id="lightbox-img" src="" alt="Zoomed Image" class="w-full h-[75vh] object-contain rounded-md shadow-md transition duration-300" />
+
+                <!-- Right Arrow -->
+                <button onclick="nextImage()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-10">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+    </div>
+
+<?php include '../components/footer.php'; ?>
+
+    <!-- BACK TO TOP SCRIPT -->
+    <script>
+        // Show/Hide Back to Top Button
+        window.onscroll = function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- Modal Script -->
+    <script>
+        const images = [{
+                src: "../images/Gamedev2/1. Menu.png",
+                title: "Menu"
+            },
+            {
+                src: "../images/Gamedev2/1. Start.png",
+                title: "Start"
+            },
+            {
+                src: "../images/Gamedev2/2. Lore.png",
+                title: "Lore"
+            },
+            {
+                src: "../images/Gamedev2/3. Choose_a_Character.png",
+                title: "Choose a Character"
+            },
+            {
+                src: "../images/Gamedev2/4. Character1.png",
+                title: "Character"
+            },
+            {
+                src: "../images/Gamedev2/4.1 Character_Stats.png",
+                title: "Character Status"
+            },
+            {
+                src: "../images/Gamedev2/4.2 Choose_a_Story (Levels).png",
+                title: "Choose a Story"
+            },
+            {
+                src: "../images/Gamedev2/5. Sample_Picking Cards.png",
+                title: "Sample Picking Cards"
+            },
+            {
+                src: "../images/Gamedev2/5.1 Choosing a Weapon.png",
+                title: "Choosing a Weapon"
+            },
+            {
+                src: "../images/Gamedev2/5.2 Attacking.png",
+                title: "Attacking"
+            },
+            {
+                src: "../images/Gamedev2/6. Character_Talking.png",
+                title: "Character Talking"
+            },
+            {
+                src: "../images/Gamedev2/6.1 Sample_Choices.png",
+                title: "Choices (Sample)"
+            },
+            {
+                src: "../images/Gamedev2/6.2 Sample_Choices2.png",
+                title: "Choices (Sample)"
+            },
+            {
+                src: "../images/Gamedev2/6.3 Sample_Choices3_Touch_it.png",
+                title: "Choices (Sample)"
+            },
+            {
+                src: "../images/Gamedev2/6.4 Sample_Choices3.png",
+                title: "Choices (Sample)"
+            },
+            {
+                src: "../images/Gamedev2/6.5 Sample_Choices4.png",
+                title: "Choices (Sample)"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/1 Back Page.png",
+                title: "Cards: Back of the Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/2.png",
+                title: "Cards: Advantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/3.png",
+                title: "Cards: Advantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/4.png",
+                title: "Cards: Advantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/5.png",
+                title: "Cards: Advantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/6.png",
+                title: "Cards: Advantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/7.png",
+                title: "Cards: Disadvantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/8.png",
+                title: "Cards: Disadvantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/9.png",
+                title: "Cards: Disadvantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Advantage-Disadvantage Cards/10.png",
+                title: "Cards: Disadvantage Card"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/ARKHOSIANS - SORCERER.png",
+                title: "Weapon: Sample Back Cover (Arkhosians-Sorcerer)"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/MIRAGE - SHADOWS.png",
+                title: "Weapon: Sample Back Cover (Mirage-Shadows)"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/ABLAZE.png",
+                title: "Weapon: Ablaze"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/AMETHYST WAND.png",
+                title: "Weapon: Amethyst Wand"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/BLINDING WINGS ARMOR.png",
+                title: "Weapon: Blinding Wings Armor"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/BOW.png",
+                title: "Weapon: BOW"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Attacks/CLEANSE.png",
+                title: "Weapon: Cleanse"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/1.png",
+                title: "Monsters: Earth Back Cover"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/2.png",
+                title: "Monsters: Spirit Back Cover"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/5.png",
+                title: "Monsters: Giant Back Cover"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/9.png",
+                title: "Monsters: Easy"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/11.png",
+                title: "Monsters: Easy"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/10.png",
+                title: "Monsters: Medium"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/17.png",
+                title: "Monsters: Medium"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/15.png",
+                title: "Monsters: Hard"
+            },
+            {
+                src: "../images/Gamedev2/Assets (Cards)/Monsters/30.png",
+                title: "Monsters: Hard"
+            }
+        ];
+
+
+
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('lightbox');
+            if (!modal.classList.contains('hidden')) {
+                if (event.key === 'ArrowRight') {
+                    nextImage();
+                } else if (event.key === 'ArrowLeft') {
+                    prevImage();
+                } else if (event.key === 'Escape') {
+                    closeModal();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

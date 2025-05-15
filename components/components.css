@@ -1,0 +1,51 @@
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+        footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer .back-to-top {
+      float: right;
+      color: #4fc3f7;
+      cursor: pointer;
+    }
+    /* Navigation links underline on hover and active */
+nav a {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* Optional active state color change */
+nav a.active {
+  font-weight: bold;
+}
+

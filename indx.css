@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    /* Vertical lines */
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px); /* Horizontal lines */
+  background-size: 20px 20px; /* Adjusts the size of the grid squares */
+  background-position: top left;
+  font-family: 'Anton', sans-serif;
+}
+
+.logo {
+  font-size: 24px;
+}
+.logo span {
+  color: #4fc3f7;
+}
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+section {
+  padding: 100px 50px;
+}
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(79, 195, 247, 0.1),
+    #000
+  );
+}
+.home .left {
+  flex: 1;
+}
+.home .left h1 {
+  font-size: 48px;
+}
+.gradient {
+  background: linear-gradient(to right, #4fc3f7, #00e676);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-stack {
+  position: relative;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #4fc3f7;
+  margin: 10px;
+  position: absolute;
+}
+.filled {
+  background-color: #4fc3f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+}
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%; /* Start from right */
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Section title underline animation using ::after */
+.section-title {
+  position: relative;
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #4fc3f7;
+  width: 0;
+  animation: underline 1s ease-in-out forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.about-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.box,
+.skill-box,
+.tool-box,
+.work-box,
+.timeline-box,
+.contact-box {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.progress {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.progress-bar {
+  height: 100%;
+  background: #4fc3f7;
+}
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.work-box:hover {
+  background: #4fc3f7;
+  color: #000;
+}
+.timeline {
+  border-left: 2px solid #4fc3f7;
+  padding-left: 20px;
+}
+.timeline-entry {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-entry::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #64ffda;
+  border-radius: 50%;
+  position: absolute;
+  left: -26px;
+  top: 5px;
+}
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+}
+.social-icons i {
+  margin: 10px;
+  font-size: 20px;
+  color: #4fc3f7;
+}
+.contact-box {
+  position: relative;
+  padding-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.contact-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+  animation: border-slide 2s linear infinite;
+}
+
+@keyframes border-slide {
+  0% {
+    left: -50%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: -50%;
+  }
+}
+#skills .skill-box {
+  position: relative;
+  padding-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+/* Define fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to body or other elements */
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+#skills .skill-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+  animation: border-slide 2s linear infinite;
+}
+
+@keyframes border-slide {
+  0% {
+    left: -50%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+.icon-box {
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.icon-box i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.icon-box:hover {
+  background-color: #4fc3f7;
+  border-color: #4fc3f7;
+}
+
+.icon-box:hover i {
+  color: white;
+}
+#work {
+  padding: 40px;
+}
+
+.work-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work-box {
+  width: 30%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.work-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.work-box:hover img {
+  transform: scale(1.1);
+}
+
+.work-box:hover {
+  background-color: #4fc3f7;
+  border-color: #4fc3f7;
+}
+
+.work-title {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease;
+  transform: translateY(20px);
+}
+
+.work-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.work-description {
+  font-size: 1rem;
+  color: #444;
+}
+
+.view-btn {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #4fc3f7;
+  border-radius: 5px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.work-box:hover .work-title {
+  transform: translateY(0);
+}
+
+.work-box:hover .view-btn {
+  display: inline-block;
+}
+
+.work-box:hover .work-description {
+  display: none;
+}
+.pulse-box:hover {
+  animation: pulse 1.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+.group:hover .default-title {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.group:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.default-title {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.hover-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.title {
+  font-family: 'Viga', sans-serif;
+  font-size: 100px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  line-height: 1.2;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.right.circle-stack {
+  position: absolute;
+  right: 500px; /* Increase this value for more spacing from the right */
+  top: 90px;   /* Adjust this as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align circles to the right inside the stack */
+}
+
+.circle {
+  width: 250px;           /* Increase width */
+  height: 250px;          /* Increase height */
+}
+
+.circle.filled {
+  background-color: #178BAB;  /* Filled color for received, for example */
+  color: white;
+}
+
+  .half-width-text {
+    width: 50%;
+    text-align: left;
+    /* margin: 0 auto; center the paragraph */
+  }
+
+  input, textarea {
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
