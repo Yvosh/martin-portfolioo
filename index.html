@@ -17,6 +17,72 @@
   <link rel="stylesheet" href="indx.css">
 </head>
 <style>
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+  flex-direction: column; /* Stack items vertically on small screens */
+  padding: 10px 20px; /* Reduced padding */
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-direction: column; /* Stack links vertically on small screens */
+}
+
+nav a {
+  padding: 10px 0; /* Increased clickable area */
+}
+
+/* Home Section */
+.home {
+  flex-direction: column; /* Stack elements vertically */
+  padding: 20px; /* Add padding for mobile */
+}
+
+.left {
+  text-align: center; /* Center text on mobile */
+}
+
+/* Project Cards */
+.project-card {
+  width: 100%; /* Full width on mobile */
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+/* Skills Section */
+.skill-box {
+  width: 100%; /* Full width on mobile */
+  margin-bottom: 20px; /* Space between skill boxes */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row; /* Horizontal layout on larger screens */
+  }
+
+  nav {
+    flex-direction: row; /* Horizontal navigation */
+  }
+
+  .home {
+    flex-direction: row; /* Side by side on larger screens */
+  }
+
+  .project-card {
+    width: calc(33.33% - 20px); /* Three columns on medium screens */
+  }
+
+  .skill-box {
+    width: calc(48% - 20px); /* Two columns on medium screens */
+  }
+}
+
   .project-box {
     padding: 16px;
     margin: 10px 0;
