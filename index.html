@@ -86,6 +86,68 @@ nav a.active {
   .hidden {
     display: none;
   }
+     @media (max-width: 768px) {
+       header {
+           flex-direction: column;
+           padding: 10px;
+       }
+
+       .left, .right {
+           width: 100%;
+           text-align: center;
+       }
+
+       .project-box {
+           width: 100%;
+           margin: 10px 0;
+       }
+
+       .skill-box {
+           width: 100%;
+       }
+
+       .contact-grid {
+           flex-direction: column;
+       }
+   }
+
+   @media (max-width: 480px) {
+       h1, h2 {
+           font-size: 2rem; /* Adjust font size for smaller screens */
+       }
+
+       .marquee p {
+           font-size: 0.8rem; /* Smaller font for marquee */
+       }
+
+       .about-boxes {
+           flex-direction: column;
+       }
+   }
+   
+   img, video {
+       max-width: 100%;
+       height: auto;
+   }
+   header {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+.project-box {
+    padding: 16px;
+    margin: 10px 0;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%; /* Full width on smaller screens */
+}
+
+
 </style>
 
 <body>
