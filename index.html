@@ -80,6 +80,199 @@ nav a.active {
   .hidden {
     display: none;
   }
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: top left;
+  font-family: 'Anton', sans-serif;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo span {
+  color: #4fc3f7;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 100px 50px;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(79, 195, 247, 0.1),
+    #000
+  );
+}
+
+.home .left {
+  flex: 1;
+}
+
+.home .left h1 {
+  font-size: 48px;
+}
+
+.gradient {
+  background: linear-gradient(to right, #4fc3f7, #00e676);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-stack {
+  position: relative;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #4fc3f7;
+  margin: 10px;
+  position: absolute;
+}
+
+.filled {
+  background-color: #4fc3f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Section title underline animation using ::after */
+.section-title {
+  position: relative;
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #4fc3f7;
+  width: 0;
+  animation: underline 1s ease-in-out forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.about-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.box,
+.skill-box,
+.tool-box,
+.work-box,
+.timeline-box,
+.contact-box {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.progress {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #4fc3f7;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.work-box:hover {
+  background: #4fc3f7;
+  color
 </style>
 
 <body>
