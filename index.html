@@ -584,82 +584,31 @@
         padding: 20px;
         background: #000;
         color: white;
-        flex-wrap: nowrap;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow-x: auto; /* Allow horizontal scroll if content is too wide */
         gap: 1rem;
-        position: relative;
-        min-width: 0;
+      }
+
+      footer p,
+      footer span.back-to-top {
+        margin: 0;
+        flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
       }
 
       footer p:first-child {
-        flex: 0 1 auto;
         text-align: left;
-        margin: 0;
-        white-space: nowrap;
-        min-width: 0;
       }
 
       footer p:nth-child(2) {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-        white-space: nowrap;
         text-align: center;
-        flex: none;
-        min-width: max-content;
+        margin: 0 auto;
       }
 
       footer span.back-to-top {
-        flex: 0 1 auto;
         text-align: right;
-        cursor: pointer;
         text-decoration: underline;
-        margin: 0;
-        white-space: nowrap;
-        min-width: 0;
-      }
-
-      /* Smaller screen adjustments */
-      @media (max-width: 480px) {
-        footer {
-          font-size: 0.75rem;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          gap: 0;
-          position: relative;
-        }
-
-        footer p:first-child {
-          order: 1;
-          flex: 0 1 auto;
-          text-align: left;
-          white-space: nowrap;
-          min-width: auto;
-          position: static;
-          transform: none;
-        }
-
-        footer p:nth-child(2) {
-          order: 2;
-          position: static;
-          transform: none;
-          flex: 0 1 auto;
-          text-align: center;
-          white-space: nowrap;
-          min-width: auto;
-          margin: 0 auto;
-        }
-
-        footer span.back-to-top {
-          order: 3;
-          flex: 0 1 auto;
-          text-align: right;
-          white-space: nowrap;
-          min-width: auto;
-          position: static;
-          transform: none;
-        }
+        cursor: pointer;
       }
 
       /* Responsive adjustments */
@@ -924,6 +873,22 @@
       .gradient-box {
         background: #1a1a1a;
       }
+      @media (max-width: 640px) {
+        .home {
+          padding: 20px; /* Adjust padding for smaller screens */
+        }
+
+        .home .left {
+          max-width: 100%; /* Ensure it doesn't exceed the screen width */
+        }
+
+        .nav-links {
+          flex-direction: column; /* Stack links vertically on small screens */
+          width: 100%; /* Ensure it takes full width */
+        }
+
+        /* Other adjustments as necessary */
+      }
     </style>
   </head>
 
@@ -949,8 +914,13 @@
 
     <section class="home flex items-center justify-between px-6">
       <div class="left max-w-lg">
-        <h1 class="font-extrabold" style="font-size: 3rem">FRONT-END</h1>
-        <h2 class="font-black" style="font-size: 6rem">DEVELOPER</h2>
+        <h1
+          class="font-extrabold mt-0 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0 mt-12 text-[3rem]"
+        >
+          FRONT-END
+        </h1>
+        <h2 class="font-black" style="font-size: 5.5rem">DEVELOPER</h2>
+
         <p class="half-width-text">
           I am a passionate and dedicated developer with hands-on experience in
           creating engaging, responsive, and user-centric web applications. I
