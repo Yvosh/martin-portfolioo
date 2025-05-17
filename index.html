@@ -1,593 +1,1898 @@
-<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YVOSH MARTIN - PORTFOLIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IT & Multimedia Designer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
- <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <!-- Link to Google Fonts or local source -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="indx.css">
-</head>
-<style>
+      body {
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+          );
+        background-size: 20px 20px;
+        background-position: top left;
+        font-family: "Anton", sans-serif;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
       header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-    }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        font-size: 1rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      @media (max-width: 640px) {
+        .logo {
+          font-size: 1rem; /* smaller size on small screens */
+        }
+      }
+
+      .logo span {
+        color: #4fc3f7;
+      }
+
+      nav a {
+        margin-left: 20px;
+        color: #fff;
+        text-decoration: none;
+        padding-bottom: 4px;
+        position: relative;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: currentColor;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover::after,
+      nav a.active::after {
+        width: 100%;
+      }
+
+      nav a.active {
+        font-weight: bold;
+      }
+
+      section {
+        padding: 100px 50px 50px;
+      }
+
+      .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: radial-gradient(
+          circle at bottom right,
+          rgba(79, 195, 247, 0.1),
+          #000
+        );
+        position: relative;
+        min-height: 400px;
+      }
+
+      .home .left {
+        flex: 1;
+        max-width: 600px;
+      }
+
+      .home .left h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+      }
+
+      .home .left h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+        background: linear-gradient(to right, #38bdf8, #14b8a6, #22c55e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .half-width-text {
+        width: 100%;
+        max-width: 650px; /* ← increased from 500px */
+        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: #eee;
+      }
+
+      .home .right {
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+      }
+
+      .circle-stack {
+        position: relative;
+        width: 250px;
+        height: 250px;
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid #4fc3f7;
+        width: 250px;
+        height: 250px;
+        transition: all 0.3s ease;
+      }
+
+      .circle:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .circle:nth-child(2) {
+        top: 20px;
+        left: 20px;
+      }
+
+      .circle.filled {
+        top: 40px;
+        left: 40px;
+        background-color: #178bab;
+        color: white;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        user-select: none;
+      }
+
+      .marquee {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 30px;
+        position: relative;
+        font-size: 0.875rem;
+        color: #fff;
+      }
+
+      .marquee p {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .section-title {
+        position: relative;
+        font-size: 2.25rem;
+        margin-bottom: 20px;
+        display: inline-block;
+        padding-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: #4fc3f7;
+        width: 0;
+        animation: underline 1s ease-in-out forwards;
+      }
+
+      @keyframes underline {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      .about-boxes {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        flex: 1 1 100%;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        max-width: 100%;
+      }
+
+      .box p {
+        margin-bottom: 1rem;
+      }
+
+      .grid-cols-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        width: 100%;
+        max-width: 900px;
+        margin-top: 2rem;
+      }
+
+      .skill-box {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+
+      .skill-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 200%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+        animation: border-slide 2s linear infinite;
+        z-index: 1;
+        border-radius: 8px 8px 0 0;
+      }
+
+      @keyframes border-slide {
+        0% {
+          left: -50%;
+        }
+
+        50% {
+          left: 0%;
+        }
+
+        100% {
+          left: -50%;
+        }
+      }
+
+      .skill-box h3 {
+        margin-bottom: 1.25rem;
+        position: relative;
+        z-index: 2;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .skill-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .progress {
+        background: #333;
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: #4fc3f7;
+      }
+
+      /* Projects grid */
+      #work .max-w-8xl {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #work .grid {
+        gap: 1.5rem;
+      }
+
+      .group {
+        position: relative;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .default-title {
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: white;
+        z-index: 10;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .hover-content {
+        position: absolute;
+        inset: 0;
+        background: rgba(44, 106, 122, 0.9);
+        background: linear-gradient(
+          to bottom right,
+          rgba(44, 106, 122, 0.9),
+          rgba(122, 44, 122, 0.9)
+        );
+        color: white;
+        padding: 1.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0.5rem;
+        z-index: 20;
+      }
+
+      .group:hover .default-title {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .group:hover .hover-content {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .hover-content h2 {
+        font-weight: 800;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hover-content h4 {
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      .hover-content p {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      .hover-content button,
+      .hover-content a button {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 0.875rem;
+        align-self: center;
+        text-decoration: none;
+      }
+
+      .hover-content button:hover,
+      .hover-content a button:hover {
+        background-color: white;
+        color: black;
+      }
+
+      /* Contact section */
+      #contact .contact-grid {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      #contact form {
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #contact form input,
+      #contact form textarea {
+        font-size: 1rem;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+        outline: none;
+        margin-bottom: 1rem;
+        resize: vertical;
+      }
+
+      #contact form input::placeholder,
+      #contact form textarea::placeholder {
+        color: #999;
+      }
+
+      #contact form button {
+        padding: 10px 20px;
+        background: #4fc3f7;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+
+      #contact form button:hover {
+        background: #38bdf8;
+      }
+
+      .contact-box {
+        flex: 1 1 300px;
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        position: relative;
+        padding-top: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+
+      .contact-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 200%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+        animation: border-slide 2s linear infinite;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .contact-box > div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .contact-box i {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 6px;
+        margin-right: 10px;
+        font-size: 1.25rem;
+        color: #4fc3f7;
+        min-width: 44px;
+        text-align: center;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+
+      .icon-box {
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
+
+      .icon-box i {
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      .icon-box:hover {
+        background-color: #4fc3f7;
+        border-color: #4fc3f7;
+      }
+
+      .icon-box:hover i {
+        color: white;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: #000;
+        color: white;
+        flex-wrap: nowrap;
+        font-size: 0.875rem;
+        gap: 1rem;
+        position: relative;
+        min-width: 0;
+      }
+
+      footer p:first-child {
+        flex: 0 1 auto;
+        text-align: left;
+        margin: 0;
+        white-space: nowrap;
+        min-width: 0;
+      }
+
+      footer p:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        white-space: nowrap;
+        text-align: center;
+        flex: none;
+        min-width: max-content;
+      }
+
+      footer span.back-to-top {
+        flex: 0 1 auto;
+        text-align: right;
+        cursor: pointer;
+        text-decoration: underline;
+        margin: 0;
+        white-space: nowrap;
+        min-width: 0;
+      }
+
+      /* Smaller screen adjustments */
+      @media (max-width: 480px) {
         footer {
-      background: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    footer .back-to-top {
-      float: right;
-      color: #4fc3f7;
-      cursor: pointer;
-    }
-    /* Navigation links underline on hover and active */
-nav a {
-  color: inherit;
-  text-decoration: none;
-  padding-bottom: 4px;
-  position: relative;
-  transition: color 0.3s ease;
-}
+          font-size: 0.75rem;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          gap: 0;
+          position: relative;
+        }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: currentColor;
-  transition: width 0.3s ease;
-}
+        footer p:first-child {
+          order: 1;
+          flex: 0 1 auto;
+          text-align: left;
+          white-space: nowrap;
+          min-width: auto;
+          position: static;
+          transform: none;
+        }
 
-nav a:hover::after,
-nav a.active::after {
-  width: 100%;
-}
+        footer p:nth-child(2) {
+          order: 2;
+          position: static;
+          transform: none;
+          flex: 0 1 auto;
+          text-align: center;
+          white-space: nowrap;
+          min-width: auto;
+          margin: 0 auto;
+        }
 
-/* Optional active state color change */
-nav a.active {
-  font-weight: bold;
-}
+        footer span.back-to-top {
+          order: 3;
+          flex: 0 1 auto;
+          text-align: right;
+          white-space: nowrap;
+          min-width: auto;
+          position: static;
+          transform: none;
+        }
+      }
 
+      /* Responsive adjustments */
+      @media (max-width: 1024px) {
+        header {
+          padding: 15px 30px;
+          font-size: 0.9rem;
+        }
 
-  .project-box {
-    padding: 16px;
-    margin: 10px 0;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
+        section {
+          padding: 80px 30px 40px;
+        }
 
-  .hidden {
-    display: none;
-  }
+        .home {
+          flex-direction: column;
+          min-height: auto;
+          padding-bottom: 2rem;
+        }
 
-</style>
+        .home .left {
+          max-width: 100%;
+          margin-bottom: 2rem;
+        }
 
-<body>
+        .home .left h1,
+        .home .left h2 {
+          font-size: 2.5rem;
+        }
 
-  <header>
-  <div class="logo">Yvosh Caila <span>Martin</span></div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#work">Project</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-  <section class="home">
-    <div class="left">
-      <h1 class="text-[4.5rem] md:text-[6rem] leading-none font-extrabold tracking-wide">
-        FRONT-END
-      </h1>
-      <h2 class="text-[4.5rem] md:text-[6rem] leading-none font-extrabold tracking-wide bg-gradient-to-r from-sky-400 via-teal-400 to-green-400 text-transparent bg-clip-text">
-        DEVELOPER
-      </h2><br><br>
-      <p class="half-width-text">I am a passionate and dedicated developer with hands-on experience in creating engaging, responsive, and user-centric web applications. I take pride in building digital solutions that are not only functional but also visually appealing and intuitive to use.</p>
-    </div>
-    <div class="right circle-stack">
-      <div class="circle" style="top: 0; left: 0;"></div>
-      <div class="circle" style="top: 20px; left: 20px;"></div>
-      <div class="circle filled" style="top: 40px; left: 40px;">YM</div>
-    </div>
-  </section>
-  <div class="marquee">
-    <p>Front-End Developer - Web Developer - Front-End Designer - UI/UX Designer -Front-End Developer - Web Developer - Front-End Designer - UI/UX Designer </p>
-  </div>
+        .half-width-text {
+          max-width: 100%;
+          width: 100%;
+        }
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-boxes" style="width: 100%;">
-      <div class="box">
-        I am a passionate web developer currently pursuing a Bachelor of Science in Information Technology (BSIT), with graduation expected in June or September. My journey in the tech world started with a fascination for how websites work, and over time, I’ve developed a strong interest in creating engaging, dynamic, and user-friendly web applications.
-        <br><br>This has enabled me to create dynamic web applications and better integrate back-end functionality, while continuously expanding my knowledge.
-        <br><br> I also have a strong creative side, where I explore graphic design, creating posters, marketing materials, and visual assets using Photoshop and Canva. I believe that design plays a crucial role in user experience, and I strive to ensure that the digital solutions I build are not only functional but also aesthetically pleasing.
-        <br><br>Always eager to learn and grow, I enjoy problem-solving and collaborating in environments that push me to improve my skills. I thrive in situations where innovation is encouraged, and I’m excited about future projects where I can continue to expand my knowledge in web development and design, using both traditional methods and cutting-edge tools like AI.
-        <br><br> In my free time, I enjoy exploring new trends in web development, connecting with other tech enthusiasts, and sharing insights to help others grow in the field.
-        <br><br> With the help of AI tools like ChatGPT and Blackbox, I bring ideas to life—turning concepts into functional and visually engaging websites.
-      </div>
+        .home .right {
+          min-height: 200px;
+        }
 
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10 w-full max-w-5xl mx-auto">
-        <div
-          class="bg-[#0f1f23] relative p-12 w-80 h-64 flex flex-col items-center justify-center border border-black cursor-pointer transition-colors duration-300 hover:bg-[#16343b]">
-          <div class="absolute inset-0 grid grid-cols-12 grid-rows-12 pointer-events-none">
-            <div class="col-span-12 row-span-12 border border-[#1a3a41]"></div>
-          </div>
-          <div class="relative z-10 text-center text-white font-montserrat">
-            <p class="text-4xl font-extrabold">1+</p>
-            <p class="text-sm mt-1">YEARS OF</p>
-            <p class="text-sm">EXPERIENCE</p>
-          </div>
-        </div>
+        .circle-stack {
+          width: 180px;
+          height: 180px;
+        }
 
-        <div
-          class="bg-[#2e1a3a] relative p-12 w-80 h-64 flex flex-col items-center justify-center border border-black cursor-pointer transition-colors duration-300 hover:bg-[#4a2e56]">
-          <div class="absolute inset-0 grid grid-cols-12 grid-rows-12 pointer-events-none">
-            <div class="col-span-12 row-span-12 border border-[#3e2a4a]"></div>
-          </div>
-          <div class="relative z-10 text-center text-white font-montserrat">
-            <p class="text-4xl font-extrabold">8</p>
-            <p class="text-sm mt-1">PROJECTS</p>
-            <p class="text-sm">COMPLETED</p>
-          </div>
-        </div>
+        .circle {
+          width: 180px;
+          height: 180px;
+        }
 
-        <div
-          class="bg-[#2e1a3a] relative p-12 w-80 h-64 flex flex-col items-center justify-center border border-black cursor-pointer transition-colors duration-300 hover:bg-[#4a2e56]">
-          <div class="absolute inset-0 grid grid-cols-12 grid-rows-12 pointer-events-none">
-            <div class="col-span-12 row-span-12 border border-[#3e2a4a]"></div>
-          </div>
-          <div class="relative z-10 text-center text-white font-montserrat">
-            <p class="text-4xl font-extrabold">2/2</p>
-            <p class="text-sm mt-1">HAPPY</p>
-            <p class="text-sm">CLIENTS</p>
-          </div>
-        </div>
+        .circle.filled {
+          top: 30px !important;
+          left: 30px !important;
+          font-size: 1.25rem;
+        }
 
-        <div
-          class="bg-[#0f1f23] relative p-12 w-80 h-64 flex flex-col items-center justify-center border border-black cursor-pointer transition-colors duration-300 hover:bg-[#16343b]">
-          <div class="absolute inset-0 grid grid-cols-12 grid-rows-12 pointer-events-none">
-            <div class="col-span-12 row-span-12 border border-[#1a3a41]"></div>
-          </div>
-          <div class="relative z-10 text-center text-white font-montserrat">
-            <p class="text-4xl font-extrabold">2</p>
-            <p class="text-sm mt-1">COMMISIONS</p>
-            <!-- <p class="text-sm">AWARDS</p> -->
-          </div>
-        </div>
-      </div>
+        .about-boxes {
+          flex-direction: column;
+          gap: 2rem;
+        }
 
+        .grid-cols-2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+          max-width: 100%;
+        }
 
+        .skill-box {
+          width: 100% !important;
+        }
 
-  </section>
-  <section id="work">
-    <h2 class="section-title">My Projects</h2>
-    <div class="max-w-8xl mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">CAPSTONE</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">CAPSTONE</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">Front-End and Back-End</h4>
-          <p class="text-white text-sm mb-4">Designed the user interface (UI) and User Experience (UX) using Figma and implemented it in code. Responsible for developing 90% of the web-based 'Document Tracking System' application, including its implementation and functionality. Developed the front end with HTML, CSS, and JavaScript, the backend with PHP, and the database using MySQL.</p>
-          <a href="projects/Capstone.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">Case Records (Intern Project Proposal)</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">OJT</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">Front-End</h4>
-          <p class="text-white text-sm mb-4">Developed the front end using HTML, CSS, and JavaScript for the 'Case Records (Intern Project Proposal)' project.</p>
-          <a href="projects/OJT.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">Software Development Project (Coffee Shop)</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">Software Development Project (Coffee Shop)</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">Front-End</h4>
-          <p class="text-white text-sm mb-4">Developed the front end using HTML, CSS, and JavaScript for the 'Coffee Shop' project.</p>
-          <a href="projects/Coffee_Shop.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">Software Development Project (Pharmacy)</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">Software Development Project (Pharmacy)</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">UI/UX</h4>
-          <p class="text-white text-sm mb-4">Designed the user interface (UI) and User Experience (UX) using Figma for the 'Pharmacy' project.</p>
-          <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">View Project</button>
-        </div>
-      </div>
-      <div class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">Software Development Project (School System: Document & Requirements)</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">Software Development Project (School System: Document & Requirements)</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">UI/UX</h4>
-          <p class="text-white text-sm mb-4">Designed the user interface (UI) and User Experience (UX) using Figma for 'Beastlink,' a school system project.</p>
-          <a href="projects/Beastlink.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">Game Development 1 Project</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">Game Development 1 Project</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">UI/UX and Graphic Designer</h4>
-          <p class="text-white text-sm mb-4">Designed and developed the board game 'Guardian of the Museums,' including creating the rules, game flow, and all assets, such as the board, weapon cards, character cards, place cards, points, and more.</p>
-          <a href="projects/Gamedev1.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">Game Development 2 Project</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">Game Development 2 Project</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">UI/UX and Graphic Designer</h4>
-          <p class="text-white text-sm mb-4">Designed our TTRPG game, including all assets such as the layout, main menu, pause screen, character cards, monster cards, weapon cards, and other cards, while ensuring the overall design was aesthetically pleasing and user-friendly.</p>
-          <a href="projects/Gamedev2.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6">
-        <h2 class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative">EcoPoints Charging System</h2>
-        <div class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-[#2c6a7a]/90 to-[#7a2c7a]/90 rounded">
-          <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">EcoPoints Charging System</h2>
-          <h4 style="font-style: italic; margin-bottom: 1rem;">Front-End</h4>
-          <p class="text-white text-sm mb-4">Developed the front end using HTML, CSS, and JavaScript for the 'Recharge' project.</p>
-          <a href="projects/Recharge.html">
-            <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-              View Project
-            </button>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-6">
-      <button id="toggleProjects" class="bg-[#2c6a7a] text-white px-6 py-2 rounded hover:bg-[#7a2c7a] transition-colors duration-300">
-        Show More Projects
+        #work .grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        #contact .contact-grid {
+          flex-direction: column;
+        }
+
+        #contact form,
+        .contact-box {
+          flex: 1 1 100%;
+        }
+
+        footer {
+          font-size: 0.8rem;
+        }
+
+        footer p,
+        footer span.back-to-top {
+          flex: 1 1 100%;
+          text-align: center;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header {
+          padding: 10px 15px;
+          font-size: 0.8rem;
+        }
+
+        nav a {
+          margin-left: 10px;
+        }
+
+        .home .left h1,
+        .home .left h2 {
+          font-size: 2rem;
+        }
+
+        .half-width-text {
+          font-size: 0.8rem;
+        }
+
+        .circle-stack {
+          width: 140px;
+          height: 140px;
+        }
+
+        .circle {
+          width: 140px;
+          height: 140px;
+        }
+
+        .circle.filled {
+          top: 20px !important;
+          left: 20px !important;
+          font-size: 1rem;
+        }
+
+        section {
+          padding: 70px 15px 30px;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .skill-box h3 {
+          font-size: 1rem;
+        }
+
+        .skill-item p,
+        .skill-item span {
+          font-size: 0.75rem;
+        }
+
+        #work .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hover-content h2,
+        .hover-content h4,
+        .hover-content p,
+        .hover-content button {
+          font-size: 0.75rem;
+        }
+
+        #contact form input,
+        #contact form textarea {
+          font-size: 0.875rem;
+        }
+
+        footer {
+          font-size: 0.75rem;
+        }
+      }
+      .home .left h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+      }
+
+      .home .left h2 {
+        font-size: 4rem; /* bigger than h1 */
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
+      }
+
+      .shimmer-effect {
+        background: linear-gradient(
+          to right,
+          #0f1f23 0%,
+          #1f2f33 20%,
+          #0f1f23 40%,
+          #0f1f23 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 4s infinite linear;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      /* Hide nav toggle button on large screens */
+      .nav-toggle {
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+      }
+
+      /* Navigation links default - horizontal row */
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: nowrap;
+      }
+
+      /* Nav links styling */
+      .nav-links a {
+        text-decoration: none;
+        color: inherit;
+        white-space: nowrap;
+      }
+
+      /* Responsive: small screens */
+      @media (max-width: 768px) {
+        .nav-toggle {
+          display: block;
+        }
+
+        /* Hide nav links by default on small screens */
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 1rem;
+        }
+
+        /* Show nav links when nav is active (toggle) */
+        .nav-links.active {
+          display: flex;
+        }
+      }
+      .icon-box i {
+        border: none;
+      }
+      /* Custom gradient background for the boxes */
+      .gradient-box {
+        background: #1a1a1a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Yvosh Caila <span>Martin</span></div>
+
+      <!-- Hamburger menu for small screens -->
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        &#9776;
+        <!-- hamburger icon -->
       </button>
+
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Project</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home flex items-center justify-between px-6">
+      <div class="left max-w-lg">
+        <h1 class="text-3xl font-extrabold">FRONT-END</h1>
+        <h2 class="text-5xl font-black">DEVELOPER</h2>
+        <p class="half-width-text">
+          I am a passionate and dedicated developer with hands-on experience in
+          creating engaging, responsive, and user-centric web applications. I
+          take pride in building digital solutions that are not only functional
+          but also visually appealing and intuitive to use.
+        </p>
+      </div>
+
+      <div
+        class="right circle-stack ml-80"
+        aria-label="Stack of three circles with initials YM in front circle"
+      >
+        <div class="circle" aria-hidden="true"></div>
+        <div class="circle" aria-hidden="true"></div>
+        <div class="circle filled" aria-label="Circle with initials YM">YM</div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Scrolling text of roles">
+      <p>
+        Front-End Developer - Web Developer - Front-End Designer - UI/UX
+        Designer - Front-End Developer - Web Developer - Front-End Designer -
+        UI/UX Designer
+      </p>
     </div>
-  </section>
 
-
-  <section id="skills">
-    <h2 class="section-title">My Skills</h2>
-    <div class="about-boxes" style="flex-wrap: wrap;">
-      <div class="skill-box" style="width: 48%;">
-        <h3 style="margin-bottom: 20px;">Skills</h3>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Front-End Development</p>
-          <span style="margin-left: 10px;">90%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Back-End Development</p>
-          <span style="margin-left: 10px;">80%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 80%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">UI/UX</p>
-          <span style="margin-left: 10px;">95%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 95%"></div>
-        </div>
-      </div>
-      <div class="skill-box" style="width: 48%;">
-        <h3 style="margin-bottom: 20px;">Design Tools</h3>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Figma</p>
-          <span style="margin-left: 10px;">90%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Photoshop</p>
-          <span style="margin-left: 10px;">85%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Canva</p>
-          <span style="margin-left: 10px;">95%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 95%"></div>
-        </div>
-      </div>
-      <div class="skill-box" style="width: 48%;">
-        <h3 style="margin-bottom: 20px;">Social Skills</h3>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Social Media Management</p>
-          <span style="margin-left: 10px;">90%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Digital Marketing</p>
-          <span style="margin-left: 10px;">85%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%"></div>
-        </div>
-      </div>
-      <div class="skill-box" style="width: 48%;">
-        <h3 style="margin-bottom: 20px;">Other Skills</h3>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Time Management</p>
-
-          <span style="margin-left: 10px;">90%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Creative</p>
-          <span style="margin-left: 10px;">85%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%"></div>
-        </div>
-        <div class="skill-item" style="display: flex; justify-content: space-between; align-items: center;">
-          <p style="margin-bottom: 10px;">Adaptibility</p>
-          <span style="margin-left: 10px;">85%</span>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="experience">
-    <h2 class="section-title">Experience</h2>
-    <div class="about-boxes">
-      <div class="timeline" style="width: 46%;">
-        <!-- Always visible -->
-        <div class="timeline-entry">
-          <strong>2024</strong>
-          <p><strong>Office of the City Prosecutor (Valenzuela)</strong><br><em>UI/UX Design</em><br>
-            <small>Proposed a system designed to enhance the office's efficiency. Created the UI using Figma before implementing it in code.</small>
+    <section id="about" class="px-4 py-8">
+      <h2 class="section-title text-3xl font-bold mb-6">About Me</h2>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- About Text Box with Shimmer Animation -->
+        <div
+          class="lg:w-1/2 p-8 mt-8 rounded-xl border border-gray-700 shimmer-effect text-white shadow-lg flex-1 h-85x overflow-y-auto"
+        >
+          <p>
+            I am a passionate web developer currently pursuing a Bachelor of
+            Science in Information Technology (BSIT), with graduation expected
+            in June or September. My journey in the tech world started with a
+            fascination for how websites work, and over time, I’ve developed a
+            strong interest in creating engaging, dynamic, and user-friendly web
+            applications.
+            <br /><br />This has enabled me to create dynamic web applications
+            and better integrate back-end functionality, while continuously
+            expanding my knowledge. <br /><br />
+            I also have a strong creative side, where I explore graphic design,
+            creating posters, marketing materials, and visual assets using
+            Photoshop and Canva. I believe that design plays a crucial role in
+            user experience, and I strive to ensure that the digital solutions I
+            build are not only functional but also aesthetically pleasing.
+            <br /><br />Always eager to learn and grow, I enjoy problem-solving
+            and collaborating in environments that push me to improve my skills.
+            I thrive in situations where innovation is encouraged, and I’m
+            excited about future projects where I can continue to expand my
+            knowledge in web development and design, using both traditional
+            methods and cutting-edge tools like AI. <br /><br />
+            In my free time, I enjoy exploring new trends in web development,
+            connecting with other tech enthusiasts, and sharing insights to help
+            others grow in the field. <br /><br />
+            With the help of AI tools like ChatGPT and Blackbox, I bring ideas
+            to life—turning concepts into functional and visually engaging
+            websites.
           </p>
         </div>
 
-        <div class="timeline-entry">
-          <strong>2024</strong>
-          <p><strong>Capstone</strong><br><em>Front-End and Backend</em><br>
-            <small>Designed the UI/UX using Figma and implemented it in code. Developed 90% of the web-based 'Document Tracking System' using HTML, CSS, JS, PHP, and MySQL.</small>
-          </p>
+        <!-- Skills -->
+        <div class="lg:w-1/2 grid grid-cols-2 md:grid-cols-2 gap-4">
+          <div
+            class="skill-box bg-[#0f1f23] border border-black cursor-pointer transition-colors duration-300 hover:bg-[#16343b] flex flex-col items-center justify-center p-12 h-64"
+          >
+            <p class="text-4xl font-extrabold">1+</p>
+            <p
+              class="text-sm mt-1 uppercase font-semibold leading-tight text-center"
+            >
+              YEARS OF<br />EXPERIENCE
+            </p>
+          </div>
+
+          <div
+            class="skill-box bg-[#2e1a3a] border border-black cursor-pointer transition-colors duration-300 hover:bg-[#4a2e56] flex flex-col items-center justify-center p-12 h-64"
+          >
+            <p class="text-4xl font-extrabold">8</p>
+            <p
+              class="text-sm mt-1 uppercase font-semibold leading-tight text-center"
+            >
+              PROJECTS<br />COMPLETED
+            </p>
+          </div>
+
+          <div
+            class="skill-box bg-[#2e1a3a] border border-black cursor-pointer transition-colors duration-300 hover:bg-[#4a2e56] flex flex-col items-center justify-center p-12 h-64"
+          >
+            <p class="text-4xl font-extrabold">2/2</p>
+            <p
+              class="text-sm mt-1 uppercase font-semibold leading-tight text-center"
+            >
+              HAPPY<br />CLIENTS
+            </p>
+          </div>
+
+          <div
+            class="skill-box bg-[#0f1f23] border border-black cursor-pointer transition-colors duration-300 hover:bg-[#16343b] flex flex-col items-center justify-center p-12 h-64"
+          >
+            <p class="text-4xl font-extrabold">2</p>
+            <p
+              class="text-sm mt-1 uppercase font-semibold leading-tight text-center"
+            >
+              COMMISIONS
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Hidden initially -->
-        <div id="more-experience" style="display: none;">
-          <div class="timeline-entry">
-            <strong>2024</strong>
-            <p><strong>Software Development</strong><br><em>UI/UX</em><br>
-              <small>Developed the front end using HTML, CSS, and JS for 'Coffee Shop'.<br><br>
-                Designed UI/UX using Figma for 'Pharmacy' and 'Beastlink' school projects.</small>
+    <section id="work">
+      <h2 class="section-title">My Projects</h2>
+      <div
+        class="max-w-10xl mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+      >
+        <div
+          class="group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            CAPSTONE
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              CAPSTONE
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">
+              Front-End and Back-End
+            </h4>
+            <p class="text-white text-sm mb-4">
+              Designed the user interface (UI) and User Experience (UX) using
+              Figma and implemented it in code. Responsible for developing 90%
+              of the web-based 'Document Tracking System' application, including
+              its implementation and functionality. Developed the front end with
+              HTML, CSS, and JavaScript, the backend with PHP, and the database
+              using MySQL.
             </p>
-          </div>
-
-          <div class="timeline-entry">
-            <strong>2024</strong>
-            <p><strong>Game Development</strong><br><em>UI/UX Designer and Graphic Designer</em><br>
-              <small>Created all assets and UI/UX for 'Guardian of the Museums' board game and a TTRPG game.</small>
-            </p>
-          </div>
-
-          <div class="timeline-entry">
-            <strong>2025</strong>
-            <p><strong>EcoPoints Charging System</strong><br><em>Front-End</em><br>
-              <small>Developed the front end using HTML, CSS, and JavaScript for the 'Recharge' project.</small>
-            </p>
+            <a href="projects/Capstone.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
           </div>
         </div>
-
-        <!-- See More Button -->
-        <button onclick="toggleMore()" style="margin-top: 10px; padding: 10px 20px; background: #0288d1; color: white; border: none; border-radius: 5px; cursor: pointer;">
-          See More
+        <div
+          class="group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            Case Records (Intern Project Proposal)
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              OJT
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">Front-End</h4>
+            <p class="text-white text-sm mb-4">
+              Developed the front end using HTML, CSS, and JavaScript for the
+              'Case Records (Intern Project Proposal)' project.
+            </p>
+            <a href="projects/OJT.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            Software Development Project (Coffee Shop)
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              Software Development Project (Coffee Shop)
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">Front-End</h4>
+            <p class="text-white text-sm mb-4">
+              Developed the front end using HTML, CSS, and JavaScript for the
+              'Coffee Shop' project.
+            </p>
+            <a href="projects/Coffee_Shop.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            Software Development Project (Pharmacy)
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              Software Development Project (Pharmacy)
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">UI/UX</h4>
+            <p class="text-white text-sm mb-4">
+              Designed the user interface (UI) and User Experience (UX) using
+              Figma for the 'Pharmacy' project.
+            </p>
+            <button
+              class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              View Project
+            </button>
+          </div>
+        </div>
+        <div
+          class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            Software Development Project (School System: Document &
+            Requirements)
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              Software Development Project (School System: Document &
+              Requirements)
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">UI/UX</h4>
+            <p class="text-white text-sm mb-4">
+              Designed the user interface (UI) and User Experience (UX) using
+              Figma for 'Beastlink,' a school system project.
+            </p>
+            <a href="projects/Beastlink.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            Game Development 1 Project
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              Game Development 1 Project
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">
+              UI/UX and Graphic Designer
+            </h4>
+            <p class="text-white text-sm mb-4">
+              Designed and developed the board game 'Guardian of the Museums,'
+              including creating the rules, game flow, and all assets, such as
+              the board, weapon cards, character cards, place cards, points, and
+              more.
+            </p>
+            <a href="projects/Gamedev1.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            Game Development 2 Project
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              Game Development 2 Project
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">
+              UI/UX and Graphic Designer
+            </h4>
+            <p class="text-white text-sm mb-4">
+              Designed our TTRPG game, including all assets such as the layout,
+              main menu, pause screen, character cards, monster cards, weapon
+              cards, and other cards, while ensuring the overall design was
+              aesthetically pleasing and user-friendly.
+            </p>
+            <a href="projects/Gamedev2.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card hidden group w-full aspect-square bg-gradient-to-br from-[#0a3a44] to-[#3a0a44] relative cursor-pointer transition-colors duration-300 hover:from-[#2c6a7a] hover:to-[#7a2c7a] flex flex-col justify-center text-center p-6"
+        >
+          <h2
+            class="default-title text-white font-extrabold text-xl tracking-widest mb-4 z-10 relative"
+          >
+            EcoPoints Charging System
+          </h2>
+          <div
+            class="hover-content absolute inset-0 flex flex-col items-center justify-center text-center p-6 rounded"
+          >
+            <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
+              EcoPoints Charging System
+            </h2>
+            <h4 style="font-style: italic; margin-bottom: 1rem">Front-End</h4>
+            <p class="text-white text-sm mb-4">
+              Developed the front end using HTML, CSS, and JavaScript for the
+              'Recharge' project.
+            </p>
+            <a href="projects/Recharge.html">
+              <button
+                class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <button
+          id="toggleProjects"
+          class="bg-[#2c6a7a] text-white px-6 py-2 rounded hover:bg-[#7a2c7a] transition-colors duration-300"
+        >
+          Show More Projects
         </button>
       </div>
+    </section>
 
-      <!-- Outer wrapper to control max width and centering -->
-      <div style="width: 100%; max-width: 900px; margin: 0 auto;">
-        <!-- Stack boxes vertically -->
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-          <div class="box" style="width: 100%; padding: 15px;">
-            <h3 style="margin-bottom:10px;">Education</h3>
+    <section id="skills">
+      <h2 class="section-title">My Skills</h2>
+      <div class="about-boxes grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="skill-box" style="width: 95%">
+          <h3>Skills</h3>
+          <div class="skill-item">
+            <p>Front-End Development</p>
+            <span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%"></div>
+          </div>
+          <div class="skill-item">
+            <p>Back-End Development</p>
+            <span>80%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%"></div>
+          </div>
+          <div class="skill-item">
+            <p>UI/UX</p>
+            <span>95%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="skill-box" style="width: 95%">
+          <h3>Design Tools</h3>
+          <div class="skill-item">
+            <p>Figma</p>
+            <span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%"></div>
+          </div>
+          <div class="skill-item">
+            <p>Photoshop</p>
+            <span>85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%"></div>
+          </div>
+          <div class="skill-item">
+            <p>Canva</p>
+            <span>95%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="skill-box" style="width: 95%">
+          <h3>Social Skills</h3>
+          <div class="skill-item">
+            <p>Social Media Management</p>
+            <span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%"></div>
+          </div>
+          <div class="skill-item">
+            <p>Digital Marketing</p>
+            <span>85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-box" style="width: 95%">
+          <h3>Other Skills</h3>
+          <div class="skill-item">
+            <p>Time Management</p>
+            <span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%"></div>
+          </div>
+          <div class="skill-item">
+            <p>Creative</p>
+            <span>85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%"></div>
+          </div>
+          <div class="skill-item">
+            <p>Adaptibility</p>
+            <span>85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="about-boxes" style="flex-wrap: wrap; gap: 2rem">
+        <div
+          class="timeline"
+          style="
+            flex: 1 1 100%;
+            max-width: 600px;
+            border-left: 2px solid #4fc3f7;
+            padding-left: 1rem;
+          "
+        >
+          <div
+            class="timeline-entry"
+            style="position: relative; margin-bottom: 1.5rem"
+          >
+            <strong>2024</strong>
             <p>
-              <strong>Bachelor of Science in Information Technology (BSIT)</strong><br>
-              Pamantasan Lungsod ng Valenzuela<br>
-              <small>2021 - Present</small>
+              <strong>Office of the City Prosecutor (Valenzuela)</strong
+              ><br /><em>UI/UX Design</em><br />
+              <small
+                >Proposed a system designed to enhance the office's efficiency.
+                Created the UI using Figma before implementing it in
+                code.</small
+              >
             </p>
           </div>
 
-          <div class="box" style="width: 100%; height: 50%; padding: 15px;">
-            <h3 style="margin-bottom: 20px;">Resume</h3>
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 20px;">
+          <div
+            class="timeline-entry"
+            style="position: relative; margin-bottom: 1.5rem"
+          >
+            <strong>2024</strong>
+            <p>
+              <strong>Capstone</strong><br /><em>Front-End and Backend</em
+              ><br />
+              <small
+                >Designed the UI/UX using Figma and implemented it in code.
+                Developed 90% of the web-based 'Document Tracking System' using
+                HTML, CSS, JS, PHP, and MySQL.</small
+              >
+            </p>
+          </div>
 
-              <!-- Left Side: Buttons (Stacked Vertically) -->
-              <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; justify-content: space-between; height: 100px;">
+          <div id="more-experience" style="display: none">
+            <div
+              class="timeline-entry"
+              style="position: relative; margin-bottom: 1.5rem"
+            >
+              <strong>2024</strong>
+              <p>
+                <strong>Software Development</strong><br /><em>UI/UX</em><br />
+                <small
+                  >Developed the front end using HTML, CSS, and JS for 'Coffee
+                  Shop'.<br /><br />
+                  Designed UI/UX using Figma for 'Pharmacy' and 'Beastlink'
+                  school projects.</small
+                >
+              </p>
+            </div>
 
-                <!-- Top Button -->
-                <button onclick="openPreview()" style="padding: 12px 32px; border: none; background-color: #00e676; color: white; border-radius: 8px; cursor: pointer; transition: background 0.3s; display: inline-block; margin-left: auto; margin-right: auto; text-align: center; font-size: 16px;">
-                  Preview Resume
-                </button>
+            <div
+              class="timeline-entry"
+              style="position: relative; margin-bottom: 1.5rem"
+            >
+              <strong>2024</strong>
+              <p>
+                <strong>Game Development</strong><br /><em
+                  >UI/UX Designer and Graphic Designer</em
+                ><br />
+                <small
+                  >Created all assets and UI/UX for 'Guardian of the Museums'
+                  board game and a TTRPG game.</small
+                >
+              </p>
+            </div>
 
-                <!-- Bottom Button -->
-                <a href="Yvosh Martin.pdf" download style="display: inline-block; margin-top: 10px; padding: 12px 24px; background-color: #7e57c2; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s; text-align: center; margin-left: auto; margin-right: auto; font-size: 16px;">
-                  Download Resume
-                </a>
-              </div>
-              <!-- Right Side: Clickable Preview -->
-              <div onclick="openPreview()" style="flex: 1; min-width: 300px; max-width: 400px; cursor: pointer;">
-                <iframe src="Yvosh Martin.pdf#toolbar=0&navpanes=0&scrollbar=0" style="width: 100%; height: 500px; border: 2px solid #4fc3f7; border-radius: 10px;"></iframe>
-              </div>
+            <div
+              class="timeline-entry"
+              style="position: relative; margin-bottom: 1.5rem"
+            >
+              <strong>2025</strong>
+              <p>
+                <strong>EcoPoints Charging System</strong><br /><em
+                  >Front-End</em
+                ><br />
+                <small
+                  >Developed the front end using HTML, CSS, and JavaScript for
+                  the 'Recharge' project.</small
+                >
+              </p>
             </div>
           </div>
 
-          <!-- Modal for Full Preview -->
-          <div id="resumeModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
-            <div style="position: relative; width: 80%; height: 90%; background: white; border-radius: 8px; overflow: hidden;">
-              <iframe src="Yvosh Martin.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
-              <button onclick="closePreview()" style="position: absolute; top: 10px; right: 10px; background: #f44336; border: none; color: white; padding: 8px 12px; border-radius: 5px; cursor: pointer;">
-                ✖ Close
-              </button>
+          <button
+            onclick="toggleMore()"
+            aria-expanded="false"
+            aria-controls="more-experience"
+            style="
+              margin-top: 10px;
+              padding: 10px 20px;
+              background: #0288d1;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            See More
+          </button>
+        </div>
+
+        <div style="flex: 1 1 100%; max-width: 900px">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem">
+            <div class="box" style="padding: 15px">
+              <h3 style="margin-bottom: 10px">Education</h3>
+              <p>
+                <strong
+                  >Bachelor of Science in Information Technology (BSIT)</strong
+                ><br />
+                Pamantasan Lungsod ng Valenzuela<br />
+                <small>2021 - Present</small>
+              </p>
+            </div>
+
+            <div class="box" style="padding: 15px">
+              <h1 style="margin-bottom: 20px">Resume</h1>
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 1rem;
+                  align-items: flex-start;
+                  justify-content: space-between;
+                  flex-direction: row;
+                "
+              >
+                <!-- Button Column -->
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    flex: 1 1 150px;
+                    min-width: 150px;
+                    max-width: 200px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 3%;
+                  "
+                >
+                  <button
+                    onclick="openPreview()"
+                    style="
+                      padding: 12px 32px;
+                      border: none;
+                      background-color: #00e676;
+                      color: white;
+                      border-radius: 8px;
+                      cursor: pointer;
+                      transition: background 0.3s;
+                      font-size: 1rem;
+                      width: 100%;
+                    "
+                  >
+                    Preview Resume
+                  </button>
+
+                  <a
+                    href="Yvosh Martin.pdf"
+                    download
+                    style="
+                      padding: 12px 24px;
+                      background-color: #7e57c2;
+                      color: white;
+                      text-decoration: none;
+                      border-radius: 8px;
+                      transition: background 0.3s;
+                      font-size: 1rem;
+                      text-align: center;
+                      width: 100%;
+                    "
+                  >
+                    Download Resume
+                  </a>
+                </div>
+
+                <!-- Preview Column -->
+                <div
+                  onclick="openPreview()"
+                  style="
+                    flex: 1 1 300px;
+                    min-width: 300px;
+                    max-width: 600px;
+                    cursor: pointer;
+                  "
+                >
+                  <iframe
+                    src="Yvosh Martin.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      border: 2px solid #4fc3f7;
+                      border-radius: 10px;
+                    "
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
-  </section>
-
-
-
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-grid" style="display: flex; gap: 50px; flex-wrap: wrap; width: 100%;">
-
-      <form action="components/contact.html" method="POST" style="flex: 1; min-width: 300px;">
-        <div style="display: flex; gap: 4%; margin-bottom: 15px;">
-          <input type="text" name="name" placeholder="Name" style="width: 48%; color: black;" required />
-          <input type="email" name="email" placeholder="Email" style="width: 48%; color: black;" required />
-        </div>
-        <input type="text" name="subject" placeholder="Subject" style="width: 100%; margin-bottom: 15px; color: black;" required />
-        <textarea name="message" rows="4" placeholder="Message" style="width: 100%; margin-bottom: 15px; color: black;" required></textarea>
-        <button type="submit" style="padding: 10px 20px; background: #4fc3f7; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
-      </form>
-
-
-      <!-- Contact Info -->
-      <div class="contact-box" style="flex: 1; min-width: 300px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          <i class="fas fa-envelope" style="border: 1px solid #ccc; padding: 10px; border-radius: 6px; margin-right: 10px;"></i>
-          <div>
-            <strong>Email</strong><br>
-            yvoshcaila@gmail.com
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          <i class="fas fa-phone" style="border: 1px solid #ccc; padding: 10px; border-radius: 6px; margin-right: 10px;"></i>
-          <div>
-            <strong>Phone</strong><br>
-            +09955953899
-          </div>
-        </div>
-
-        <h4 style="margin-bottom: 10px;">Follow me:</h4>
-        <div class="social-icons" style="display: flex; gap: 10px; margin-bottom: 15px;">
-          <a href="https://facebook.com" target="_blank" class="icon-box">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <!-- <a href="https://twitter.com" target="_blank" class="icon-box">
-            <i class="fab fa-twitter"></i>
-          </a> -->
-          <a href="https://www.linkedin.com/in/martin-yvosh-caila-a7354b312" target="_blank" class="icon-box">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-
-          <a href="https://www.instagram.com/frontendyvosh/" target="_blank" class="icon-box">
-            <i class="fab fa-instagram"></i>
-          </a>
-
         </div>
       </div>
-  </section>
+    </section>
 
-<footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #000; color: white; flex-wrap: wrap;">
-  <p style="margin: 0; flex: 1; text-align: left;">
-    Yvosh Martin
-  </p>
-  
-  <p style="margin: 0; flex: 1; text-align: center;">
-    &copy; 2025 Yvosh Martin. All rights reserved.
-  </p>
-  
-  <span class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" style="cursor: pointer; text-decoration: underline; flex: 1; text-align: right;">
-    Back to Top
-  </span>
-</footer>
-</body>
-<script>
-  function toggleMore() {
-    const moreSection = document.getElementById("more-experience");
-    const btn = event.target;
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="max-w-9xl mx-auto px-6 py-10">
+        <div class="flex flex-col sm:flex-row gap-8">
+          <div
+            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md"
+          >
+            <!-- Top Circle Icon -->
+            <div
+              class="w-14 h-14 bg-[#4fc3f7] rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
+            >
+              <i class="fas fa-phone text-white text-xl"></i>
+            </div>
 
-    if (moreSection.style.display === "none") {
-      moreSection.style.display = "block";
-      btn.textContent = "See Less";
-    } else {
-      moreSection.style.display = "none";
-      btn.textContent = "See More";
-    }
-  }
+            <!-- Title -->
+            <h3 class="text-base font-semibold mb-3 text-white text-center">
+              Contacts
+            </h3>
 
-  function openPreview() {
-    document.getElementById("resumeModal").style.display = "flex";
-  }
+            <!-- Contact Info Section -->
+            <div
+              class="flex flex-col gap-3 text-sm text-white font-medium mt-4"
+            >
+              <!-- Email -->
+              <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-[#4fc3f7] w-5 text-center"></i>
+                <span>cailayvosh@gmail.com / yvoshfrontend@gmail.com</span>
+              </div>
 
-  function closePreview() {
-    document.getElementById("resumeModal").style.display = "none";
-  }
+              <!-- Phone -->
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-[#4fc3f7] w-5 text-center"></i>
+                <span>09955953899</span>
+              </div>
 
+              <!-- Location -->
+              <div class="flex items-center gap-2">
+                <i
+                  class="fas fa-map-marker-alt text-[#4fc3f7] w-5 text-center"
+                ></i>
+                <span>Valenzuela</span>
+              </div>
+            </div>
+          </div>
 
-  const toggleButton = document.getElementById('toggleProjects');
-  const hiddenCards = document.querySelectorAll('.project-card.hidden');
-  let isExpanded = false;
+          <div
+            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md"
+          >
+            <div
+              class="w-14 h-14 bg-[#4fc3f7] rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
+            >
+              <i class="fas fa-comment-alt text-white text-xl"></i>
+            </div>
+            <h3 class="text-base font-semibold mb-2 text-white text-center">
+              My Socials
+            </h3>
 
-  toggleButton.addEventListener('click', () => {
-    hiddenCards.forEach(card => card.classList.toggle('hidden'));
-    isExpanded = !isExpanded;
-    toggleButton.textContent = isExpanded ? 'Show Less Projects' : 'Show More Projects';
-  });
-</script>
+            <div class="social-info flex items-center justify-center gap-6">
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/frontendyvosh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2"
+                aria-label="Instagram"
+              >
+                <div class="icon-box">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </div>
+                <span class="text-white text-sm font-medium"
+                  >@frontendyvosh</span
+                >
+              </a>
 
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/martin-yvosh-caila-a7354b312"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2"
+                aria-label="LinkedIn"
+              >
+                <div class="icon-box">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </div>
+                <span class="text-white text-sm font-medium">Yvosh Martin</span>
+              </a>
+            </div>
+
+            <div class="flex justify-center"></div>
+          </div>
+          <div
+            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md"
+          >
+            <div
+              class="w-14 h-14 bg-[#4fc3f7] rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
+            >
+              <i class="fas fa-envelope text-white text-xl"></i>
+            </div>
+            <h3 class="text-base font-semibold mb-2 text-white text-center">
+              Ask a Question
+            </h3>
+            <p
+              class="text-xs text-white mb-4 leading-tight text-center font-medium"
+            >
+              You can message me for more inquiries or questions. I will get
+              back to you as soon as possible.
+            </p>
+
+            <div class="flex justify-center">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=yvoshfrontend@gmail.com&su=GET%20STARTED%20-%20(SAMPLE%20TITLE%20PROJECT)&body=Hi%2C%0A%0AYour%20Name%20-%20What%20will%20I%20do%20(Front%20end%20or%20Back%20end%20or%20UI%2FUX)%20-%20When%20do%20you%20need%20it%20-%20Overall%20summary%20of%20the%20project%20"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+              >
+                <button
+                  class="bg-[#4fc3f7] text-white text-xs px-4 py-2 rounded font-semibold hover:bg-[#003a5a] transition"
+                  type="button"
+                >
+                  Get Started
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md"
+          >
+            <div
+              class="w-14 h-14 bg-[#4fc3f7] rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
+            >
+              <i class="fas fa-handshake text-white text-xl"></i>
+            </div>
+            <h3 class="text-base font-semibold mb-2 text-white text-center">
+              I accept commissions from:
+            </h3>
+            <ul
+              class="text-xs text-white mb-4 leading-tight text-center font-medium list-disc list-inside"
+            >
+              <li>Students</li>
+              <li>Startups / Small businesses</li>
+              <li>Small businesses/Anyone Interested</li>
+            </ul>
+
+            <div class="flex justify-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Yvosh Martin</p>
+      <p>&copy; 2025 Yvosh Martin. All rights reserved.</p>
+      <span
+        class="back-to-top"
+        role="button"
+        tabindex="0"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        onkeypress="if(event.key==='Enter'){window.scrollTo({ top: 0, behavior: 'smooth' })}"
+      >
+        Back to Top
+      </span>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div
+      id="resumeModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          width: 90%;
+          height: 90%;
+          background: #fff;
+          border-radius: 8px;
+          overflow: hidden;
+        "
+      >
+        <iframe
+          src="Yvosh Martin.pdf"
+          style="width: 100%; height: 100%; border: none"
+        ></iframe>
+        <button
+          onclick="closePreview()"
+          style="
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f44336;
+            border: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+        >
+          ✖ Close
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const links = document.querySelectorAll(".nav-links a");
+
+      navToggle.addEventListener("click", () => {
+        const expanded =
+          navToggle.getAttribute("aria-expanded") === "true" || false;
+        navToggle.setAttribute("aria-expanded", !expanded);
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a nav link
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          navToggle.setAttribute("aria-expanded", false);
+          navLinks.classList.remove("active");
+        });
+      });
+
+      function toggleMore() {
+        const moreSection = document.getElementById("more-experience");
+        const btn = event.target;
+
+        if (moreSection.style.display === "none") {
+          moreSection.style.display = "block";
+          btn.textContent = "See Less";
+          btn.setAttribute("aria-expanded", "true");
+        } else {
+          moreSection.style.display = "none";
+          btn.textContent = "See More";
+          btn.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      function openPreview() {
+        document.getElementById("resumeModal").style.display = "flex";
+      }
+
+      function closePreview() {
+        document.getElementById("resumeModal").style.display = "none";
+      }
+
+      const toggleButton = document.getElementById("toggleProjects");
+      const hiddenCards = document.querySelectorAll(".project-card.hidden");
+      let isExpanded = false;
+
+      toggleButton.addEventListener("click", () => {
+        hiddenCards.forEach((card) => card.classList.toggle("hidden"));
+        isExpanded = !isExpanded;
+        toggleButton.textContent = isExpanded
+          ? "Show Less Projects"
+          : "Show More Projects";
+      });
+    </script>
+  </body>
 </html>
