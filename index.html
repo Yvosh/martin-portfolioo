@@ -135,15 +135,11 @@
         letter-spacing: 0.05em;
       }
 
-      .home .left h2 {
-        font-size: 3rem;
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: 0.05em;
+      /* .home .left h2 {
         background: linear-gradient(to right, #38bdf8, #14b8a6, #22c55e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
+      } */
 
       .half-width-text {
         width: 100%;
@@ -163,43 +159,70 @@
         min-height: 300px;
       }
 
-      .circle-stack {
-        position: relative;
-        width: 250px;
-        height: 250px;
-      }
+     .circle-stack {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
 
-      .circle {
-        position: absolute;
-        border-radius: 50%;
-        border: 2px solid #4fc3f7;
-        width: 250px;
-        height: 250px;
-        transition: all 0.3s ease;
-      }
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #4fc3f7;
+  width: 250px;
+  height: 250px;
+  transition: all 0.3s ease;
+}
 
-      .circle:nth-child(1) {
-        top: 0;
-        left: 0;
-      }
+.circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
 
-      .circle:nth-child(2) {
-        top: 20px;
-        left: 20px;
-      }
+.circle:nth-child(2) {
+  top: 20px;
+  left: 20px;
+}
 
-      .circle.filled {
-        top: 40px;
-        left: 40px;
-        background-color: #178bab;
-        color: white;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        user-select: none;
-      }
+.circle.filled {
+  top: 40px;
+  left: 40px;
+  background-color: #178bab;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+/* Smaller screens adjustment */
+@media (max-width: 640px) {
+  .circle-stack {
+    width: 120px;
+    height: 120px;
+    margin-right: 50%;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    border-width: 1.5px;
+  }
+
+  .circle:nth-child(2) {
+    top: 10px;
+    left: 10px;
+  }
+
+  .circle.filled {
+    top: 20px;
+    left: 20px;
+    font-size: 0.9rem;
+  }
+}
+
 
       .marquee {
         white-space: nowrap;
@@ -889,6 +912,7 @@
 
         /* Other adjustments as necessary */
       }
+      
     </style>
   </head>
 
@@ -919,9 +943,21 @@
         >
           FRONT-END
         </h1>
-        <h2 class="font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[5.5rem]">
+<h2
+  class="font-black text-[1.8rem] sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-[5.5rem] whitespace-nowrap inline-block pr-1"
+  style="
+    background: linear-gradient(to right, #38bdf8, #14b8a6, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  "
+>
   DEVELOPER
 </h2>
+
+
+
+
+
 
 
         <p class="half-width-text">
