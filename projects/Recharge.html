@@ -1,1116 +1,236 @@
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YVOSH MARTIN - PORTFOLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Work Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 1px
-          );
-        background-size: 20px 20px;
-        background-position: top left;
-        animation: fadeIn 1s ease-in-out;
-      }
+    <link rel="stylesheet" href="projects.css">
+</head>
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
+<body class="font-sans">
+      <!-- HEADER -->
+  <header class="sticky-header p-4 flex justify-between items-center opacity-90">
+    <!-- Left: Home/Arrow Icon -->
+    <a href="../index.html" class="text-white text-2xl hover:text-gray-300">
+      &#8592; <!-- Left arrow symbol -->
+    </a>
 
-        to {
-          opacity: 1;
-        }
-      }
+    <!-- Right: Name -->
+    <span class="text-white text-2xl">
+      Yvosh <span class="text-[#4fc3f7]">Caila</span> Martin
+    </span>
+  </header>
 
-      .shimmer-effect {
-        background: linear-gradient(
-          to right,
-          #0f1f23 0%,
-          #1f2f33 20%,
-          #0f1f23 40%,
-          #0f1f23 100%
-        );
-        background-size: 200% 100%;
-        animation: shimmer 4s infinite linear;
-      }
+    <!-- MAIN CONTENT -->
+    <section class="px-[5%] p-6 bg-gray-900 rounded-xl shadow-lg mt-8 ml-10 mr-10">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+            <!-- Left: Main Image -->
+            <div class="flex-shrink-0 w-full md:w-2/6">
+                <div class="flex space-x-2">
+                    <img src="../images/Recharge/1.png" alt="Main Project" class="rounded-lg w-2/4 shadow-md" />
+                    <img src="../images/Recharge/3.png" alt="Main Project" class="rounded-lg w-2/4 shadow-md" />
+                </div>
+            </div>
 
-      @keyframes shimmer {
-        0% {
-          background-position: -1000px 0;
-        }
-        100% {
-          background-position: 1000px 0;
-        }
-      }
-    </style>
-  </head>
-
-  <body class="bg-black text-white overflow-x-hidden">
-    <header
-      class="fixed w-full z-50 bg-black bg-opacity-80 flex flex-wrap justify-between items-center px-12 py-5 text-base"
-    >
-      <div class="logo text-2xl font-semibold">
-        Yvosh Caila <span class="text-sky-400">Martin</span>
-      </div>
-
-      <button
-        class="nav-toggle text-3xl bg-transparent border-none cursor-pointer md:hidden"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-      >
-        &#9776;
-      </button>
-
-      <nav
-        class="nav-links hidden md:flex gap-6 whitespace-nowrap text-white font-medium"
-      >
-        <a href="#" class="active font-bold border-b-2 border-sky-400 pb-1"
-          >Home</a
-        >
-        <a href="#about" class="hover:border-b-2 hover:border-sky-400 pb-1"
-          >About</a
-        >
-        <a href="#work" class="hover:border-b-2 hover:border-sky-400 pb-1"
-          >Project</a
-        >
-        <a href="#skills" class="hover:border-b-2 hover:border-sky-400 pb-1"
-          >Skills</a
-        >
-        <a href="#experience" class="hover:border-b-2 hover:border-sky-400 pb-1"
-          >Experience</a
-        >
-        <a href="#contact" class="hover:border-b-2 hover:border-sky-400 pb-1"
-          >Contact</a
-        >
-      </nav>
-    </header>
-
-<section
-  class="home flex items-center justify-between relative min-h-[400px] bg-[radial-gradient(circle_at_bottom_right,rgba(79,195,247,0.1),#000)] px-10"
-  style="align-items: flex-end;"
->
-<div class="left max-w-4xl w-3/4">
-  <h1 class="font-extrabold mt-0 text-[3rem]">FRONT-END</h1>
-  <p
-    class="font-black text-[3.5rem] sm:text-[1.8rem] md:text-4xl lg:text-5xl xl:text-[5.5rem] whitespace-nowrap inline-block pr-1"
-    style="
-      background: linear-gradient(to right, #38bdf8, #14b8a6, #22c55e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    "
-  >
-    DEVELOPER
-  </p>
-  <p class="text-gray-300 text-base mt-1 leading-relaxed max-w-full">
-    I am a passionate and dedicated developer with hands-on experience in
-    creating engaging, responsive, and user-centric web applications. I take
-    pride in building digital solutions that are not only functional but
-    also visually appealing and intuitive to use.
-  </p>
-</div>
-
-<div
-  aria-label="Profile picture half body"
-  class="right relative w-1/4 flex justify-center items-end mx-auto md:mx-0 mt-0 md:mt-0 md:w-1/4 sm:w-3/4 xs:w-3/4"
->
-    <img
-      src="photo.png"
-      alt="Half Body Photo"
-      class="w-60 max-h-[280px] object-contain self-end"
-      style="margin-bottom: 0;"
-    />
-  </div>
-</section>
-    <div
-      class="marquee whitespace-nowrap overflow-hidden w-full mt-8 text-sm text-white px-4 md:px-12"
-      aria-label="Scrolling text of roles"
-    >
-      <p class="inline-block animate-marquee pl-full">
-        Front-End Developer - Web Developer - Front-End Designer - UI/UX
-        Designer - Front-End Developer - Web Developer - Front-End Designer -
-        UI/UX Designer
-      </p>
-    </div>
-
-    <section id="about" class="px-4 py-8 md:px-12">
-      <h2
-        class="section-title text-3xl font-bold mb-6 inline-block pb-1 border-b-2 border-sky-400"
-      >
-        About Me
-      </h2>
-      <div class="flex flex-col lg:flex-row gap-8">
-        <div
-          class="lg:w-1/2 p-8 rounded-xl border border-gray-700 shimmer-effect text-white shadow-lg flex-1 about-text-box"
-        >
-          <p class="text-sm leading-relaxed">
-            I am a passionate web developer currently pursuing a Bachelor of
-            Science in Information Technology (BSIT), with graduation expected
-            in June or September. My journey in the tech world started with a
-            fascination for how websites work, and over time, I’ve developed a
-            strong interest in creating engaging, dynamic, and user-friendly web
-            applications.
-            <br /><br />
-            This has enabled me to create dynamic web applications and better
-            integrate back-end functionality, while continuously expanding my
-            knowledge. <br /><br />
-            I also have a strong creative side, where I explore graphic design,
-            creating posters, marketing materials, and visual assets using
-            Photoshop and Canva. I believe that design plays a crucial role in
-            user experience, and I strive to ensure that the digital solutions I
-            build are not only functional but also aesthetically pleasing.
-            <br /><br />
-            Always eager to learn and grow, I enjoy problem-solving and
-            collaborating in environments that push me to improve my skills. I
-            thrive in situations where innovation is encouraged, and I’m excited
-            about future projects where I can continue to expand my knowledge in
-            web development and design, using both traditional methods and
-            cutting-edge tools like AI. <br /><br />
-            In my free time, I enjoy exploring new trends in web development,
-            connecting with other tech enthusiasts, and sharing insights to help
-            others grow in the field. <br /><br />
-            With the help of AI tools like ChatGPT and Blackbox, I bring ideas
-            to life—turning concepts into functional and visually engaging
-            websites.
-          </p>
+            <!-- Right: Description + Button -->
+            <div class="w-full md:w-1/2 text-left">
+                <h1 class="text-3xl font-bold mb-10">Recharge (EcoPoints Charging System)</h1>
+                <p class="text-gray-740 mb-5"><strong>Role: Front-End</strong><br /></p>
+                <p class="text-gray-300 mb-10">
+                    Category: Web Application (Designed for Phones)<br />
+                    Status: Completed<br />
+                    Client: Student from PLV <br />
+                    Platform: HTML, JS, and Tailwind CSS <br> <br>
+                    Purpose: School Project <br>
+                    Client Request: Use only HTML, CSS, and JavaScript, and ensure the website is responsive and optimized for mobile phones. <br>
+                    Focus: Mobile-Responsive Design
+                </p>
+                <p class="text-gray-740 mb-5"><strong>To visit the link, click the button below.</strong><br /></p>
+                <a href="../Links/Recharge/Dashboard.html" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-full transition mb-4">
+                    Click here to redirect
+                </a>
+            </div>
         </div>
-
-<div class="lg:w-1/2 grid grid-cols-2 gap-4">
-  <div id="skill1"
-    class="skill-box bg-sky-800 opacity-85 border border-black cursor-pointer transition-colors duration-300 hover:bg-sky-900 flex flex-col items-center justify-center p-12 h-64"
-  >
-    <p class="text-4xl font-extrabold">1+</p>
-    <p class="text-sm mt-1 uppercase font-semibold leading-tight text-center">
-      YEARS OF<br />EXPERIENCE
-    </p>
-  </div>
-
-  <div id="skill2"
-    class="skill-box bg-purple-800 opacity-85 border border-black cursor-pointer transition-colors duration-300 hover:bg-purple-900 flex flex-col items-center justify-center p-12 h-64"
-  >
-    <p class="text-4xl font-extrabold">8</p>
-    <p class="text-sm mt-1 uppercase font-semibold leading-tight text-center">
-      PROJECTS<br />COMPLETED
-    </p>
-  </div>
-
-  <div id="skill3"
-    class="skill-box bg-purple-800 opacity-85 border border-black cursor-pointer transition-colors duration-300 hover:bg-purple-900 flex flex-col items-center justify-center p-12 h-64"
-  >
-    <p class="text-4xl font-extrabold">2/2</p>
-    <p class="text-sm mt-1 uppercase font-semibold leading-tight text-center">
-      HAPPY<br />CLIENTS
-    </p>
-  </div>
-
-  <div id="skill4"
-    class="skill-box bg-sky-800 opacity-85 border border-black cursor-pointer transition-colors duration-300 hover:bg-sky-900 flex flex-col items-center justify-center p-12 h-64"
-  >
-    <p class="text-4xl font-extrabold">2</p>
-    <p class="text-sm mt-1 uppercase font-semibold leading-tight text-center">
-      COMMISIONS
-    </p>
-  </div>
-</div>
-</section>
-
-<!-- Modal -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
-    <div class="bg-gray-900 p-6 rounded-lg max-w-md w-full relative">
-      <button id="closeModal" class="absolute top-2 right-2 text-white text-xl font-bold hover:text-gray-400">&times;</button>
-      <div id="modalContent" class="text-white text-center text-lg"></div>
-    </div>
-  </div>
-
-   <section id="work" class="px-4 md:px-12">
-  <h2
-    class="section-title text-3xl font-bold mb-6 inline-block pb-1 border-b-2 border-sky-400"
-  >
-    My Projects
-  </h2>
-  <div
-    class="max-w-[1900px] mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-  >
-    <div
-      class="group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4 h-400">
-        <img
-          src="../images/Capstone/1. Login Page/1. Login.png" alt="Main Project" class="rounded-lg w-2/2 shadow-md"
-          alt="Capstone Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          CAPSTONE
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-purple-900 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          CAPSTONE
-        </h2>
-        <h4 class="italic mb-4">Front-End and Back-End</h4>
-        <p class="text-white text-sm mb-4">
-          Designed the user interface (UI) and User Experience (UX) using Figma
-          and implemented it in code. Responsible for developing 90% of the
-          web-based 'Document Tracking System' application, including its
-          implementation and functionality. Developed the front end with HTML,
-          CSS, and JavaScript, the backend with PHP, and the database using
-          MySQL.
-        </p>
-        <a href="projects/Capstone.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-
-    <div
-      class="group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src="../images/OJT/login.png"
-          alt="Case Records Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          Case Records (Intern Project Proposal)
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-sky-700 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          OJT
-        </h2>
-        <h4 class="italic mb-4">Front-End</h4>
-        <p class="text-white text-sm mb-4">
-          Developed the front end using HTML, CSS, and JavaScript for the 'Case
-          Records (Intern Project Proposal)' project.
-        </p>
-        <a href="projects/OJT.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-
-    <div
-      class="group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src="../images/Coffee Shop/1.png"
-          alt="Coffee Shop Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          Software Development Project (Coffee Shop)
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-purple-900 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          Software Development Project (Coffee Shop)
-        </h2>
-        <h4 class="italic mb-4">Front-End</h4>
-        <p class="text-white text-sm mb-4">
-          Developed the front end using HTML, CSS, and JavaScript for the
-          'Coffee Shop' project.
-        </p>
-        <a href="projects/Coffee_Shop.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-        <div
-      class="project-card hidden group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src=""
-          alt="Coffee Shop Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          Software Development Project (Pharmacy)
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-sky-700 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          Software Development Project (Pharmacy)
-        </h2>
-        <h4 class="italic mb-4">UI/UX</h4>
-        <p class="text-white text-sm mb-4">
-Designed the user interface (UI) and User Experience (UX) using Figma for the 'Pharmacy' project.
-        </p>
-        <a href="projects/Coffee_Shop.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-        <div
-      class="project-card hidden group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src="../images/BeastLink UI/1.png"
-          alt="Beastlink Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          Software Development Project (School System: Document & Requirements)
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-purple-900 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          Software Development Project (School System: Document & Requirements)
-        </h2>
-        <h4 class="italic mb-4">UI/UX and Front-End</h4>
-        <p class="text-white text-sm mb-4">
-          Designed the user interface (UI) and User Experience (UX) using Figma for 'Beastlink,' a school system project'. <br>
-          Developed the front end using React, Tailwind CSS, and JavaScript for the 'Beastlink,' a school system project' project.
-        </p>
-        <a href="projects/BeastLink.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-    
-        <div
-      class="project-card hidden group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src="../images/Gamedev1/Assets (Cards)/Boards and Other Cards/Board.png"
-          alt="Gamedev 1 Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          Game Development 1 Project
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-sky-700 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          Game Development 1 Project
-        </h2>
-        <h4 class="italic mb-4">UI/UX and Graphic Designer</h4>
-        <p class="text-white text-sm mb-4">
-Designed and developed the board game 'Guardian of the Museums,' including creating the rules, game flow, and all assets, such as the board, weapon cards, character cards, place cards, points, and more.
-        </p>
-        <a href="projects/Gamedev1.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-        <div
-      class="project-card hidden group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src="../images/Gamedev2/1. Start.png"
-          alt="Gamedev2 Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          Game Development 2 Project  
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-purple-900 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          Game Development 2 Project
-        </h2>
-        <h4 class="italic mb-4">UI/UX and Graphic Designer</h4>
-        <p class="text-white text-sm mb-4">
-      Designed our TTRPG game, including all assets such as the layout, main menu, pause screen, character cards, monster cards, weapon cards, and other cards, while ensuring the overall design was aesthetically pleasing and user-friendly.
-        </p>
-        <a href="projects/Gamedev2.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-        <div
-      class="project-card hidden group w-full aspect-square bg-gray-900 relative cursor-pointer transition-colors duration-300 hover:bg-gray-800 rounded overflow-hidden"
-    >
-      <div class="flex flex-col items-center p-4">
-        <img
-          src="../images/Recharge/1.png"
-          alt="Recharge Project Image"
-          class="w-3/4 rounded-md object-cover"
-        />
-        <h2
-          class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center transition-opacity duration-300 group-hover:opacity-0"
-        >
-          EcoPoints Charging System
-        </h2>
-      </div>
-      <div
-        class="hover-content absolute inset-0 bg-sky-700 p-6 flex flex-col items-center justify-center text-center opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible rounded"
-      >
-        <h2 class="text-white font-extrabold text-xl tracking-widest mb-2">
-          EcoPoints Charging System 
-        </h2>
-        <h4 class="italic mb-4">Front-End</h4>
-        <p class="text-white text-sm mb-4">
-         Developed the front end using HTML, CSS, and JavaScript for the 'Recharge' project.
-        </p>
-        <a href="projects/Recharge.html" class="inline-block">
-          <button
-            class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            View Project
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-      <div class="text-center mt-6">
-        <button
-          id="toggleProjects"
-          class="bg-sky-700 text-white px-6 py-2 rounded hover:bg-purple-700 transition-colors duration-300"
-        >
-          Show More Projects
-        </button>
-      </div>
-</section>    
-
-<section id="skills" class="px-4 md:px-12">
-      <h2
-        class="section-title text-3xl font-bold mb-6 inline-block pb-1 border-b-2 border-sky-400"
-      >
-        My Skills
-      </h2>
-      <div class="about-boxes grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="skill-box w-full bg-[#1a1a1a] p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4">Skills</h3>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Front-End Development</p>
-            <span>90%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 90%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Back-End Development</p>
-            <span>80%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 80%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>UI/UX</p>
-            <span>95%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 95%"
-            ></div>
-          </div>
-        </div>
-
-        <div class="skill-box w-full bg-[#1a1a1a] p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4">Design Tools</h3>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Figma</p>
-            <span>90%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 90%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Photoshop</p>
-            <span>85%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 85%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Canva</p>
-            <span>95%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 95%"
-            ></div>
-          </div>
-        </div>
-
-        <div class="skill-box w-full bg-[#1a1a1a] p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4">Social Skills</h3>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Social Media Management</p>
-            <span>90%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 90%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Digital Marketing</p>
-            <span>85%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 85%"
-            ></div>
-          </div>
-        </div>
-
-        <div class="skill-box w-full bg-[#1a1a1a] p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4">Other Skills</h3>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Time Management</p>
-            <span>90%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 90%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Creative</p>
-            <span>85%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 85%"
-            ></div>
-          </div>
-          <div class="skill-item flex justify-between mb-2">
-            <p>Adaptibility</p>
-            <span>85%</span>
-          </div>
-          <div class="progress bg-gray-800 rounded h-2 mb-4 overflow-hidden">
-            <div
-              class="progress-bar bg-sky-400 h-full"
-              style="width: 85%"
-            ></div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="experience" class="px-4 md:px-12 mt-12 mb-12">
-  <h2
-    class="section-title text-3xl font-bold mb-6 inline-block pb-1 border-b-2 border-sky-400"
-  >
-    Experience
-  </h2>
-  <div class="about-boxes flex flex-wrap gap-8">
-    <div
-      class="timeline flex-1 max-w-lg border-l-4 border-sky-400 pl-4 space-y-6"
-    >
-      <div>
-        <strong>2024</strong>
-        <p>
-          <strong>Office of the City Prosecutor (Valenzuela)</strong><br />
-          <em>UI/UX Design</em><br />
-          <small
-            >Proposed a system designed to enhance the office's efficiency.
-            Created the UI using Figma before implementing it in
-            code.</small
-          >
-        </p>
-      </div>
-
-      <div>
-        <strong>2024</strong>
-        <p>
-          <strong>Capstone</strong><br />
-          <em>Front-End and Backend</em><br />
-          <small
-            >Designed the UI/UX using Figma and implemented it in code.
-            Developed 90% of the web-based 'Document Tracking System' using
-            HTML, CSS, JS, PHP, and MySQL.</small
-          >
-        </p>
-      </div>
-
-      <div id="more-experience" class="hidden space-y-6">
-        <div>
-          <strong>2024</strong>
-          <p>
-            <strong>Software Development</strong><br />
-            <em>UI/UX</em><br />
-            <small
-              >Developed the front end using HTML, CSS, and JS for 'Coffee
-              Shop'.<br /><br />
-              Designed UI/UX using Figma for 'Pharmacy' and 'Beastlink'
-              school projects.</small
-            >
-          </p>
+    <p class="w-[96%] px-[2%] text-xl font-semibold text-gray-200 mt-10 ml-10 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        Product Management Side
+    </p>
+    <!-- GALLERY SECTION -->
+    <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
+        <!-- Example cards -->
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(1)">
+            <img src="../images/Recharge/1.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Dashboard</h2>
         </div>
-
-        <div>
-          <strong>2024</strong>
-          <p>
-            <strong>Game Development</strong><br />
-            <em>UI/UX Designer and Graphic Designer</em><br />
-            <small
-              >Created all assets and UI/UX for 'Guardian of the Museums'
-              board game and a TTRPG game.</small
-            >
-          </p>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(2)">
+            <img src="../images/Recharge/2.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Dashboard (Account)</h2>
         </div>
-
-        <div>
-          <strong>2025</strong>
-          <p>
-            <strong>EcoPoints Charging System</strong><br />
-            <em>Front-End</em><br />
-            <small
-              >Developed the front end using HTML, CSS, and JavaScript for
-              the 'Recharge' project.</small
-            >
-          </p>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(3)">
+            <img src="../images//Recharge/3.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Leadboards</h2>
         </div>
-      </div>
-
-      <button
-        onclick="toggleMore()"
-        aria-expanded="false"
-        aria-controls="more-experience"
-        class="mt-4 px-5 py-2 bg-sky-700 rounded text-white hover:bg-sky-600 transition"
-      >
-        See More
-      </button>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(4)">
+            <img src="../images/Recharge/4.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Leadboards (Popup Notification)</h2>
+        </div>
+        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(5)">
+            <img src="../images/Recharge/5.png" class="rounded-md mb-3 w-full" />
+            <h2 class="text-lg font-semibold text-center">Notification</h2>
+        </div>
+        <!-- <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(6)">
+      <img src="../images/Recharge/5.png" class="rounded-md mb-3 w-full" />
+      <h2 class="text-lg font-semibold text-center">Categories</h2>
     </div>
-
-    <div class="flex-1 max-w-3xl flex flex-col gap-6 ml-auto">
-      <div class="box bg-[#1a1a1a] p-4 rounded-lg shadow-md">
-        <h3 class="mb-2 text-xl font-semibold">Education</h3>
-        <p>
-          <strong
-            >Bachelor of Science in Information Technology (BSIT)</strong
-          ><br />
-          Pamantasan Lungsod ng Valenzuela<br />
-          <small>2021 - Present</small>
-        </p>
-      </div>
-
-      <div class="box bg-[#1a1a1a] p-4 rounded-lg shadow-md">
-        <h1 class="mb-5 text-2xl font-bold">Resume</h1>
-        <div class="flex flex-wrap gap-4 items-start justify-between">
-          <div
-            class="flex flex-col gap-4 flex-1 min-w-[150px] max-w-[200px] mx-3 my-auto"
-          >
-            <button
-              onclick="openPreview()"
-              class="w-full px-6 py-3 bg-green-600 rounded text-white font-semibold hover:bg-green-700 transition"
-            >
-              Preview Resume
-            </button>
-
-            <a
-              href="Yvosh Martin.pdf"
-              download
-              class="w-full px-6 py-3 bg-purple-700 rounded text-white text-center font-semibold hover:bg-purple-800 transition"
-              >Download Resume</a
-            >
-          </div>
-
-          <div
-            onclick="openPreview()"
-            class="flex-1 min-w-[300px] max-w-3xl cursor-pointer"
-          >
-            <iframe
-              src="Yvosh Martin.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              class="w-full h-72 border-4 border-sky-400 rounded-lg"
-            ></iframe>
-          </div>
-        </div>
-      </div>
+    <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(7)">
+      <img src="../images/Coffee Shop/5.1.png" class="rounded-md mb-3 w-full" />
+      <h2 class="text-lg font-semibold text-center">Categories: Variants </h2>
     </div>
-  </div>
-</section>
-    <section id="contact" class="px-4 md:px-12">
-      <h2
-        class="section-title text-3xl font-bold mb-6 inline-block pb-1 border-b-2 border-sky-400"
-      >
-        Contact
-      </h2>
-      <div class="max-w-9xl mx-auto px-6 py-10">
-        <div class="flex flex-col sm:flex-row gap-8 flex-wrap">
-          <div
-            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md bg-[#1a1a1a]"
-          >
-            <div
-              class="w-14 h-14 bg-sky-400 rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
-            >
-              <i class="fas fa-phone text-white text-xl"></i>
+    <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(8)">
+      <img src="../images/BeastLink UI/Applicant Side/2.3 Error.png" class="rounded-md mb-3 w-full" />
+      <h2 class="text-lg font-semibold text-center">Error- Exceed File Limit </h2>
+    </div>
+    <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(9)">
+      <img src="../images/BeastLink UI/Applicant Side/2.4 Success Message.png" class="rounded-md mb-3 w-full" />
+      <h2 class="text-lg font-semibold text-center">Success </h2>
+    </div> -->
+    </section>
+
+
+    <!-- MODAL -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50 px-[17%]">
+        <!-- Container -->
+        <div class="w-full bg-gray-800 rounded-lg shadow-xl">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+                <h2 id="modal-title" class="text-2xl font-semibold text-white">Project Title</h2>
+                <button onclick="closeModal()" class="text-white text-3xl hover:text-red-400">&times;</button>
             </div>
 
-            <h3 class="text-base font-semibold mb-3 text-white text-center">
-              Contacts
-            </h3>
-
-            <div
-              class="flex flex-col gap-3 text-sm text-white font-medium mt-4"
-            >
-              <div class="flex items-center gap-2">
-                <i class="fas fa-envelope text-sky-400 w-5 text-center"></i>
-                <span>cailayvosh@gmail.com / yvoshfrontend@gmail.com</span>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <i class="fas fa-phone text-sky-400 w-5 text-center"></i>
-                <span>09955953899</span>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <i
-                  class="fas fa-map-marker-alt text-sky-400 w-5 text-center"
-                ></i>
-                <span>Valenzuela</span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md bg-[#1a1a1a]"
-          >
-            <div
-              class="w-14 h-14 bg-sky-400 rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
-            >
-              <i class="fas fa-comment-alt text-white text-xl"></i>
-            </div>
-            <h3 class="text-base font-semibold mb-2 text-white text-center">
-              My Socials
-            </h3>
-
-            <div
-              class="social-info flex items-center justify-center gap-6 flex-wrap"
-            >
-              <a
-                href="https://www.instagram.com/frontendyvosh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2"
-                aria-label="Instagram"
-              >
-                <div
-                  class="icon-box border-2 border-white p-2 rounded-lg text-white text-xl flex items-center justify-center transition-colors hover:bg-sky-400 hover:border-sky-400"
-                >
-                  <i class="fab fa-instagram"></i>
-                </div>
-                <span class="text-white text-sm font-medium"
-                  >@frontendyvosh</span
-                >
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/martin-yvosh-caila-a7354b312"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2"
-                aria-label="LinkedIn"
-              >
-                <div
-                  class="icon-box border-2 border-white p-2 rounded-lg text-white text-xl flex items-center justify-center transition-colors hover:bg-sky-400 hover:border-sky-400"
-                >
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-                <span class="text-white text-sm font-medium">Yvosh Martin</span>
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md bg-[#1a1a1a]"
-          >
-            <div
-              class="w-14 h-14 bg-sky-400 rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
-            >
-              <i class="fas fa-envelope text-white text-xl"></i>
-            </div>
-            <h3 class="text-base font-semibold mb-2 text-white text-center">
-              Ask a Question
-            </h3>
-            <p
-              class="text-xs text-white mb-4 leading-tight text-center font-medium"
-            >
-              You can message me for more inquiries or questions. I will get
-              back to you as soon as possible.
-            </p>
-
-            <div class="flex justify-center">
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=yvoshfrontend@gmail.com&su=GET%20STARTED%20-%20(SAMPLE%20TITLE%20PROJECT)&body=Hi%2C%0A%0AYour%20Name%20-%20What%20will%20I%20do%20(Front%20end%20or%20Back%20end%20or%20UI%2FUX)%20-%20When%20do%20you%20need%20it%20-%20Overall%20summary%20of%20the%20project%20"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="no-underline"
-              >
-                <button
-                  class="bg-sky-400 text-white text-xs px-4 py-2 rounded font-semibold hover:bg-sky-900 transition"
-                  type="button"
-                >
-                  Get Started
+            <!-- Modal Image Area -->
+            <div class="relative bg-gray-900 p-6 flex items-center justify-center rounded-b-lg" style="min-height: 80vh;">
+                <!-- Left Arrow -->
+                <button onclick="prevImage()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-10">
+                    &larr;
                 </button>
-              </a>
-            </div>
-          </div>
 
-          <div
-            class="gradient-box flex-1 p-8 pt-16 relative rounded-md shadow-md bg-[#1a1a1a]"
-          >
-            <div
-              class="w-14 h-14 bg-sky-400 rounded-full flex items-center justify-center absolute -top-7 left-1/2 transform -translate-x-1/2 shadow-lg"
-            >
-              <i class="fas fa-handshake text-white text-xl"></i>
+                <!-- Image -->
+                <img id="lightbox-img" src="" alt="Zoomed Image" class="w-[90%] h-[75vh] object-contain rounded-md shadow-md transition duration-300" />
+
+
+                <!-- Right Arrow -->
+                <button onclick="nextImage()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-10">
+                    &rarr;
+                </button>
             </div>
-            <h3 class="text-base font-semibold mb-2 text-white text-center">
-              I accept commissions from:
-            </h3>
-            <ul
-              class="text-xs text-white mb-4 leading-tight text-center font-medium list-disc list-inside"
-            >
-              <li>Students</li>
-              <li>Startups / Small businesses</li>
-              <li>Small businesses/Anyone Interested</li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <footer
-      class="flex flex-nowrap justify-between items-center px-6 py-4 bg-black text-white text-xs whitespace-nowrap overflow-x-auto"
-    >
-      <p class="flex-shrink-0 text-left">Yvosh Martin</p>
-      <p class="flex-grow text-center">
-        &copy; 2025 Yvosh Martin. All rights reserved.
-      </p>
-      <span
-        class="flex-shrink-0 text-right underline cursor-pointer"
-        role="button"
-        tabindex="0"
-        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        onkeypress="if(event.key==='Enter'){window.scrollTo({ top: 0, behavior: 'smooth' })}"
-        >Back to Top</span
-      >
-    </footer>
-
-    <!-- Resume Modal -->
-    <div
-      id="resumeModal"
-      class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center"
-    >
-      <div class="relative w-[90%] h-[90%] bg-white rounded-lg overflow-hidden">
-        <iframe
-          src="Yvosh Martin.pdf"
-          class="w-full h-full border-none"
-        ></iframe>
-        <button
-          onclick="closePreview()"
-          class="absolute top-2 right-2 bg-red-600 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-700 transition"
-        >
-          ✖ Close
-        </button>
-      </div>
     </div>
 
-    <script>
-      const navToggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      const links = document.querySelectorAll(".nav-links a");
-
-      navToggle.addEventListener("click", () => {
-        const expanded =
-          navToggle.getAttribute("aria-expanded") === "true" || false;
-        navToggle.setAttribute("aria-expanded", !expanded);
-        navLinks.classList.toggle("hidden");
-      });
-
-      // Close menu when clicking a nav link
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          navToggle.setAttribute("aria-expanded", false);
-          navLinks.classList.add("hidden");
-        });
-      });
-
-      function toggleMore() {
-        const moreSection = document.getElementById("more-experience");
-        const btn = event.target;
-
-        if (moreSection.classList.contains("hidden")) {
-          moreSection.classList.remove("hidden");
-          btn.textContent = "See Less";
-          btn.setAttribute("aria-expanded", "true");
-        } else {
-          moreSection.classList.add("hidden");
-          btn.textContent = "See More";
-          btn.setAttribute("aria-expanded", "false");
-        }
-      }
-
-      function openPreview() {
-        document.getElementById("resumeModal").classList.remove("hidden");
-      }
-
-      function closePreview() {
-        document.getElementById("resumeModal").classList.add("hidden");
-      }
-
-      const toggleButton = document.getElementById("toggleProjects");
-      const hiddenCards = document.querySelectorAll(".project-card.hidden");
-      let isExpanded = false;
-
-      toggleButton.addEventListener("click", () => {
-        hiddenCards.forEach((card) => card.classList.toggle("hidden"));
-        isExpanded = !isExpanded;
-        toggleButton.textContent = isExpanded
-          ? "Show Less Projects"
-          : "Show More Projects";
-      });
+<footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #000; color: white; flex-wrap: wrap;">
+  <p style="margin: 0; flex: 1; text-align: left;">
+    Yvosh Martin
+  </p>
   
-    const modal = document.getElementById('modal');
-    const modalContent = document.getElementById('modalContent');
-    const closeModal = document.getElementById('closeModal');
+  <p style="margin: 0; flex: 1; text-align: center;">
+    &copy; 2025 Yvosh Martin. All rights reserved.
+  </p>
+  
+  <span class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" style="cursor: pointer; text-decoration: underline; flex: 1; text-align: right;">
+    Back to Top
+  </span>
+</footer>
 
-    const skillData = {
-      skill1: {
-        title: 'Years of Experience',
-        description: 'I have 1+ years of experience from school projects and freelance commissions, using React, Tailwind CSS, JavaScript, HTML, and CSS for front-end development. On the back end, I work with PHP and MySQL, and I’m currently learning Laravel and Blade.'
-      },
-      skill2: {
-        title: 'Projects Completed',
-        description: 'I have successfully completed 8 projects, including both school assignments and commissioned work — ranging from small websites to more complex web applications.'
-      },
-      skill3: {
-        title: 'Happy Clients',
-        description: 'I have 2 happy clients who are satisfied with the quality and timeliness of my work.'
-      },
-      skill4: {
-        title: 'Commissions',
-        description: 'I have completed 2 commissions, delivering custom solutions tailored to client needs.'
-      }
-    };
+    <!-- BACK TO TOP SCRIPT -->
+    <script>
+        // Show/Hide Back to Top Button
+        window.onscroll = function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
 
-    document.querySelectorAll('.skill-box').forEach(box => {
-      box.addEventListener('click', () => {
-        const data = skillData[box.id];
-        modalContent.innerHTML = `<h2 class="text-2xl font-bold mb-4">${data.title}</h2><p>${data.description}</p>`;
-        modal.classList.remove('hidden');
-      });
-    });
-
-    closeModal.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 
-    <style>
-      /* Marquee animation */
-      @keyframes marquee {
-        0% {
-          transform: translateX(100%);
+    <!-- Modal Script -->
+    <script>
+        const images = [{
+                src: "../images/Recharge/1.png",
+                title: "Dashboard"
+            },
+            {
+                src: "../images/Recharge/1.png",
+                title: "Dashboard"
+            },
+            {
+                src: "../images/Recharge/2.png",
+                title: "Dashboard (Account)"
+            },
+            {
+                src: "../images/Recharge/3.png",
+                title: "Leadboards"
+            },
+            {
+                src: "../images/Recharge/4.png",
+                title: "Leadboards (Popup Notification)"
+            },
+            {
+                src: "../images/Recharge/5.png",
+                title: "Notification"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+            document.getElementById('lightbox').classList.remove('hidden');
         }
-        100% {
-          transform: translateX(-100%);
+
+        function closeModal() {
+            document.getElementById('lightbox').classList.add('hidden');
         }
-      }
-      .animate-marquee {
-        animation: marquee 15s linear infinite;
-      }
-      .pl-full {
-        padding-left: 100%;
-      }
-      
-    </style>
-  </body>
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+            document.getElementById('modal-title').textContent = images[currentIndex].title;
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('lightbox');
+            if (!modal.classList.contains('hidden')) {
+                if (event.key === 'ArrowRight') {
+                    nextImage();
+                } else if (event.key === 'ArrowLeft') {
+                    prevImage();
+                } else if (event.key === 'Escape') {
+                    closeModal();
+                }
+            }
+        });
+    </script>
+
+</body>
+
 </html>
