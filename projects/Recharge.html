@@ -126,35 +126,61 @@
       </button>
     </div>
 
+<!-- MODAL -->
+<div
+  id="lightbox"
+  class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50 px-4 sm:px-8 xs:px-2 xs:py-2"
+>
+  <!-- Modal Container -->
+  <div class="w-full max-w-5xl bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+    <!-- Modal Header -->
+    <div class="flex justify-between items-center px-4 py-2 border-b border-gray-700">
+      <h2
+        id="modal-title"
+        class="text-xl sm:text-lg xs:text-base font-semibold text-white truncate max-w-[80%]"
+      >
+        Project Title
+      </h2>
+      <button
+        onclick="closeModal()"
+        class="text-white text-3xl hover:text-red-400 focus:outline-none"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+    </div>
+
     <!-- Modal Image Area -->
     <div
       class="relative w-full bg-gray-900 flex items-center justify-center px-2 py-2 xs:py-3"
-      style="min-height: 0;"  <!-- let content decide -->
+      style="min-height: 0;"
     >
-      <!-- Left Arrow (pulled in a bit) -->
+      <!-- Left Arrow (now inside the container) -->
       <button
         onclick="prevImage()"
-        class="absolute left-[-0.75rem] sm:left-[-1rem] text-white bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full shadow-lg z-10 focus:outline-none"
+        class="absolute left-2 text-white bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full shadow-lg z-10 focus:outline-none"
         aria-label="Previous image"
       >
         &larr;
       </button>
 
-      <!-- Image itself (max height/width only) -->
+      <!-- Image itself (reduced max-height so it is shorter) -->
       <img
         id="lightbox-img"
         src=""
         alt="Zoomed Image"
-        class="object-contain rounded-md shadow-md transition duration-300
-               max-w-[80%] max-h-[80vh]
-               sm:max-w-[85%] sm:max-h-[60vh]
-               xs:max-w-[90%] xs:max-h-[50vh]"
+        class="
+          object-contain rounded-md shadow-md transition duration-300
+          max-w-[70%] max-h-[60vh]       /* desktop: up to 70% width, 60vh height */
+          sm:max-w-[80%] sm:max-h-[50vh] /* ≥640px: a bit larger width, but only 50vh height */
+          xs:max-w-[90%] xs:max-h-[40vh] /* <640px: almost full width, 40vh height */
+        "
       />
 
-      <!-- Right Arrow (pulled in a bit) -->
+      <!-- Right Arrow (inside the container) -->
       <button
         onclick="nextImage()"
-        class="absolute right-[-0.75rem] sm:right-[-1rem] text-white bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full shadow-lg z-10 focus:outline-none"
+        class="absolute right-2 text-white bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full shadow-lg z-10 focus:outline-none"
         aria-label="Next image"
       >
         &rarr;
@@ -162,6 +188,7 @@
     </div>
   </div>
 </div>
+
 
 
 <footer
