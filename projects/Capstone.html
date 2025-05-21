@@ -308,14 +308,18 @@
         </div>
 
         <!-- Modal Image Area -->
-        <div class="relative w-full h-full bg-gray-900 flex items-center justify-center px-4 pb-4 xs:pb-6"> <!-- Centered and space below -->
+        <div class="relative w-full h-full bg-gray-900 flex items-center justify-center px-4 pb-4 xs:pb-6">
             <!-- Left Arrow -->
             <button onclick="prevImage()" class="absolute left-2 sm:left-3 text-white bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full shadow-lg z-10 focus:outline-none" aria-label="Previous image">
                 &larr;
             </button>
 
             <!-- Image -->
-            <img id="lightbox-img" src="" alt="Zoomed Image" class="max-h-full max-w-full object-contain rounded-md shadow-md transition duration-300" />
+            <img id="lightbox-img" src="" alt="Zoomed Image"
+                class="object-contain rounded-md shadow-md transition duration-300
+                       max-w-[80%] max-h-[60vh]
+                       sm:max-w-[70%] sm:max-h-[55vh]
+                       xs:max-w-[90%] xs:max-h-[50vh]" />
 
             <!-- Right Arrow -->
             <button onclick="nextImage()" class="absolute right-2 sm:right-3 text-white bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full shadow-lg z-10 focus:outline-none" aria-label="Next image">
