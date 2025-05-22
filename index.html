@@ -240,32 +240,6 @@
   </div>
 </div>
 
-<!-- Modal backdrop -->
-<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
-  <!-- Modal content -->
-  <div class="bg-gray-900 rounded-lg p-6 max-w-md w-full relative">
-    <button id="closeModal" class="absolute top-2 right-2 text-white text-xl">&times;</button>
-    
-    <div class="project-card w-full aspect-square relative cursor-pointer transition-colors duration-300 rounded overflow-hidden flex flex-col items-center p-4">
-      <div class="relative w-full h-3/4 overflow-hidden rounded-lg shadow-md">
-        <img
-          src="images/BeastLink UI/1.png"
-          alt="Beastlink Project Image"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
-      <h2 class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center sm:text-lg">
-        Software Development Project (School System: Document & Requirements)
-      </h2>
-      <a href="projects/Beastlink.html" class="inline-block mt-4">
-        <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
-          View Project
-        </button>
-      </a>
-    </div>
-  </div>
-</div>
-
 
 </section>
 
@@ -1035,29 +1009,6 @@ const skillData = {
     description: 'I have completed 2 commissions, delivering custom solutions tailored to client needs.'
   }
 };
-
-// Modal open/close JS — after DOM is ready or at bottom of <body>
-const skill4 = document.getElementById('skill4');
-const modal = document.getElementById('projectModal');
-const closeModal = document.getElementById('closeModal');
-
-skill4.addEventListener('click', () => {
-  modal.classList.remove('opacity-0', 'pointer-events-none');
-  modal.classList.add('opacity-100');
-});
-
-closeModal.addEventListener('click', () => {
-  modal.classList.add('opacity-0', 'pointer-events-none');
-  modal.classList.remove('opacity-100');
-});
-
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.classList.add('opacity-0', 'pointer-events-none');
-    modal.classList.remove('opacity-100');
-  }
-});
-
 
     document.querySelectorAll('.skill-box').forEach(box => {
       box.addEventListener('click', () => {
