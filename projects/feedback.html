@@ -125,22 +125,15 @@
   </footer>
 
   <script>
-    document.querySelectorAll('.flip-card-inner').forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('rotate-y-180');
-      });
-    });
-
-    document.querySelectorAll('.flip-card-inner').forEach(card => {
-      card.addEventListener('click', (e) => {
-        // Check if the click started inside an element with the class 'feedback-textbox'
-        if (e.target.closest('.feedback-textbox')) {
-          // If clicked inside scrollable feedback box, do NOT flip
-          return;
-        }
-        card.classList.toggle('rotate-y-180');
-      });
-    });
+document.querySelectorAll('.flip-card-inner').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // If click is inside feedback textbox, do NOT flip
+    if (e.target.closest('.feedback-textbox')) {
+      return;
+    }
+    card.classList.toggle('rotate-y-180');
+  });
+});
 
   </script>
 
