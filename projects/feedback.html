@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commissions Feedback</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: top left;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .font-techy {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s ease-in-out;
+      transform-style: preserve-3d;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-black">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 p-4 flex justify-between items-center opacity-90 bg-black">
+    <a class="text-white text-2xl hover:text-gray-300" href="../index.html">←</a>
+    <span class="text-white text-xl sm:text-lg xs:text-base text-center font-techy">
+      Yvosh <span class="text-[#4fc3f7]">Caila</span> Martin
+    </span>
+  </header>
+
+  <main class="flex-grow flex items-start justify-center p-6">
+    <div class="w-full max-w-5xl">
+      <!-- Title -->
+    <h2 class="text-center py-6 mb-8 flex flex-wrap justify-center items-center gap-4">
+      <span class="font-techy text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#4fc3f7]">COMMISSIONS</span>
+      <span class="font-techy font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white">FEEDBACK</span>
+    </h2>
+      <!-- Flip Cards Container -->
+      <div class="flex flex-row flex-wrap justify-center gap-x-6 gap-y-10 mt-10">
+        <!-- Flip Card -->
+        <div class="flip-card w-full max-w-[500px] relative mb-6 h-[460px] sm:h-[420px]">
+          <div class="flip-card-inner">
+            <!-- Front -->
+            <div class="flip-card-front absolute w-full h-full bg-gradient-to-br from-sky-700 to-sky-600 rounded-2xl border border-gray-700 shadow-xl px-6 py-8 flex flex-col items-center justify-end backface-hidden">
+              <img class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover absolute -top-12" 
+                   src="images/BeastLink UI/1.png" alt="Profile" />
+              <div class="mb-[-5] w-full text-white text-sm font-medium space-y-4">
+                <p><span class="font-semibold text-gray-200">Stars:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">⭐⭐⭐⭐⭐</span></p>
+                <p><span class="font-semibold text-gray-200">Accomplished:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">UI, Landing Page, Responsive Fixes</span></p>
+                <p><span class="font-semibold text-gray-200">Delivered:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">On Time</span></p>
+                <p><span class="font-semibold text-gray-200">Communication:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">Excellent</span></p>
+                <p><span class="font-semibold text-gray-200">Recommend:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">Definitely!</span></p>
+                <p><span class="font-semibold text-gray-200 block mb-1">Feedback:</span> <span class="inline-block bg-[#fff] text-black rounded-xl px-4 py-2 w-full max-h-24 overflow-y-auto">Super fast and clean code! Great communication throughout the project, implemented all feedback on time, delivered responsive design, fixed cross-browser issues, and stayed in constant touch to provide updates. Highly professional and organized!</span></p>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="flip-card-back absolute w-full h-full rounded-2xl overflow-hidden bg-white backface-hidden flex flex-col">
+              <img class="w-full h-[75%] object-cover rounded-t-2xl" 
+                   src="images/Recharge/1.png" alt="Project Screenshot" />
+              <div class="h-[25%] flex items-center justify-center px-4">
+                <h3 class="text-center text-base sm:text-lg font-semibold text-gray-800">Customer Portrait</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card w-full max-w-[500px] relative mb-6 h-[460px] sm:h-[420px]">          <div class="flip-card-inner">
+            <!-- Front -->
+            <div class="flip-card-front absolute w-full h-full bg-gradient-to-br from-purple-800 to-purple-700 rounded-2xl border border-gray-700 shadow-xl px-6 py-8 flex flex-col items-center justify-end backface-hidden">
+              <img class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover absolute -top-12" 
+                   src="https://storage.googleapis.com/a1aa/image/a663e692-dfa7-4d8d-aae5-14d8ac80269b.jpg" alt="Profile" />
+              <div class="mb-[-5] w-full text-white text-sm font-medium space-y-4">
+                <p><span class="font-semibold text-gray-200">Stars:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">⭐⭐⭐⭐⭐</span></p>
+                <p><span class="font-semibold text-gray-200">Accomplished:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">UI, Landing Page, Responsive Fixes</span></p>
+                <p><span class="font-semibold text-gray-200">Delivered:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">On Time</span></p>
+                <p><span class="font-semibold text-gray-200">Communication:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">Excellent</span></p>
+                <p><span class="font-semibold text-gray-200">Recommend:</span> <span class="inline-block bg-[#fff] text-black rounded-full px-3 py-1 ml-2">Definitely!</span></p>
+                <p><span class="font-semibold text-gray-200 block mb-1">Feedback:</span> <span class="inline-block bg-[#fff] text-black rounded-xl px-4 py-2 w-full max-h-24 overflow-y-auto">Super fast and clean code! Great communication throughout the project, implemented all feedback on time, delivered responsive design, fixed cross-browser issues, and stayed in constant touch to provide updates. Highly professional and organized!</span></p>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="flip-card-back absolute w-full h-full rounded-2xl overflow-hidden bg-white backface-hidden flex flex-col">
+              <img class="w-full h-[75%] object-cover rounded-t-2xl" 
+                   src="https://storage.googleapis.com/a1aa/image/a936766b-d386-4919-1718-4eee4e04de92.jpg" alt="Project Screenshot" />
+              <div class="h-[25%] flex items-center justify-center px-4">
+                <h3 class="text-center text-base sm:text-lg font-semibold text-gray-800">Customer Portrait</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat Flip Card as needed -->
+        <!-- You can duplicate the above flip card structure for additional cards -->
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="flex flex-nowrap justify-between items-center px-6 py-4 bg-black text-white text-[10px] sm:text-xs whitespace-nowrap overflow-x-auto">
+    <p class="flex-shrink-0 text-left">Yvosh Martin</p>
+    <p class="flex-grow text-center">&copy; 2025 Yvosh Martin. All rights reserved.</p>
+    <span class="flex-shrink-0 text-right underline cursor-pointer" role="button" tabindex="0" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" onkeypress="if(event.key==='Enter'){window.scrollTo({ top: 0, behavior: 'smooth' })}">Back to Top</span>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.flip-card-inner').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('rotate-y-180');
+      });
+    });
+  </script>
+
+</body>
+</html>
