@@ -229,23 +229,43 @@
 </a>
 
 
-<div
-  id="skill4"
-  class="bg-white border border-gray-300 rounded-lg p-6 w-72 mx-auto flex flex-col items-center"
->
-  <img
-    src="https://via.placeholder.com/300x225"
-    alt="Commissions"
-    class="w-3/4 h-[75%] object-cover rounded-md"
-  />
-  <h3 class="mt-4 text-xl font-semibold text-center">Commissions</h3>
-  <button
-    onclick="window.location.href='projects/Beastlink.html'"
-    class="mt-3 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+  <div id="skill4"
+    class="skill-box bg-sky-800 opacity-85 border border-black cursor-pointer transition-colors duration-300 hover:bg-sky-900 flex flex-col items-center justify-center p-12 h-64"
   >
-    View
-  </button>
+    <p class="text-4xl font-extrabold">2</p>
+    <p class="text-sm mt-1 uppercase font-semibold leading-tight text-center">
+      COMMISIONS
+    </p>
+    <p class="text-xs mt-2 text-white text-center">Click here to view</p>
+  </div>
 </div>
+
+<!-- Modal backdrop -->
+<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+  <!-- Modal content -->
+  <div class="bg-gray-900 rounded-lg p-6 max-w-md w-full relative">
+    <button id="closeModal" class="absolute top-2 right-2 text-white text-xl">&times;</button>
+    
+    <div class="project-card w-full aspect-square relative cursor-pointer transition-colors duration-300 rounded overflow-hidden flex flex-col items-center p-4">
+      <div class="relative w-full h-3/4 overflow-hidden rounded-lg shadow-md">
+        <img
+          src="images/BeastLink UI/1.png"
+          alt="Beastlink Project Image"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+      <h2 class="mt-4 text-white font-extrabold text-xl tracking-widest border-t-2 border-sky-400 pt-2 w-full text-center sm:text-lg">
+        Software Development Project (School System: Document & Requirements)
+      </h2>
+      <a href="projects/Beastlink.html" class="inline-block mt-4">
+        <button class="bg-transparent border border-white text-white text-sm px-4 py-2 rounded hover:bg-white hover:text-black transition-colors duration-300">
+          View Project
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
 
 </section>
 
@@ -996,24 +1016,48 @@
     const modalContent = document.getElementById('modalContent');
     const closeModal = document.getElementById('closeModal');
 
-    const skillData = {
-      skill1: {
-        title: 'Years of Experience',
-        description: 'I have 1+ years of experience from school projects and freelance commissions, using React, Tailwind CSS, JavaScript, HTML, and CSS for front-end development. On the back end, I work with PHP and MySQL, and I’m currently learning Laravel and Blade.'
-      },
-      skill2: {
-        title: 'Projects Completed',
-        description: 'I have successfully completed 8 projects, including both school assignments and commissioned work — ranging from small websites to more complex web applications.'
-      },
-      skill3: {
-        title: 'Happy Clients',
-        description: 'I have 2 happy clients who are satisfied with the quality and timeliness of my work.'
-      },
-      skill4: {
-        title: 'Commissions',
-        description: 'I have completed 2 commissions, delivering custom solutions tailored to client needs.'
-      }
-    };
+// Skill data object — just data, no DOM stuff here
+const skillData = {
+  skill1: {
+    title: 'Years of Experience',
+    description: 'I have 1+ years of experience from school projects and freelance commissions, using React, Tailwind CSS, JavaScript, HTML, and CSS for front-end development. On the back end, I work with PHP and MySQL, and I’m currently learning Laravel and Blade.'
+  },
+  skill2: {
+    title: 'Projects Completed',
+    description: 'I have successfully completed 8 projects, including both school assignments and commissioned work — ranging from small websites to more complex web applications.'
+  },
+  skill3: {
+    title: 'Happy Clients',
+    description: 'I have 2 happy clients who are satisfied with the quality and timeliness of my work.'
+  },
+  skill4: {
+    title: 'Commissions',
+    description: 'I have completed 2 commissions, delivering custom solutions tailored to client needs.'
+  }
+};
+
+// Modal open/close JS — after DOM is ready or at bottom of <body>
+const skill4 = document.getElementById('skill4');
+const modal = document.getElementById('projectModal');
+const closeModal = document.getElementById('closeModal');
+
+skill4.addEventListener('click', () => {
+  modal.classList.remove('opacity-0', 'pointer-events-none');
+  modal.classList.add('opacity-100');
+});
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add('opacity-0', 'pointer-events-none');
+  modal.classList.remove('opacity-100');
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+  }
+});
+
 
     document.querySelectorAll('.skill-box').forEach(box => {
       box.addEventListener('click', () => {
