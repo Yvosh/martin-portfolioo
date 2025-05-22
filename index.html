@@ -1069,21 +1069,33 @@ const skillData = {
   }
 };
 
-    const skill4 = document.getElementById('skill4');
-    const modal = document.getElementById('modal');
-    const closeModal = document.getElementById('closeModal');
+document.addEventListener('DOMContentLoaded', () => {
+  const skill4 = document.getElementById('skill4');
+  const modal = document.getElementById('modal');
+  const closeModal = document.getElementById('closeModal');
 
-    skill4.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden'; // prevent background scroll
-    });
+  skill4.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+  });
 
-    closeModal.addEventListener('click', () => {
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = ''; // restore scroll
+  });
+
+  // Optional: Close modal by clicking outside content
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
       modal.classList.add('hidden');
       modal.classList.remove('flex');
-      document.body.style.overflow = ''; // restore scroll
-    });
+      document.body.style.overflow = '';
+    }
+  });
+});
+
 
     // Close modal on clicking outside modal content
     modal.addEventListener('click', (e) => {
