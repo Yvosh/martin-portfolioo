@@ -1,0 +1,295 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Pharmacy App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Hide scrollbar for horizontal scroll on categories */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+  </head>
+  <body class="bg-[#E6F4F1] min-h-screen flex flex-col relative">
+    <div id="root" class="flex-grow"></div>
+
+    <script type="text/babel">
+      // Categories redesigned like Shopee/Lazada/Watsons common style: circular icons with label below, horizontally scrollable on small screens, grid on larger
+      const categories = [
+        {
+          id: 1,
+          label: "Medicines",
+          img: "https://storage.googleapis.com/a1aa/image/46b541eb-0242-45cb-68ae-5d8c4d08c089.jpg",
+          alt: "Icon of medicine bottle and pills",
+        },
+        {
+          id: 2,
+          label: "Supplements",
+          img: "https://storage.googleapis.com/a1aa/image/7f006124-e660-48e5-b009-5ed9b36f3f9a.jpg",
+          alt: "Icon of supplement bottle",
+        },
+        {
+          id: 3,
+          label: "Personal Care",
+          img: "https://storage.googleapis.com/a1aa/image/fe5a42c5-f99a-4b2e-7368-f63731459cfc.jpg",
+          alt: "Icon of personal care items",
+        },
+        {
+          id: 4,
+          label: "Health Devices",
+          img: "https://storage.googleapis.com/a1aa/image/b302010c-f445-4681-0452-59122ce79857.jpg",
+          alt: "Icon of health devices",
+        },
+        {
+          id: 5,
+          label: "Baby Care",
+          img: "https://storage.googleapis.com/a1aa/image/46b541eb-0242-45cb-68ae-5d8c4d08c089.jpg",
+          alt: "Icon of baby care products",
+        },
+        {
+          id: 6,
+          label: "Beauty",
+          img: "https://storage.googleapis.com/a1aa/image/fe5a42c5-f99a-4b2e-7368-f63731459cfc.jpg",
+          alt: "Icon of beauty products",
+        },
+        {
+          id: 7,
+          label: "Fitness",
+          img: "https://storage.googleapis.com/a1aa/image/7f006124-e660-48e5-b009-5ed9b36f3f9a.jpg",
+          alt: "Icon of fitness products",
+        },
+        {
+          id: 8,
+          label: "Medical Supplies",
+          img: "https://storage.googleapis.com/a1aa/image/b302010c-f445-4681-0452-59122ce79857.jpg",
+          alt: "Icon of medical supplies",
+        },
+      ];
+
+      const products = [
+        {
+          id: 1,
+          name: "Multivitamin",
+          price: "$2.50",
+          img: "https://storage.googleapis.com/a1aa/image/5e8585c3-62db-4eec-d7f1-d9141698901c.jpg",
+          alt: "Black bottle labeled Multivitamin for Men",
+          favorite: true,
+        },
+        {
+          id: 2,
+          name: "Multivitamin",
+          price: "$2.50",
+          img: "https://storage.googleapis.com/a1aa/image/5e8585c3-62db-4eec-d7f1-d9141698901c.jpg",
+          alt: "Black bottle labeled Multivitamin for Men",
+          favorite: false,
+        },
+        {
+          id: 3,
+          name: "Multivitamin",
+          price: "$2.50",
+          img: "https://storage.googleapis.com/a1aa/image/5e8585c3-62db-4eec-d7f1-d9141698901c.jpg",
+          alt: "Black bottle labeled Multivitamin for Men",
+          favorite: false,
+        },
+      ];
+
+      function App() {
+        return (
+          <>
+            <header className="bg-[#1E4D4D] rounded-b-3xl relative px-5 pt-6 pb-20">
+              <div className="flex justify-between items-center">
+                <div></div>
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3">
+                    {/* Cart Button on the Left */}
+                    <a
+                      href="cart.html"
+                      aria-label="Cart"
+                      className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+                    >
+                      <i className="fas fa-shopping-cart text-white text-lg"></i>
+                    </a>
+
+                    {/* User Button */}
+                    <a href="account.html">
+                      <button
+                        aria-label="Account"
+                        className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+                      >
+                        <i className="fas fa-user text-white text-lg"></i>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-1 max-w-xs relative z-20">
+                <p className="text-white text-xs font-normal leading-none mt-0">
+                  Welcome back!
+                </p>
+                <h1 className="text-white text-xl font-extrabold leading-tight">
+                  John Doe
+                </h1>
+              </div>
+
+              {/* Offer Card lowered */}
+              <div
+                className="absolute left-5 right-5 top-[140px] bg-gradient-to-r from-[#3AAFA9] to-[#2B7A78] rounded-2xl flex items-center p-4 gap-4 z-0"
+                style={{ boxShadow: "0 10px 20px rgba(43,122,120,0.3)" }}
+              >
+                <div className="flex-1">
+                  <p className="text-white font-semibold text-sm">
+                    Pharmacy Offer Ends Today
+                  </p>
+                  <p className="text-white text-xs font-normal mt-1 mb-3">
+                    Save up 40% on Medicines
+                  </p>
+                  <button
+                    className="bg-white text-[#2B7A78] text-xs font-semibold px-4 py-1 rounded-md"
+                    type="button"
+                  >
+                    Order Now
+                  </button>
+                </div>
+                <img
+                  alt="Female doctor in white coat pointing, standing next to a blister pack of pills"
+                  className="w-20 h-20 object-contain"
+                  draggable="false"
+                  height="80"
+                  src="https://storage.googleapis.com/a1aa/image/712c715d-bd7f-4bc7-d178-d868d7569ecf.jpg"
+                  width="80"
+                />
+              </div>
+            </header>
+
+            {/* Category Section */}
+            <section className="mt-28 px-5 max-w-7xl mx-auto">
+              <h2 className="text-[#1E4D4D] text-sm font-semibold mb-3">
+                Category
+              </h2>
+              <div className="flex space-x-6 overflow-x-auto no-scrollbar py-2 px-1 sm:grid sm:grid-cols-4 sm:gap-6 sm:space-x-0 sm:overflow-visible">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    className="flex flex-col items-center min-w-[72px] sm:min-w-auto bg-white rounded-full p-3 shadow-md hover:shadow-lg transition-shadow"
+                    type="button"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#E0F2F1] flex items-center justify-center mb-2">
+                      <img
+                        alt={cat.alt}
+                        draggable="false"
+                        height="28"
+                        src={cat.img}
+                        width="28"
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="text-xs text-[#4B5563] font-medium text-center">
+                      {cat.label}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            {/* Products Section */}
+            <section className="mt-6 px-5 max-w-7xl mx-auto">
+              <div className="flex justify-between items-center mb-3">
+                <h2 className="text-[#1E4D4D] text-sm font-semibold">
+                  Products
+                </h2>
+                <button
+                  aria-label="More options"
+                  className="text-[#1E4D4D] text-2xl font-extrabold leading-none"
+                  type="button"
+                >
+                  •••
+                </button>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-full pb-2">
+                {products.map((product) => (
+                  <div
+                    key={product.id}
+                    className="bg-white rounded-2xl shadow-sm p-4 relative flex flex-col"
+                  >
+                    <img
+                      alt={product.alt}
+                      className="w-20 h-20 object-contain mb-3"
+                      draggable="false"
+                      height="80"
+                      src={product.img}
+                      width="80"
+                    />
+                    {product.favorite && (
+                      <button
+                        aria-label="Favorite"
+                        className="absolute top-3 right-3 w-6 h-6 bg-white rounded-full flex items-center justify-center text-red-500"
+                        type="button"
+                      >
+                        <i className="fas fa-heart"></i>
+                      </button>
+                    )}
+                    <h3 className="text-[#1E4D4D] font-semibold text-sm mb-1">
+                      {product.name}
+                    </h3>
+                    <p className="text-[#D14343] font-semibold text-xs mb-2">
+                      {product.price}
+                    </p>
+                    <a href="product.html">
+                    <button
+                      aria-label={`Add ${product.name} to cart`}
+                      className="ml-auto w-6 h-6 bg-[#2B7A78] rounded-full flex items-center justify-center text-white text-xs"
+                      type="button"
+                    >
+                      <i className="fas fa-arrow-right"></i>
+                    </button>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Messenger Icon */}
+            <a
+              href="messages.html"
+              aria-label="Open Messages"
+              className="fixed bottom-6 right-6 w-14 h-14 bg-[#2B7A78] rounded-full flex items-center justify-center shadow-lg hover:bg-[#3AAFA9] transition-colors z-50"
+            >
+              <i className="fab fa-facebook-messenger text-white text-2xl"></i>
+            </a>
+          </>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

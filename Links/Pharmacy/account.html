@@ -1,0 +1,141 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Account - Pharmacy App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Hide scrollbar for horizontal scroll */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-[#E6F4F1] min-h-screen flex flex-col">
+    <header
+      class="bg-[#1E4D4D] px-5 py-4 rounded-b-3xl flex items-center justify-between"
+    >
+      <h1 class="text-white text-xl font-extrabold">My Account</h1>
+      <a
+        aria-label="Back to home"
+        class="text-white text-lg"
+        href="dashboard.html"
+      >
+        <i class="fas fa-arrow-left"> </i>
+      </a>
+    </header>
+    <main class="flex-grow max-w-7xl mx-auto px-5 py-6 w-full">
+      <section
+        class="bg-white rounded-2xl shadow p-6 mb-6 flex flex-col items-center"
+      >
+        <img
+          alt="Profile picture of Elizabeth Johnson"
+          class="w-24 h-24 rounded-full object-cover mb-4"
+          draggable="false"
+          height="100"
+          src="logo.jpg"
+          width="100"
+        />
+        <h2 class="text-[#1E4D4D] font-semibold text-xl mb-1">
+          John Doe
+        </h2>
+        <p class="text-gray-600 text-sm mb-4">johndoe@example.com</p>
+        <button
+          class="bg-[#2B7A78] text-white rounded-full px-6 py-2 font-semibold hover:bg-[#3AAFA9] transition"
+          type="button"
+        >
+          Edit Profile
+        </button>
+      </section>
+      <section class="bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-[#1E4D4D] font-semibold text-lg mb-4">My Orders</h3>
+        <ul class="divide-y divide-gray-200">
+          <li class="py-3 flex justify-between items-center">
+            <div>
+              <p class="font-semibold text-[#1E4D4D]">Order #12345</p>
+              <p class="text-gray-600 text-sm">Placed on June 10, 2024</p>
+            </div>
+            <span class="text-[#2B7A78] font-semibold"> Delivered </span>
+          </li>
+          <li class="py-3 flex justify-between items-center">
+            <div>
+              <p class="font-semibold text-[#1E4D4D]">Order #12346</p>
+              <p class="text-gray-600 text-sm">Placed on June 5, 2024</p>
+            </div>
+            <span class="text-[#F59E0B] font-semibold"> Processing </span>
+          </li>
+        </ul>
+        <button
+          class="mt-4 w-full bg-[#2B7A78] text-white rounded-full px-6 py-2 font-semibold hover:bg-[#3AAFA9] transition"
+          type="button"
+        >
+          View All Orders
+        </button>
+      </section>
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-[#1E4D4D] font-semibold text-lg mb-4">Settings</h3>
+        <ul class="divide-y divide-gray-200">
+          <li>
+            <a
+              class="flex justify-between items-center py-3 hover:bg-gray-50 px-2 rounded cursor-pointer"
+              href="#"
+            >
+              <span> Account Settings </span>
+              <i class="fas fa-chevron-right text-gray-400"> </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex justify-between items-center py-3 hover:bg-gray-50 px-2 rounded cursor-pointer"
+              href="#"
+            >
+              <span> Payment Methods </span>
+              <i class="fas fa-chevron-right text-gray-400"> </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex justify-between items-center py-3 hover:bg-gray-50 px-2 rounded cursor-pointer"
+              href="#"
+            >
+              <span> Notifications </span>
+              <i class="fas fa-chevron-right text-gray-400"> </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex justify-between items-center py-3 hover:bg-gray-50 px-2 rounded cursor-pointer"
+              href="#"
+            >
+              <span> Help &amp; Support </span>
+              <i class="fas fa-chevron-right text-gray-400"> </i>
+            </a>
+          </li>
+          <li>
+            <button
+              class="w-full text-left py-3 text-[#D14343] font-semibold hover:bg-gray-50 rounded"
+              type="button"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

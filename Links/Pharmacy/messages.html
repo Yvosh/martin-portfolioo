@@ -1,0 +1,151 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Messages - Pharmacy App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Hide scrollbar for horizontal scroll */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+            /* Custom underline with low opacity and subtle shadow */
+      .custom-underline {
+        border-bottom-width: 2px;
+        border-bottom-color: rgba(43, 122, 120, 0.3);
+        box-shadow: 0 2px 4px rgba(43, 122, 120, 0.1);
+      }
+      .custom-underline:hover,
+      .custom-underline:focus {
+        border-bottom-color: rgba(43, 122, 120, 0.6);
+        box-shadow: 0 2px 6px rgba(43, 122, 120, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-[#E6F4F1] min-h-screen flex">
+    <div class="flex w-full h-screen shadow-lg rounded-none overflow-hidden bg-white">
+      <aside class="w-1/5 border-r border-[#2B7A78] bg-white flex flex-col">
+<div class="flex items-center justify-between p-4 border-b border-[#2B7A78]">
+    <a href="dashboard.html">
+              <button aria-label="Back to chats" class="text-[#2B7A78] hover:text-[#3AAFA9]">
+            <i class="fas fa-arrow-left text-xl"></i>
+          </button>
+          </a>
+  <h2 class="font-semibold text-[#1E4D4D] text-lg">Chats</h2>
+<input
+  type="search"
+  placeholder="Search chats"
+  class="hidden md:block w-2/3 rounded-md border border-[#2B7A78] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#3AAFA9]"
+  aria-label="Search chats"
+/>
+
+</div>
+<button class="flex items-center gap-3 p-2 hover:bg-[#E6F4F1] custom-underline focus:outline-none focus:ring-2 focus:ring-[#3AAFA9]">
+  <img
+    src="https://storage.googleapis.com/a1aa/image/375e94ee-2d6c-4edf-58c4-0807e2911085.jpg"
+    alt="John Doe profile"
+    class="w-10 h-10 rounded-full object-cover"
+    draggable="false"
+  />
+  <!-- Hide this text part on small screens -->
+  <div class="flex-col text-left hidden md:flex">
+    <span class="font-semibold text-[#1E4D4D] text-sm">John Doe</span>
+    <span class="text-xs text-gray-600 truncate max-w-[120px]">
+      Thanks for your help! I received the order.
+    </span>
+  </div>
+</button>
+<button class="flex items-center gap-3 p-2 hover:bg-[#E6F4F1] custom-underline focus:outline-none focus:ring-2 focus:ring-[#3AAFA9]">
+  <img
+    src="https://storage.googleapis.com/a1aa/image/375e94ee-2d6c-4edf-58c4-0807e2911085.jpg"
+    alt="John Doe profile"
+    class="w-10 h-10 rounded-full object-cover"
+    draggable="false"
+  />
+  <!-- Hide this text part on small screens -->
+  <div class="flex-col text-left hidden md:flex">
+    <span class="font-semibold text-[#1E4D4D] text-sm">John Doe</span>
+    <span class="text-xs text-gray-600 truncate max-w-[120px]">
+      Thanks for your help! I received the order.
+    </span>
+  </div>
+</button>
+<button class="flex items-center gap-3 p-2 hover:bg-[#E6F4F1] custom-underline focus:outline-none focus:ring-2 focus:ring-[#3AAFA9]">
+  <img
+    src="https://storage.googleapis.com/a1aa/image/375e94ee-2d6c-4edf-58c4-0807e2911085.jpg"
+    alt="John Doe profile"
+    class="w-10 h-10 rounded-full object-cover"
+    draggable="false"
+  />
+  <!-- Hide this text part on small screens -->
+  <div class="flex-col text-left hidden md:flex">
+    <span class="font-semibold text-[#1E4D4D] text-sm">John Doe</span>
+    <span class="text-xs text-gray-600 truncate max-w-[120px]">
+      Thanks for your help! I received the order.
+    </span>
+  </div>
+</button>
+        </nav>
+      </aside>
+
+      <section class="w-4/5 flex flex-col bg-white">
+        <header class="p-4 border-b border-gray-200 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/375e94ee-2d6c-4edf-58c4-0807e2911085.jpg"
+              alt="John Doe profile"
+              class="w-12 h-12 rounded-full object-cover"
+              draggable="false"
+            />
+            <h2 class="text-[#1E4D4D] font-semibold text-lg">John Doe</h2>
+          </div>
+        </header>
+
+        <div class="flex-1 p-6 overflow-y-auto space-y-4 bg-[#E6F4F1]">
+          <div class="max-w-xs bg-white p-3 rounded-xl shadow self-start">
+            <p class="text-sm text-[#1E4D4D]">
+              Thanks for your help! I received the order.
+            </p>
+            <time class="block text-xs text-gray-400 mt-1 text-right">2:45 PM</time>
+          </div>
+          <div class="max-w-xs bg-[#2B7A78] text-white p-3 rounded-xl shadow self-end ml-auto">
+            <p class="text-sm">
+              You're welcome! Let me know if you need anything else.
+            </p>
+            <time class="block text-xs text-gray-200 mt-1 text-right">2:47 PM</time>
+          </div>
+        </div>
+
+        <form class="p-4 border-t border-gray-200 flex items-center gap-3 bg-white">
+          <input
+            type="text"
+            placeholder="Type a message"
+            class="flex-grow border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2B7A78]"
+          />
+          <button
+            type="submit"
+            class="bg-[#2B7A78] text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#3AAFA9]"
+            aria-label="Send message"
+          >
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
