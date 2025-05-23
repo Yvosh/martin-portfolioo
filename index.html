@@ -88,7 +88,7 @@
       <nav
         class="nav-links hidden md:flex gap-6 whitespace-nowrap text-white font-medium"
       >
-        <a href="#" class="active font-bold border-b-2 border-sky-400 pb-1"
+        <a href="#" font-bold border-b-2 border-sky-400 pb-1"
           >Home</a
         >
         <a href="#about" class="hover:border-b-2 hover:border-sky-400 pb-1"
@@ -1000,6 +1000,8 @@
     </div>
 
     <script>
+
+
       const navToggle = document.querySelector(".nav-toggle");
       const navLinks = document.querySelector(".nav-links");
       const links = document.querySelectorAll(".nav-links a");
@@ -1018,6 +1020,18 @@
           navLinks.classList.add("hidden");
         });
       });
+
+      links.forEach(link => {
+        link.addEventListener("click", function () {
+          links.forEach(l => l.classList.remove("border-b-2", "border-sky-400", "font-bold"));
+          this.classList.add("border-b-2", "border-sky-400", "font-bold");
+      
+          // Optional: close the mobile nav after clicking a link
+          navLinks.classList.add("hidden");
+          navToggle.setAttribute("aria-expanded", false);
+        });
+      });
+
 
       function toggleMore() {
         const moreSection = document.getElementById("more-experience");
