@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white">
+<html lang="en" class="text-white">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,7 +11,8 @@
 
 <body class="font-sans">
       <!-- HEADER -->
-  <header class="sticky-header p-4 flex justify-between items-center opacity-90">
+  <header class="sticky-header p-4 flex justify-between items-center opacity-90 bg-[#050716]
+">
     <!-- Left: Home/Arrow Icon -->
     <a href="../index.html" class="text-white text-2xl hover:text-gray-300">
       &#8592; <!-- Left arrow symbol -->
@@ -22,9 +23,14 @@
       Yvosh <span class="text-[#4fc3f7]">Caila</span> Martin
     </span>
   </header>
-
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <div class="orb orb-6"></div>
     <!-- MAIN CONTENT -->
-     <section class="px-[5%] p-6 bg-gray-900 rounded-xl shadow-lg mt-8 mx-4 sm:mx-6 xs:mx-2">
+     <section class="px-[5%] p-6 bg-[#353766] rounded-xl shadow-lg mt-8 mx-4 sm:mx-6 xs:mx-2">
         <div class="flex flex-col md:flex-row gap-6 items-center">
             <!-- Left: Main Image -->
             <div class="flex-shrink-0 w-full md:w-2/6">
@@ -55,45 +61,45 @@
         </div>
     </section>
 
-        <p class="w-[96%] px-[2%] text-xl sm:text-lg xs:text-base font-semibold text-gray-200 mt-10 ml-4 sm:ml-6 xs:ml-2 bg-gray-800 rounded-md py-3 shadow-lg shadow-gray-900">
+        <p class="w-[96%] px-[2%] text-xl sm:text-lg xs:text-base font-semibold text-gray-200 mt-10 ml-4 sm:ml-6 xs:ml-2  bg-[#2b2d55] rounded-md py-3 shadow-lg shadow-gray-900">
         Product Management Side
     </p>
     <!-- GALLERY SECTION -->
     <section class="px-[2%] p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-10">
         <!-- Example cards -->
-        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(1)">
+        <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(1)">
             <img src="../images/Recharge/1.png" class="rounded-md mb-3 w-full" />
             <h2 class="text-lg font-semibold text-center">Dashboard</h2>
         </div>
-        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(2)">
+        <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(2)">
             <img src="../images/Recharge/2.png" class="rounded-md mb-3 w-full" />
             <h2 class="text-lg font-semibold text-center">Dashboard (Account)</h2>
         </div>
-        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(3)">
+        <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(3)">
             <img src="../images//Recharge/3.png" class="rounded-md mb-3 w-full" />
             <h2 class="text-lg font-semibold text-center">Leadboards</h2>
         </div>
-        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(4)">
+        <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(4)">
             <img src="../images/Recharge/4.png" class="rounded-md mb-3 w-full" />
             <h2 class="text-lg font-semibold text-center">Leadboards (Popup Notification)</h2>
         </div>
-        <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(5)">
+        <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(5)">
             <img src="../images/Recharge/5.png" class="rounded-md mb-3 w-full" />
             <h2 class="text-lg font-semibold text-center">Notification</h2>
         </div>
-        <!-- <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(6)">
+        <!-- <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(6)">
       <img src="../images/Recharge/5.png" class="rounded-md mb-3 w-full" />
       <h2 class="text-lg font-semibold text-center">Categories</h2>
     </div>
-    <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(7)">
+    <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(7)">
       <img src="../images/Coffee Shop/5.1.png" class="rounded-md mb-3 w-full" />
       <h2 class="text-lg font-semibold text-center">Categories: Variants </h2>
     </div>
-    <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(8)">
+    <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(8)">
       <img src="../images/BeastLink UI/Applicant Side/2.3 Error.png" class="rounded-md mb-3 w-full" />
       <h2 class="text-lg font-semibold text-center">Error- Exceed File Limit </h2>
     </div>
-    <div class="bg-gray-900 p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(9)">
+    <div class="bg-[#353766] p-3 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition transform duration-300 cursor-pointer" onclick="openModal(9)">
       <img src="../images/BeastLink UI/Applicant Side/2.4 Success Message.png" class="rounded-md mb-3 w-full" />
       <h2 class="text-lg font-semibold text-center">Success </h2>
     </div> -->
@@ -103,10 +109,10 @@
 <!-- MODAL -->
 <div
   id="lightbox"
-  class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50 px-4 sm:px-8 xs:px-2 xs:py-2"
+  class="fixed inset-0 bg-[#050716] bg-opacity-90 hidden flex items-center justify-center z-50 px-4 sm:px-8 xs:px-2 xs:py-2"
 >
   <!-- Modal Container -->
-  <div class="w-full max-w-5xl bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+  <div class="w-full max-w-5xl  bg-[#2b2d55] rounded-lg shadow-xl overflow-hidden">
     <!-- Modal Header -->
     <div class="flex justify-between items-center px-4 py-2 border-b border-gray-700">
       <h2
@@ -126,7 +132,7 @@
 
     <!-- Modal Image Area -->
     <div
-      class="relative w-full bg-gray-900 flex items-center justify-center px-2 py-2 xs:py-3"
+      class="relative w-full bg-[#353766] flex items-center justify-center px-2 py-2 xs:py-3"
       style="min-height: 0;"
     >
       <!-- Left Arrow -->
@@ -164,7 +170,7 @@
 
 
 <footer
-    class="flex flex-nowrap justify-between items-center px-6 py-4 bg-black text-white text-[10px] sm:text-xs whitespace-nowrap overflow-x-auto">
+    class="flex flex-nowrap justify-between items-center px-6 py-4 bg-[#050716] text-white text-[10px] sm:text-xs whitespace-nowrap overflow-x-auto">
     <p class="flex-shrink-0 text-left">Yvosh Martin</p>
     <p class="flex-grow text-center">
       &copy; 2025 Yvosh Martin. All rights reserved.
