@@ -522,3 +522,9 @@ body::after {
 .pl-full {
   padding-left: 100%;
 }
+
+    @media (max-width: 640px) {
+      h1.responsive-mt {
+        margin-top: 1.5rem; /* example margin top for small screens */
+      }
+    }
