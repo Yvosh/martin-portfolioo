@@ -1,0 +1,524 @@
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  background: #0a0e27;
+  color: #f8fafc;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Clean geometric grid patterns */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background-image: linear-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
+  animation: gridMove 30s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 100px,
+      rgba(0, 102, 255, 0.02) 101px,
+      rgba(0, 102, 255, 0.02) 102px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 150px,
+      rgba(0, 255, 157, 0.03) 151px,
+      rgba(0, 255, 157, 0.03) 152px
+    );
+  animation: backgroundShift 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(80px, 80px);
+  }
+}
+
+@keyframes backgroundShift {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Clean geometric shapes instead of gradient orbs */
+.orb {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.orb-1 {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 102, 255, 0.08);
+  border: 2px solid rgba(0, 102, 255, 0.2);
+  border-radius: 50%;
+  top: 5%;
+  left: 75%;
+  animation: float1 12s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 255, 157, 0.06);
+  border: 1px solid rgba(0, 255, 157, 0.15);
+  transform: rotate(45deg);
+  bottom: 15%;
+  left: 5%;
+  animation: float2 15s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 120px;
+  height: 120px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 2px solid rgba(99, 102, 241, 0.25);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 45%;
+  right: 15%;
+  animation: float3 18s ease-in-out infinite;
+}
+
+.orb-4 {
+  width: 180px;
+  height: 180px;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  top: 20%;
+  left: 20%;
+  animation: float4 20s ease-in-out infinite;
+}
+
+.orb-5 {
+  width: 100px;
+  height: 100px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 2px solid rgba(59, 130, 246, 0.18);
+  border-radius: 20px;
+  bottom: 40%;
+  right: 35%;
+  animation: float5 14s ease-in-out infinite;
+}
+
+.orb-6 {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 255, 157, 0.12);
+  border: 2px solid rgba(0, 255, 157, 0.3);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  top: 70%;
+  left: 60%;
+  animation: float6 16s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(-40px, -30px) scale(1.1) rotate(90deg);
+  }
+  50% {
+    transform: translate(-20px, -60px) scale(0.9) rotate(180deg);
+  }
+  75% {
+    transform: translate(30px, -20px) scale(1.05) rotate(270deg);
+  }
+}
+
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(0.8) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, -30px) scale(1.2) rotate(240deg);
+  }
+}
+
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  20% {
+    transform: translate(-25px, 35px) scale(1.15) rotate(72deg);
+  }
+  40% {
+    transform: translate(15px, -25px) scale(0.85) rotate(144deg);
+  }
+  60% {
+    transform: translate(-35px, -15px) scale(1.1) rotate(216deg);
+  }
+  80% {
+    transform: translate(25px, 25px) scale(0.95) rotate(288deg);
+  }
+}
+
+@keyframes float4 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 40px) scale(1.2);
+  }
+}
+
+@keyframes float5 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -30px) scale(0.9);
+  }
+  75% {
+    transform: translate(-30px, 20px) scale(1.1);
+  }
+}
+
+@keyframes float6 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-20px, -40px) scale(1.3);
+  }
+  66% {
+    transform: translate(40px, 20px) scale(0.7);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.flip-card {
+  perspective: 1000px;
+  height: 64px; /* approx height */
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.flip-card2 {
+  perspective: 1000px;
+  height: 64px; /* approx height */
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.flip-card2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flip-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.125rem; /* rounded-sm */
+  background-color: #111827; /* Tailwind gray-900 */
+  color: white;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  gap: 1rem;
+  font-size: 0.75rem; /* text-xs */
+  border: 1px solid #1f2937; /* Tailwind gray-800 */
+}
+
+.flip-front {
+  justify-content: flex-start;
+}
+
+.icon-box {
+  background-color: #8b5cf6;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem; /* rounded-sm */
+  flex-shrink: 0;
+}
+
+.icon-box2 {
+  background-color: #17d1e0;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem; /* rounded-sm */
+  flex-shrink: 0;
+}
+
+.flip-back {
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Roboto Mono", monospace;
+  transform: rotateY(180deg);
+  padding-left: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progress-bar-container {
+  width: 80%;
+  height: 12px;
+  background-color: #374151; /* Tailwind gray-700 */
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #6e2ea0;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+/* New styles for animated bars */
+.skill-box {
+  background-color: #8b5cf6; /* same as dev tools and skills bg */
+  border: 1px solid #1f2937; /* same border */
+}
+
+/* New styles for animated bars */
+.skill-box2 {
+  background-color: #17d1e0; /* same as dev tools and skills bg */
+  border: 1px solid #1f2937; /* same border */
+}
+
+.progress-bar-animated {
+  height: 100%;
+  background-color: #38bdf8; /* Tailwind [#17d1e0] */
+  border-radius: 9999px;
+  width: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+/* Animation keyframes for each width */
+@keyframes fill90 {
+  to {
+    width: 90%;
+  }
+}
+@keyframes fill85 {
+  to {
+    width: 85%;
+  }
+}
+
+/* Assign animations */
+.fill-90 {
+  animation-name: fill90;
+  animation-duration: 1.5s;
+}
+.fill-85 {
+  animation-name: fill85;
+  animation-duration: 1.5s;
+}
+.shimmer-effect {
+  background: linear-gradient(
+    to right,
+    #2563eb 0%,
+    /* blue-600 */ #7c3aed 25%,
+    /* purple-700 */ #3b82f6 50%,
+    /* blue-500 */ #8b5cf6 75%,
+    /* purple-500 */ #2563eb 100% /* blue-600 */
+  );
+  background-size: 200% 100%;
+  animation: shimmer 10s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cursor {
+  display: inline-block;
+  color: #38bdf8;
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+  font-size: 3rem; /* default for h1 */
+  line-height: 1; /* set to 1 for consistent line height */
+  vertical-align: bottom; /* keep cursor bottom aligned */
+  margin-left: 2px; /* small gap from text */
+  margin-bottom: 10px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  transition: all 0.3s ease;
+}
+
+.cursor.big {
+  font-size: 5rem; /* match your largest font-size in #typed-dev */
+  line-height: 1; /* keep consistent */
+  vertical-align: bottom;
+  margin-left: 4px; /* slightly bigger gap */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  /* On small screens, keep cursor inline with #typed-dev text */
+  .cursor {
+    margin-bottom: 0 !important;
+    vertical-align: middle !important;
+    font-size: 2.5rem !important;
+    margin-left: 4px !important;
+    margin-bottom: 5% !important;
+  }
+  .cursor.big {
+    font-size: 2.5rem !important;
+    margin-left: 4px !important;
+    margin-bottom: 5% !important;
+  }
+  /* Adjust font sizes for texts on small screens */
+  h1 {
+    font-size: 2.5rem !important;
+    white-space: nowrap;
+  }
+  #typed-dev {
+    font-size: 2rem !important;
+    white-space: nowrap;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+.pl-full {
+  padding-left: 100%;
+}
