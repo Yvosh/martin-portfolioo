@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const frontText = "FRONT-END";
-  const devText = "DEVELOPER";
+  const frontText = "WEB";
+  const devText = "DESIGNER";
   const frontTarget = document.getElementById("typed-front");
   const devTarget = document.getElementById("typed-dev");
   const cursor = document.getElementById("cursor");
@@ -238,3 +238,4 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section); // Observe each section
   });
 });
+
